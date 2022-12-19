@@ -29,7 +29,7 @@
             @yield('content')
 
         </div>
-
+        <footer-component></footer-component>
     </div>
 </body>
 

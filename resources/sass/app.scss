@@ -3,6 +3,7 @@
 // Variables
 @import 'variables';
 @import '~@mdi/font/css/materialdesignicons.css';
+
 //ref website -> https://materialdesignicons.com/
 //npm i @mdi/font
 // Bootstrap
@@ -17,14 +18,120 @@ html body {
 }
 
 .navbar {
-    border-bottom: 0.5px solid green;
+    border-bottom: 0.5px solid 29aecf;
     box-shadow: 0px 1px 10px rgb(224, 224, 224);
 }
+
+.w-button {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 1px solid #29aecf;
+    background-color: white;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    color: black;
+    font-weight: bold;
+    font-size: 0.8em;
+    ;
+    z-index: 1;
+}
+
+.w-button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.w-button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #39bda7;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.w-button:hover {
+    color: #ffffff;
+    border: 1px solid #39bda7;
+}
+
+.w-button:hover:before {
+    top: -35%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.w-button:hover:after {
+    top: -45%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+
+.w2-button {
+    padding: 0.8em 1.8em;
+    border: 2px solid #17C3B2;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #17C3B2;
+}
+
+.w2-button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #17C3B2;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.w2-button:hover::before {
+    width: 105%;
+}
+
+.w2-button:hover {
+    color: rgb(255, 255, 255);
+}
+
+
 
 @media screen and (max-width: 1023px) {
     .b-sidebar {
         .sidebar-content {
             &.is-mini-mobile {
+
                 &:not(.is-mini-expand),
                 &.is-mini-expand:not(:hover):not(.is-mini-delayed) {
                     .menu-list {
@@ -34,8 +141,10 @@ html body {
                                     display: none;
                                 }
                             }
+
                             ul {
                                 padding-left: 0;
+
                                 li {
                                     a {
                                         display: inline-block;
@@ -44,6 +153,7 @@ html body {
                             }
                         }
                     }
+
                     .menu-label:not(:last-child) {
                         margin-bottom: 0;
                     }
@@ -57,6 +167,7 @@ html body {
     .b-sidebar {
         .sidebar-content {
             &.is-mini {
+
                 &:not(.is-mini-expand),
                 &.is-mini-expand:not(:hover):not(.is-mini-delayed) {
                     .menu-list {
@@ -66,8 +177,10 @@ html body {
                                     display: none;
                                 }
                             }
+
                             ul {
                                 padding-left: 0;
+
                                 li {
                                     a {
                                         display: inline-block;
@@ -76,6 +189,7 @@ html body {
                             }
                         }
                     }
+
                     .menu-label:not(:last-child) {
                         margin-bottom: 0;
                     }
@@ -111,7 +225,7 @@ html body {
 @import "~bulma/sass/utilities/_all";
 //
 ////Set your colors
-$primary: rgb(4, 109, 30);
+$primary: #29aecf;
 $primary-light: findLightColor($primary);
 $primary-dark: findDarkColor($primary);
 $primary-invert: findColorInvert($primary);
@@ -121,7 +235,7 @@ $twitter-invert: findColorInvert($twitter);
 $custom-colors: null !default;
 $custom-shades: null !default;
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
-$colors: mergeColorMaps( ( "white": ( $white, $black, ), "black": ( $black, $white, ), "light": ( $light, $light-invert, ), "dark": ( $dark, $dark-invert, ), "primary": ( $primary, $primary-invert, $primary-light, $primary-dark, ), "link": ( $link, $link-invert, $link-light, $link-dark, ), "info": ( $info, $info-invert, $info-light, $info-dark, ), "success": ( $success, $success-invert, $success-light, $success-dark, ), "warning": ( $warning, $warning-invert, $warning-light, $warning-dark, ), "danger": ( $danger, $danger-invert, $danger-light, $danger-dark, ), ), $custom-colors);
+$colors: mergeColorMaps(("white": ($white, $black, ), "black": ($black, $white, ), "light": ($light, $light-invert, ), "dark": ($dark, $dark-invert, ), "primary": ($primary, $primary-invert, $primary-light, $primary-dark, ), "link": ($link, $link-invert, $link-light, $link-dark, ), "info": ($info, $info-invert, $info-light, $info-dark, ), "success": ($success, $success-invert, $success-light, $success-dark, ), "warning": ($warning, $warning-invert, $warning-light, $warning-dark, ), "danger": ($danger, $danger-invert, $danger-light, $danger-dark, ), ), $custom-colors);
 //// Links
 $link: $primary;
 $link-invert: $primary-invert;
@@ -130,7 +244,7 @@ $link-focus-border: $primary;
 $navbar-height: 5rem;
 $navbar-item-img-max-height: 4rem;
 //$input-background-color: rgb(217, 255, 230);
-$input-radius: 20px;
+$input-radius: 0px;
 //$navbar-burger-color: white;
 //$navbar-item-color: #ffffff;
 //$navbar-item-hover-color: #a7f1a7;
@@ -151,6 +265,7 @@ $input-radius: 20px;
 //}
 // Import Bulma and Buefy styles
 @import "~bulma";
+
 .sidebar-content {
     background-color: #2a2a2a;
 }

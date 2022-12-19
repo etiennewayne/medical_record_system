@@ -3,7 +3,7 @@
         <b-navbar>
             <template #brand>
                 <b-navbar-item>
-                    <span v-if="userRole">{{ userRole }}</span>
+                    <span>ADMINISTRATOR PANEL</span>
                 </b-navbar-item>
             </template>
             <template #start>
@@ -11,10 +11,10 @@
             </template>
 
             <template #end>
-                <b-navbar-item href="/admin/home">
+                <b-navbar-item href="/admin-home">
                     Home
                 </b-navbar-item>
-                <b-navbar-item href="/admin/job-types">
+                <!-- <b-navbar-item href="/admin/job-types">
                     Documentation
                 </b-navbar-item>
                 <b-navbar-dropdown label="Settings">
@@ -24,16 +24,17 @@
                     <b-navbar-item href="/admin/categories">
                         Category
                     </b-navbar-item>
-                </b-navbar-dropdown>
-                <b-navbar-item href="/admin/users">
-                    Users
+                </b-navbar-dropdown> -->
+                <b-navbar-item href="/admin-accounts">
+                    Accounts
                 </b-navbar-item>
                 
                 <b-navbar-item tag="div">
                     <div class="buttons">
-                        <b-button @click="logout" class="is-danger">
-                            Log out
-                        </b-button>
+                        <button @click="logout" class="w2-button">
+                            <span class="mdi mdi-logout"></span>
+                            LOG OUT
+                        </button>
                     </div>
                 </b-navbar-item>
             </template>

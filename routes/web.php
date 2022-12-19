@@ -22,15 +22,7 @@ use App\Models\Category;
 */
 
 Route::get('/', function () {
-    // if(Auth::check()){
-    //     $user = Auth::user();
-    //     return view('welcome')
-    //         ->with('user', $user->only(['lname', 'fname', 'mname', 'suffix', 'role', 'remark', 'office_id']));
-    // }
-    $categories = Category::all();
-
-    return view('welcome')
-        ->with('categories', $categories);
+    return view('welcome');
 });
 
 
@@ -72,97 +64,20 @@ Route::get('/load-barangays', [App\Http\Controllers\AddressController::class, 'l
 
 
 
+// -----------------------ADMINSITRATOR-------------------------------------------
+
+Route::get('/admin-home', [App\Http\Controllers\Administrator\AdminHomeController::class, 'index']);
 
 
-
-/*     ADMINSITRATOR          */
-
-Route::resource('/admin/home', App\Http\Controllers\Administrator\AdminHomeController::class);
+Route::get('/admin-accounts', [App\Http\Controllers\Administrator\AccountController::class, 'index']);
 
 
-Route::resource('/admin/job-types', App\Http\Controllers\Administrator\JobTypeController::class);
-Route::get('/admin/get-job-types', [App\Http\Controllers\Administrator\JobTypeController::class, 'getJobTypes']);
-
-
-Route::resource('/admin/categories', App\Http\Controllers\Administrator\CategoryController::class);
-Route::get('/admin/get-categories', [App\Http\Controllers\Administrator\CategoryController::class, 'getCategories']);
-
-
-
-Route::resource('/admin/users', App\Http\Controllers\Administrator\UserController::class);
-Route::get('/admin/get-users', [App\Http\Controllers\Administrator\UserController::class, 'getUsers']);
-
-
-
-
-// EMPLOYER ROUTES
-
-Route::resource('/employer/signup', App\Http\Controllers\Employer\EmployerSignUpController::class);
-
-Route::resource('/employer/dashboard', App\Http\Controllers\Employer\EmployerDashboardController::class);
-
-
-Route::get('/employer/company-feed/{cid}', [App\Http\Controllers\Employer\EmployerFeedsController::class, 'index']);
-
-Route::get('/employer/get-my-companies', [App\Http\Controllers\Employer\EmployerCompanyController::class, 'getMyCompanies']);
-
-
-
-Route::get('/employer/company-add-edit', [App\Http\Controllers\Employer\EmployerCompanyController::class, 'create']);
-Route::post('/employer/company-add-edit', [App\Http\Controllers\Employer\EmployerCompanyController::class, 'store']);
-Route::put('/employer/company-add-edit/{id}', [App\Http\Controllers\Employer\EmployerCompanyController::class, 'update']);
-Route::get('/employer/company-add-edit/{id}', [App\Http\Controllers\Employer\EmployerCompanyController::class, 'edit']);
-Route::get('/employer/company-show/{cid}', [App\Http\Controllers\Employer\EmployerCompanyController::class, 'show']);
-Route::delete('/employer/company-delete/{id}', [App\Http\Controllers\Employer\EmployerCompanyController::class, 'destroy']);
-
-
-
-
-// ------------------------------------------------------------------
+// -----------------------ADMINSITRATOR-------------------------------------------
 
 Route::get('/session', function(){
     return Session::all();
 });
 
-
-Route::get('/before', function(){
-    //return Session::all();
-
-
-    $beforeDay = date('Y-m-d H:i', strtotime('+24 hour', strtotime(date('Y-m-d H:i'))));
-
-    $data = \DB::table('appointments')
-        ->where('appoint_date', date('Y-m-d', strtotime($beforeDay)))
-        ->where('appoint_time', date('H:i', strtotime($beforeDay)))
-        ->where('is_notify', 0)
-        ->get();
-
-    foreach($data as $i){
-
-        $user = User::find($i->user_id);
-
-        $msg = 'Hi '.$user->lname . ', ' . $user->fname . ', this is just a reminder that you have an appointment tomorrow. Your ref no. is: ' . $i->qr_code . '.';
-        try{
-            Http::withHeaders([
-                'Content-Type' => 'text/plain'
-            ])->post('http://'. env('IP_SMS_GATEWAY') .'/services/api/messaging?Message='.$msg.'&To='.$user->contact_no.'&Slot=1', []);
-        }catch(Exception $e){} //just hide the error
-
-        $appoint = Appointment::find($i->appointment_id);
-        $appoint->is_notify = 1;
-        $appoint->save();
-    }
-
-    //$beforeDay = date($today, strtotime('-1 day'));
-    return $data;
-});
-
-
-
-
-Route::get('/collect', function(){
-    return $collection = collect([1, 2, 3]);
-});
 
 
 Route::get('/applogout', function(Request $req){

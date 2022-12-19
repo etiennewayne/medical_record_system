@@ -2,33 +2,27 @@
     <b-navbar>
         <template #brand>
             <b-navbar-item>
-                <img src="/img/trablogo.png" />
+                <img src="/img/logo.png" />
                 
             </b-navbar-item>
         </template>
 
         <template #start>
-            <b-navbar-item href="/">
-                Hunt Talent
-            </b-navbar-item>
-            <b-navbar-item href="/">
-                Hunt Job
-            </b-navbar-item>
-
-            <b-navbar-item href="/">
-                About Us
-            </b-navbar-item>
+           
 
         </template>
 
         <template #end>
+           
             <b-navbar-item href="/">
-                FAQ
+                Home
             </b-navbar-item>
-
+            <b-navbar-item href="/">
+                About Us
+            </b-navbar-item>
             <b-navbar-item tag="div">
                 <div v-if="!currentLogin" class="buttons">
-                    <a class="button is-primary is-rounded" href="/login">
+                    <a class="button is-primary is-outlined" href="/login">
                         <strong>Login</strong>
                     </a>
                 </div>

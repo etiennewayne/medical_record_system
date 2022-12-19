@@ -18,50 +18,33 @@ class UserSeeder extends Seeder
         $data = [
             [
                 'username' => 'admin',
-                'lname' => 'ABELLA',
-                'fname' => 'LEDA GRACE',
+                'lname' => 'CAGO',
+                'fname' => 'ROFEL',
                 'mname' => 'P',
                 'sex' => 'MALE',
                 'province' => 'MISAMIS OCCIDENTAL',
                 'city' => 'TANGUB CITY',
                 'barangay' => 'CANIANGAN',
                 'street' => 'P-6',
-                'email' => 'admin@dev.com',
-                'contact_no' => '09167789585',
+                'email' => 'rofel@dev.com',
+                'contact_no' => '1234',
                 'role' => 'ADMINISTRATOR',
                 'password' => Hash::make('a')
             ],
 
-            //client
             [
-                'username' => 'user01',
-                'lname' => 'LUMAPAC',
-                'fname' => 'RAMONITO',
+                'username' => 'jessa',
+                'lname' => 'BECHADA',
+                'fname' => 'JESSA',
                 'mname' => 'P',
-                'sex' => 'MALE',
+                'sex' => 'FEMALE',
                 'province' => 'MISAMIS OCCIDENTAL',
                 'city' => 'TANGUB CITY',
                 'barangay' => 'CANIANGAN',
                 'street' => 'P-6',
-                'email' => 'neri@dev.com',
-                'contact_no' => '09167789585',
-                'role' => 'USER',
-                'password' => Hash::make('a')
-            ],
-
-            [
-                'username' => 'emp01',
-                'lname' => 'SACAN',
-                'fname' => 'NIMROD',
-                'mname' => 'P',
-                'sex' => 'MALE',
-                'province' => 'MISAMIS OCCIDENTAL',
-                'city' => 'TANGUB CITY',
-                'barangay' => 'CANIANGAN',
-                'street' => 'P-6',
-                'email' => 'sacan@dev.com',
-                'contact_no' => '09167789585',
-                'role' => 'EMPLOYER',
+                'email' => 'jessa@dev.com',
+                'contact_no' => '1234',
+                'role' => 'ADMINISTRATOR',
                 'password' => Hash::make('a')
             ],
 
