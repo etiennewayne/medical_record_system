@@ -69,10 +69,72 @@ Route::get('/load-barangays', [App\Http\Controllers\AddressController::class, 'l
 Route::get('/admin-home', [App\Http\Controllers\Administrator\AdminHomeController::class, 'index']);
 
 
-Route::get('/admin-accounts', [App\Http\Controllers\Administrator\AccountController::class, 'index']);
+Route::resource('/accounts', App\Http\Controllers\Administrator\AccountController::class);
+Route::get('/get-accounts', [App\Http\Controllers\Administrator\AccountController::class, 'getAccounts']);
 
+
+Route::resource('/designations', App\Http\Controllers\Administrator\DesignationController::class);
+Route::get('/get-designations', [App\Http\Controllers\Administrator\DesignationController::class, 'getDesignations']);
+
+
+
+
+Route::get('/manage-patient', [App\Http\Controllers\Administrator\ManagePatientController::class, 'index']);
 
 // -----------------------ADMINSITRATOR-------------------------------------------
+
+
+
+// -----------------------NURSE-------------------------------------------
+Route::resource('/nurse-home', App\Http\Controllers\Nurse\NurseHomeController::class);
+
+Route::resource('/nurse-patient', App\Http\Controllers\Nurse\NursePatientController::class);
+Route::get('/get-nurse-patients',[App\Http\Controllers\Nurse\NursePatientController::class, 'getNursePatients']);
+
+
+
+Route::get('/nurse-patient-diagnoses/{id}',[App\Http\Controllers\Nurse\NursePatientDiagnoseController::class, 'index']);
+Route::get('/get-nurse-patient-diagnoses/{id}',[App\Http\Controllers\Nurse\NursePatientDiagnoseController::class, 'getPatientDiagnoses']);
+
+Route::post('/nurse-patient-submit-diagnose',[App\Http\Controllers\Nurse\NursePatientDiagnoseController::class, 'store']);
+
+
+Route::get('/nurse-patient-diagnose-doctor-orders/{id}',[App\Http\Controllers\Nurse\NursePatientDiagnoseDoctorOrderController::class, 'index']);
+Route::get('/get-nurse-patient-diagnose-doctor-orders/{id}',[App\Http\Controllers\Nurse\NursePatientDiagnoseDoctorOrderController::class, 'getDoctorOrders']);
+Route::post('/nurse-patient-diagnose-doctor-orders-detail-update/{id}',[App\Http\Controllers\Nurse\NursePatientDiagnoseDoctorOrderController::class, 'updateOrderDetail']);
+
+
+
+// -----------------------NURSE-------------------------------------------
+
+
+
+// -----------------------DOCTOR-------------------------------------------
+Route::resource('/doctor-home', App\Http\Controllers\Doctor\DoctorHomeController::class);
+
+
+
+Route::resource('/doctor-patients', App\Http\Controllers\Doctor\DoctorPatientController::class);
+Route::get('/get-doctor-patients', [App\Http\Controllers\Doctor\DoctorPatientController::class, 'getDoctorPatients']);
+
+Route::get('/doctor-patient-diagnoses/{id}', [App\Http\Controllers\Doctor\PatientDiagnoseController::class, 'index']);
+
+Route::post('/doctor-patient-diagnose-submit', [App\Http\Controllers\Doctor\PatientDiagnoseController::class, 'store']);
+
+// -----------------------DOCTOR-------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::get('/session', function(){
     return Session::all();

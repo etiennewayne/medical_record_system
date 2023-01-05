@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <accounts></accounts>
+    <accounts prop-designations='@json($designations)'></accounts>
 @endsection
 

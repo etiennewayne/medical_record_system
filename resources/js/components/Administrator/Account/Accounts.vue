@@ -20,7 +20,6 @@
                             <b-button @click="openModal" icon-left="plus" class="is-primary is-small">NEW</b-button>
                         </div>
 
-
                         <b-table
                             :data="data"
                             :loading="loading"
@@ -52,10 +51,6 @@
 
                             <b-table-column field="sex" label="Sex" v-slot="props">
                                 {{ props.row.sex }}
-                            </b-table-column>
-
-                            <b-table-column field="email" label="Email" v-slot="props">
-                                {{ props.row.email }}
                             </b-table-column>
 
                             <b-table-column field="role" label="Role" v-slot="props">
@@ -160,13 +155,12 @@
                                         </b-input>
                                     </b-field>
                                 </div>
-
                                 <div class="column">
-                                    <b-field label="Email" label-position="on-border"
-                                             :type="this.errors.email ? 'is-danger':''"
-                                             :message="this.errors.email ? this.errors.email[0] : ''">
-                                        <b-input type="email" v-model="fields.email"
-                                                 placeholder="Email" required>
+                                    <b-field label="Suffix" label-position="on-border"
+                                             :type="this.errors.suffix ? 'is-danger':''"
+                                             :message="this.errors.suffix ? this.errors.suffix[0] : ''">
+                                        <b-input v-model="fields.suffix"
+                                                 placeholder="Suffix">
                                         </b-input>
                                     </b-field>
                                 </div>
@@ -182,7 +176,18 @@
                                         </b-input>
                                     </b-field>
                                 </div>
+                                <div class="column">
+                                    <b-field label="Designation" expanded label-position="on-border"
+                                             :type="this.errors.designation ? 'is-danger':''"
+                                             :message="this.errors.designation ? this.errors.designation[0] : ''">
+                                        <b-select v-model="fields.designation" expanded
+                                                 placeholder="Designation">
+                                            <option v-for="(item, index) in designations" :key="index" :value="item.designation">{{  item.designation }}</option>
+                                        </b-select>
+                                    </b-field>
+                                </div>
                             </div>
+
                             <div class="columns" v-if="global_id < 1">
                                 <div class="column">
                                     <b-field label="Password" label-position="on-border"
@@ -223,78 +228,21 @@
                                              :type="this.errors.role ? 'is-danger':''"
                                              :message="this.errors.role ? this.errors.role[0] : ''">
                                         <b-select v-model="fields.role" expanded>
-                                            <option value="ADMIN">ADMINISTRATOR</option>
-                                            <option value="DENTIST">USER</option>
-                                            <option value="STAFF">EMPLOYER</option>
+                                            <option value="ADMINISTRATOR">ADMINISTRATOR</option>
+                                            <option value="CHIEF NURSE">CHIEF NURSE</option>
+                                            <option value="NURSE">NURSE</option>
+                                            <option value="DOCTOR">DOCTOR</option>
+                                            <option value="RECORD OFFICER">RECORD OFFICER</option>
                                         </b-select>
                                     </b-field>
                                 </div>
 
                             </div>
 
-                            <div class="columns">
-                                <div class="column" v-if="fields.role === 'OFFICE'">
-                                    <b-field label="Office" label-position="on-border" expanded
-                                             :type="this.errors.office ? 'is-danger':''"
-                                             :message="this.errors.office ? this.errors.office[0] : ''">
-                                        <b-select v-model="fields.office" expanded>
-                                            <option v-for="(item, index) in offices" :key="index" :value="item.office_id">{{ item.office_name }}</option>
-                                        </b-select>
-                                    </b-field>
-                                </div>
-
-                            </div>
-
-                            <div class="columns">
-                                <div class="column">
-                                    <b-field label="Province" label-position="on-border" expanded
-                                             :type="this.errors.province ? 'is-danger':''"
-                                             :message="this.errors.province ? this.errors.province[0] : ''">
-                                        <b-select v-model="fields.province" @input="loadCity" expanded>
-                                            <option v-for="(item, index) in provinces" :key="index" :value="item.provCode">{{ item.provDesc }}</option>
-                                        </b-select>
-                                    </b-field>
-                                </div>
-
-                                <div class="column">
-                                    <b-field label="City" label-position="on-border" expanded
-                                             :type="this.errors.city ? 'is-danger':''"
-                                             :message="this.errors.city ? this.errors.city[0] : ''">
-                                        <b-select v-model="fields.city" @input="loadBarangay" expanded>
-                                            <option v-for="(item, index) in cities" :key="index" :value="item.citymunCode">{{ item.citymunDesc }}</option>
-                                        </b-select>
-                                    </b-field>
-                                </div>
-                            </div>
-
-                            <div class="columns">
-                                <div class="column">
-                                    <b-field label="Barangay" label-position="on-border" expanded
-                                             :type="this.errors.barangay ? 'is-danger':''"
-                                             :message="this.errors.barangay ? this.errors.barangay[0] : ''">
-                                        <b-select v-model="fields.barangay" expanded>
-                                            <option v-for="(item, index) in barangays" :key="index" :value="item.brgyCode">{{ item.brgyDesc }}</option>
-                                        </b-select>
-                                    </b-field>
-                                </div>
-                                <div class="column">
-                                    <b-field label="Street" label-position="on-border">
-                                        <b-input v-model="fields.street"
-                                                 placeholder="Street">
-                                        </b-input>
-                                    </b-field>
-                                </div>
-                            </div>
                         </div>
                     </section>
                     <footer class="modal-card-foot">
-                        <b-button
-                            label="Close"
-                            @click="isModalCreate=false"/>
-                        <button
-                            :class="btnClass"
-                            label="Save"
-                            type="is-success">SAVE</button>
+                        <button class="button is-primary">Save Account</button>
                     </footer>
                 </div>
             </form><!--close form-->
@@ -346,13 +294,8 @@
                         </div>
                     </section>
                     <footer class="modal-card-foot">
-                        <b-button
-                            label="Close"
-                            @click="modalResetPassword=false"/>
                         <button
-                            :class="btnClass"
-                            label="Save"
-                            type="is-success">SAVE</button>
+                            class="button is-primary">SAVE</button>
                     </footer>
                 </div>
             </form><!--close form-->
@@ -366,6 +309,7 @@
 <script>
 
 export default{
+    props: ['propDesignations'],
     data() {
         return{
             data: [],
@@ -389,25 +333,20 @@ export default{
 
             fields: {
                 username: '',
-                lname: '', fname: '', mname: '',
-                password: '', password_confirmation : '',
-                sex : '', role: '',  email : '', contact_no : '',
-                province: '', city: '', barangay: '', street: ''
+                lname: '', 
+                fname: '',
+                mname: '',
+                suffix: '',
+                designation: '',
+                password: '', 
+                password_confirmation : '',
+                sex : '', role: '', 
+                contact_no : '',
             },
             errors: {},
-            offices: [],
-
-            btnClass: {
-                'is-success': true,
-                'button': true,
-                'is-loading':false,
-            },
-
-            provinces: [],
-            cities: [],
-            barangays: [],
 
 
+            designations: [],
         }
 
     },
@@ -425,7 +364,7 @@ export default{
             ].join('&')
 
             this.loading = true
-            axios.get(`/admin/get-users?${params}`)
+            axios.get(`/get-accounts?${params}`)
                 .then(({ data }) => {
                     this.data = [];
                     let currentTotal = data.total
@@ -471,29 +410,13 @@ export default{
             this.errors = {};
         },
 
-        loadProvince: function(){
-            axios.get('/load-provinces').then(res=>{
-                this.provinces = res.data;
-            })
-        },
-
-        loadCity: function(){
-            axios.get('/load-cities?prov=' + this.fields.province).then(res=>{
-                this.cities = res.data;
-            })
-        },
-
-        loadBarangay: function(){
-            axios.get('/load-barangays?prov=' + this.fields.province + '&city_code='+this.fields.city).then(res=>{
-                this.barangays = res.data;
-            })
-        },
+      
 
 
         submit: function(){
             if(this.global_id > 0){
                 //update
-                axios.put('/admin/users/'+this.global_id, this.fields).then(res=>{
+                axios.put('/accounts/'+this.global_id, this.fields).then(res=>{
                     if(res.data.status === 'updated'){
                         this.$buefy.dialog.alert({
                             title: 'UPDATED!',
@@ -514,7 +437,7 @@ export default{
                 })
             }else{
                 //INSERT HERE
-                axios.post('/admin/users', this.fields).then(res=>{
+                axios.post('/accounts', this.fields).then(res=>{
                     if(res.data.status === 'saved'){
                         this.$buefy.dialog.alert({
                             title: 'SAVED!',
@@ -534,8 +457,6 @@ export default{
                         this.errors = err.response.data.errors;
                     }
                 });
-
-
             }
         },
 
@@ -553,8 +474,9 @@ export default{
         },
         //execute delete after confirming
         deleteSubmit(delete_id) {
-            axios.delete('/admin/users/' + delete_id).then(res => {
+            axios.delete('/accounts/' + delete_id).then(res => {
                 this.loadAsyncData();
+                this.clearFields()
             }).catch(err => {
                 if (err.response.status === 422) {
                     this.errors = err.response.data.errors;
@@ -563,12 +485,19 @@ export default{
         },
 
         clearFields(){
+            this.global_id = 0;
+
             this.fields = {
-                    username: '',
-                    lname: '', fname: '', mname: '',
-                    password: '', password_confirmation : '',
-                    sex : '', role: '',  email : '', contact_no : '',
-                    province: '', city: '', barangay: '', street: ''
+                username: '',
+                lname: '', 
+                fname: '',
+                mname: '',
+                suffix: '',
+                designation: '',
+                password: '', 
+                password_confirmation : '',
+                sex : '', role: '', 
+                contact_no : '',
             };
         },
 
@@ -579,30 +508,11 @@ export default{
             this.global_id = data_id;
             this.isModalCreate = true;
 
-
             //nested axios for getting the address 1 by 1 or request by request
-            axios.get('/admin/users/'+data_id).then(res=>{
+            axios.get('/accounts/'+data_id).then(res=>{
                 this.fields = res.data;
-                this.fields.office = res.data.office_id;
-                let tempData = res.data;
-                //load city first
-                axios.get('/load-cities?prov=' + this.fields.province).then(res=>{
-                    //load barangay
-                    this.cities = res.data;
-                    axios.get('/load-barangays?prov=' + this.fields.province + '&city_code='+this.fields.city).then(res=>{
-                        this.barangays = res.data;
-                        this.fields = tempData;
-                    });
-                });
             });
         },
-
-        loadOffices(){
-            axios.get('/get-user-offices').then(res=>{
-                this.offices = res.data
-            });
-        },
-
 
         //CHANGE PASSWORD
         openModalResetPassword(dataId){
@@ -634,15 +544,19 @@ export default{
             })
         },
 
-
+        initData(){
+            this.designations = JSON.parse(this.propDesignations)
+        }
     },
 
     mounted() {
-        //this.loadOffices();
-        this.loadAsyncData();
-        this.loadProvince();
+        this.initData();
+        this.loadAsyncData()
     }
+
 }
+
+
 </script>
 
 

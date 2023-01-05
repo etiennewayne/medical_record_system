@@ -8,6 +8,9 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
+use App\Models\Designation;
+
+
 class AccountController extends Controller
 {
     //
@@ -20,10 +23,14 @@ class AccountController extends Controller
     }
 
     public function index(){
-        return view('administrator.admin-accounts'); //blade.php
+        
+        $designations = Designation::orderBy('designation', 'asc')->get();
+
+        return view('administrator.admin-accounts')
+            ->with('designations', $designations); //blade.php
     }
 
-    public function getUsers(Request $req){
+    public function getAccounts(Request $req){
         $sort = explode('.', $req->sort_by);
 
         $users = User::where('lname', 'like', $req->lname . '%')
@@ -46,29 +53,23 @@ class AccountController extends Controller
             'lname' => ['required', 'string', 'max:100'],
             'fname' => ['required', 'string', 'max:100'],
             'sex' => ['required', 'string', 'max:20'],
-            'email' => ['required', 'unique:users'],
             'password' => ['required', 'string', 'confirmed'],
             'role' => ['required', 'string'],
-            'province' => ['required', 'string'],
-            'city' => ['required', 'string'],
-            'barangay' => ['required', 'string'],
+           
         ]);
 
         User::create([
-            'qr_ref' => $qr_code,
             'username' => $req->username,
             'password' => Hash::make($req->password),
             'lname' => strtoupper($req->lname),
             'fname' => strtoupper($req->fname),
             'mname' => strtoupper($req->mname),
+            'suffix' => strtoupper($req->suffix),
             'sex' => $req->sex,
-            'email' => $req->email,
+            'designation' => strtoupper($req->designation),
             'contact_no' => $req->contact_no,
             'role' => $req->role,
-            'province' => $req->province,
-            'city' => $req->city,
-            'barangay' => $req->barangay,
-            'street' => strtoupper($req->street)
+       
         ]);
 
         return response()->json([
@@ -82,11 +83,8 @@ class AccountController extends Controller
             'lname' => ['required', 'string', 'max:100'],
             'fname' => ['required', 'string', 'max:100'],
             'sex' => ['required', 'string', 'max:20'],
-            'email' => ['required', 'unique:users,email,'.$id.',user_id'],
             'role' => ['required', 'string'],
-            'province' => ['required', 'string'],
-            'city' => ['required', 'string'],
-            'barangay' => ['required', 'string'],
+
         ]);
 
         $data = User::find($id);
@@ -94,13 +92,11 @@ class AccountController extends Controller
         $data->lname = strtoupper($req->lname);
         $data->fname = strtoupper($req->fname);
         $data->mname = strtoupper($req->mname);
+        $data->suffix = strtoupper($req->suffix);
+        $data->designation = strtoupper($req->designation);
         $data->sex = $req->sex;
-        $data->email = $req->email;
+        $data->contact_no = $req->contact_no;
         $data->role = $req->role;
-        $data->province = $req->province;
-        $data->city = $req->city;
-        $data->barangay = $req->barangay;
-        $data->street = strtoupper($req->street);
         $data->save();
 
         return response()->json([
@@ -109,14 +105,7 @@ class AccountController extends Controller
     }
 
 
-    public function getBrowseDentist(Request $req){
 
-        $data = User::where('lname', 'like', $req->lname . '%')
-            ->where('fname', 'like', $req->fname . '%')
-            ->where('role', 'DENTIST')
-            ->paginate($req->perpage);
-        return $data;
-    }
 
     public function resetPassword(Request $req, $id){
 
@@ -124,11 +113,6 @@ class AccountController extends Controller
             'password' => ['required', 'confirmed']
         ]);
 
-//        if($req->password != $req->password_confirmation){
-//            return response()->json([
-//                'status' => 'not_matched'
-//            ], 422);
-//        }
 
         $user = User::find($id);
         $user->password = Hash::make($req->password);

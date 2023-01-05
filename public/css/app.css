@@ -26641,6 +26641,10 @@ html body {
   box-shadow: 0px 1px 10px #e0e0e0;
 }
 
+button {
+  border-radius: 0px !important;
+}
+
 .w-button {
   display: inline-block;
   padding: 10px 24px;
@@ -27000,6 +27004,22 @@ fieldset[disabled] .file-name, fieldset[disabled] .select select, .select fields
   font-size: 1em;
   margin: 0;
   padding: 0;
+}
+
+.table-text {
+  font-weight: bold;
+  font-size: 1.4em;
+  text-align: center;
+  padding: 10px 5px;
+  border-bottom: 1px solid #b9b9b9;
+  margin: 5px 0 30px 0;
+}
+
+.box-text {
+  font-weight: bold;
+  font-size: 1.2em;
+  border-bottom: 1px solid #b9b9b9;
+  margin: 5px 0 30px 0;
 }
 
 /*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma */
@@ -31410,7 +31430,7 @@ button.dropdown-item.is-active {
 .modal-card-head,
 .modal-card-foot {
   align-items: center;
-  background-color: whitesmoke;
+  background-color: #ffffff;
   display: flex;
   flex-shrink: 0;
   justify-content: flex-start;

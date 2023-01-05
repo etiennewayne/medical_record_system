@@ -51,8 +51,12 @@ export default {
                     window.location = '/admin-home';
                 }
 
-                if(res.data.role === 'USER'){
-                    window.location = '/';
+                if(res.data.role === 'NURSE'){
+                    window.location = '/nurse-home';
+                }
+
+                if(res.data.role === 'DOCTOR'){
+                    window.location = '/doctor-home';
                 }
 
                //window.location = '/dashboard';

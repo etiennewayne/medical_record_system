@@ -14,18 +14,20 @@
                 <b-navbar-item href="/admin-home">
                     Home
                 </b-navbar-item>
-                <!-- <b-navbar-item href="/admin/job-types">
-                    Documentation
+
+                <b-navbar-item href="/manage-patient">
+                    Patient
                 </b-navbar-item>
-                <b-navbar-dropdown label="Settings">
-                    <b-navbar-item href="/admin/job-types">
-                        Job Type
+               
+                <b-navbar-dropdown label="Setup">
+                    <b-navbar-item href="/designations">
+                        Designations
                     </b-navbar-item>
-                    <b-navbar-item href="/admin/categories">
+                    <!-- <b-navbar-item href="/role">
                         Category
-                    </b-navbar-item>
-                </b-navbar-dropdown> -->
-                <b-navbar-item href="/admin-accounts">
+                    </b-navbar-item> -->
+                </b-navbar-dropdown>
+                <b-navbar-item href="/accounts">
                     Accounts
                 </b-navbar-item>
                 
