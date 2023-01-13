@@ -85,7 +85,17 @@ Route::get('/manage-patient', [App\Http\Controllers\Administrator\ManagePatientC
 
 
 
+//open links
+Route::get('/load-open-nationalities', [App\Http\Controllers\OpenController::class, 'loadNationalities']);
+Route::get('/load-open-religions', [App\Http\Controllers\OpenController::class, 'loadReligions']);
+
+
 // -----------------------NURSE-------------------------------------------
+
+Route::resource('/new-admission', App\Http\Controllers\Nurse\NewAdmissionController::class);
+
+
+
 Route::resource('/nurse-home', App\Http\Controllers\Nurse\NurseHomeController::class);
 
 Route::resource('/nurse-patient', App\Http\Controllers\Nurse\NursePatientController::class);
