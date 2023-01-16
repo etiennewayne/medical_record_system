@@ -8,13 +8,15 @@ use App\Models\Patient;
 use App\Models\Religion;
 use App\Models\Nationality;
 use App\Models\User;
+use App\Models\NursePatient;
+
 
 class NursePatientController extends Controller
 {
     //
     public function __construct(){
         $this->middleware('auth');
-        $this->middleware('nurse');
+        //$this->middleware('nurse');
     }
 
     public function index(){
@@ -47,49 +49,9 @@ class NursePatientController extends Controller
             ->with('fname', $req->fname);
     }
 
-    public function store(Request $req){
-        
-        $req->validate([
-            'lname' => ['required'],
-            'fname' => ['required'],
-            'sex' => ['required'],
-            'province' => ['required'],
-            'city' => ['required'],
-            'barangay' => ['required'],
-            'mother_maiden_name' => ['required'],
-        ]);
-
-        $dob = date("Y-m-d", strtotime($req->bdate)); //convert to date format UNIX
-
-        Patient::create([
-            'lname' => strtoupper($req->lname),
-            'fname' => strtoupper($req->fname),
-            'mname' => strtoupper($req->mname),
-            'suffix' => strtoupper($req->suffix),
-            'province' => $req->province,
-            'city' => $req->city,
-            'barangay' => $req->barangay,
-            'street' => $req->street,
-            'contact_no' => $req->contact_no,
-            'sex' => strtoupper($req->sex),
-            'civil_status' => strtoupper($req->civil_status),
-            'bdate' => $dob,
-            'birthplace' => strtoupper($req->birthplace),
-            'nationality' => strtoupper($req->nationality),
-            'religion' => strtoupper($req->religion),
-            'mother_maiden_name' => strtoupper($req->mother_maiden_name),
-            'father_name' => strtoupper($req->father_name),
-            'admission_date' => date('Y-m-d'),
-            'family_history' => $req->family_history,
 
 
-        ]);
 
-        return response()->json([
-            'status' => 'saved'
-        ], 200);
-
-    }
 
     public function edit($id){
 
@@ -147,8 +109,12 @@ class NursePatientController extends Controller
         ], 200);
     }
 
+
+
     public function destroy($id){
-        Patient::destroy($id);
+        //return $id;
+
+        NursePatient::destroy($id);
 
         return response()->json([
             'status' => 'deleted'

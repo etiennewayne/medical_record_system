@@ -31,6 +31,7 @@
                             :data="data"
                             :loading="loading"
                             paginated
+                            detailed
                             backend-pagination
                             :total="total"
                             :pagination-rounded="true"
@@ -44,12 +45,12 @@
                             :default-sort-direction="defaultSortDirection"
                             @sort="onSort">
 
-                            <b-table-column field="patient_diagnose_id" label="ID" sortable v-slot="props">
-                                {{ props.row.patient_diagnose_id }}
+                            <b-table-column field="patient_id" label="ID" sortable v-slot="props">
+                                {{ props.row.patient_id }}
                             </b-table-column>
 
-                            <b-table-column field="date_admission" label="Date Admission" sortable v-slot="props">
-                                {{ props.row.date_admission }}
+                            <b-table-column field="admission_date" label="Admission Date" sortable v-slot="props">
+                                {{ props.row.admission_date | formatDateAndTime }}
                             </b-table-column>
                             <b-table-column field="name" label="Name" sortable v-slot="props">
                                 {{ props.row.fname }} {{ props.row.mname }} {{ props.row.lname }} {{ props.row.suffix }}
@@ -75,46 +76,71 @@
                                 {{ props.row.father_name }}
                             </b-table-column>
 
-                            <b-table-column label="Action" v-slot="props">
-                                <div class="is-flex">
+                            
 
-                                    <b-dropdown aria-role="list">
-                                        <template #trigger="{ active }">
-                                            <b-button
-                                                label="Option"
-                                                type="is-primary"
-                                                class="is-small"
-                                                :icon-right="active ? 'menu-up' : 'menu-down'" />
-                                        </template>
+                            <template #detail="props">
+                                <tr>
+                                    <th>Admission Id</th>
+                                    <th>Admission Date</th>
+                                    <th>Discharge Date</th>
+                                    <th>Total Day</th>
+                                    <th>Ward/Room</th>
+                                    <th>Admitting Physician</th>
+                                    <th>Action</th>
+                                </tr>
+                                <tr v-for="(item, index) in props.row.patient_admissions" :key="index">
+                                    <td>{{ item.patient_admission_id }}</td>
+                                    <td>{{ item.admission_date }}</td>
+                                    <td>{{ item.discharge_date }}</td>
+                                    <td>{{ item.total_day }}</td>
+                                    <td>{{ item.ward_room }}</td>
+                                    <td>{{ item.admitting_physician }}</td>
+                                    <td>
+
+                                        <b-dropdown aria-role="list">
+                                            <template #trigger="{ active }">
+                                                <b-button
+                                                    label="Option"
+                                                    type="is-primary"
+                                                    class="is-small"
+                                                    :icon-right="active ? 'menu-up' : 'menu-down'" />
+                                            </template>
+
+                                            <b-dropdown-item aria-role="listitem"
+                                                             :href="`/doctor-patient-diagnose/${item.patient_admission_id}/${item.patient_id}`">
+                                                Diagnose
+                                            </b-dropdown-item>
+                                            <b-dropdown-item aria-role="listitem"
+                                                             :href="`/doctor-patient-history/${item.patient_admission_id}/${item.patient_id}`">
+                                                History
+                                            </b-dropdown-item>
+
+                                            <b-dropdown-item aria-role="listitem"
+                                                             :href="`/doctor-patient-system-review/${item.patient_admission_id}/${item.patient_id}`">
+                                                System Review
+                                            </b-dropdown-item>
+
+                                            <b-dropdown-item aria-role="listitem"
+                                                             :href="`/doctor-patient-physical-exam/${item.patient_admission_id}/${item.patient_id}`">
+                                                Physical Exam
+                                            </b-dropdown-item>
+
+                                            <b-dropdown-item aria-role="listitem"
+                                                             :href="`/doctor-patient-disposition/${item.patient_admission_id}/${item.patient_id}`">
+                                                Disposition
+                                            </b-dropdown-item>
+
+<!--                                            <b-dropdown-item aria-role="listitem"-->
+<!--                                                             @click="confirmDelete(props.row.nurse_patient_id)"-->
+<!--                                                             Show diagnoses>-->
+<!--                                                Delete-->
+<!--                                            </b-dropdown-item>-->
+                                        </b-dropdown>
 
 
-<!--                                        <b-dropdown-item aria-role="listitem"-->
-<!--                                             icon-right="pencil"-->
-<!--                                             :href="`/nurse-patient/${props.row.patient_id}/edit`">Update</b-dropdown-item>-->
-
-<!--                                        <b-dropdown-item aria-role="listitem" @click="openModalDiagnose(props.row)">-->
-<!--                                            Show Diagnose-->
-<!--                                        </b-dropdown-item>-->
-
-                                        <b-dropdown-item aria-role="listitem" :href="`/doctor-patient-diagnoses/${props.row.patient_diagnose_id}`">
-                                            Show diagnoses
-                                        </b-dropdown-item>
-
-<!--                                        <hr>-->
-
-<!--                                        <b-dropdown-item aria-role="listitem"-->
-<!--                                                         icon-right="delete"-->
-<!--                                                         @click="confirmDelete(props.row.patient_id)"-->
-<!--                                        >-->
-<!--                                            Delete-->
-<!--                                        </b-dropdown-item>-->
-
-                                    </b-dropdown>
-
-
-
-                                </div>
-                            </b-table-column>
+                                    </td>
+                                </tr>
+                            </template>
                         </b-table>
 
                         <div class="columns">
@@ -137,180 +163,6 @@
 
 
 
-        <!--modal reset password-->
-        <b-modal v-model="modalDiagnose" has-modal-card
-                 trap-focus
-                 :width="640"
-                 aria-role="dialog"
-                 aria-label="Modal"
-                 aria-modal>
-
-            <form @submit.prevent="submitDiagnose">
-                <div class="modal-card">
-                    <header class="modal-card-head">
-                        <p class="modal-card-title">Diagnose Information</p>
-                        <button
-                            type="button"
-                            class="delete"
-                            @click="modalDiagnose = false"/>
-                    </header>
-
-                    <section class="modal-card-body">
-                        <div class="">
-                            <div class="columns">
-                                <div class="column">
-
-                                    <b-field label="Present Complain" label-position="on-border"
-                                             :type="this.errors.present_complain ? 'is-danger':''"
-                                             :message="this.errors.present_complain ? this.errors.present_complain[0] : ''">
-                                        <b-input type="textarea" v-model="fields.present_complain"
-                                                 placeholder="Present Complain">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Admission Diagnose" label-position="on-border"
-                                             :type="this.errors.admission_diagnose ? 'is-danger':''"
-                                             :message="this.errors.admission_diagnose ? this.errors.admission_diagnose[0] : ''">
-                                        <b-input type="textarea" v-model="fields.admission_diagnose"
-                                                 placeholder="Admission Diagnose">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Principal Diagnose" label-position="on-border"
-                                             :type="this.errors.principal_diagnose ? 'is-danger':''"
-                                             :message="this.errors.principal_diagnose ? this.errors.principal_diagnose[0] : ''">
-                                        <b-input type="textarea" v-model="fields.principal_diagnose"
-                                                 placeholder="Principal Diagnose">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Doctor" label-position="on-border"
-                                             :type="this.errors.doctor ? 'is-danger':''"
-                                             :message="this.errors.doctor ? this.errors.doctor[0] : ''">
-                                        <b-select v-model="fields.doctor"
-                                                  placeholder="Doctor">
-                                            <option v-for="(item, index) in doctors" :key="index"
-                                                    :value="item.user_id">{{ item.lname }}, {{ item.fname }} {{item.mname  }}</option>
-                                        </b-select>
-                                    </b-field>
-
-                                    <b-field label="Skin" label-position="on-border"
-                                             :type="this.errors.skin ? 'is-danger':''"
-                                             :message="this.errors.skin ? this.errors.skin[0] : ''">
-                                        <b-input type="text" v-model="fields.skin"
-                                                 placeholder="Skin">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Head EENT" label-position="on-border"
-                                             :type="this.errors.head_eent ? 'is-danger':''"
-                                             :message="this.errors.head_eent ? this.errors.head_eent[0] : ''">
-                                        <b-input type="text" v-model="fields.head_eent"
-                                                 placeholder="Head EENT">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Lymp Notes" label-position="on-border"
-                                             :type="this.errors.lymp_notes ? 'is-danger':''"
-                                             :message="this.errors.lymp_notes ? this.errors.lymp_notes[0] : ''">
-                                        <b-input type="text" v-model="fields.lymp_notes"
-                                                 placeholder="Lymp Notes">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Chest" label-position="on-border"
-                                             :type="this.errors.chest ? 'is-danger':''"
-                                             :message="this.errors.chest ? this.errors.chest[0] : ''">
-                                        <b-input type="text" v-model="fields.chest"
-                                                 placeholder="Chest">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Lungs" label-position="on-border"
-                                             :type="this.errors.lungs ? 'is-danger':''"
-                                             :message="this.errors.lungs ? this.errors.lungs[0] : ''">
-                                        <b-input type="text" v-model="fields.lungs"
-                                                 placeholder="Lungs">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Cadiovascular" label-position="on-border"
-                                             :type="this.errors.cardiovascular ? 'is-danger':''"
-                                             :message="this.errors.cardiovascular ? this.errors.cardiovascular[0] : ''">
-                                        <b-input type="text" v-model="fields.cardiovascular"
-                                                 placeholder="Cadiovascular">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Breast" label-position="on-border"
-                                             :type="this.errors.breast ? 'is-danger':''"
-                                             :message="this.errors.breast ? this.errors.breast[0] : ''">
-                                        <b-input type="text" v-model="fields.breast"
-                                                 placeholder="Breast">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Abdomen" label-position="on-border"
-                                             :type="this.errors.abdomen ? 'is-danger':''"
-                                             :message="this.errors.abdomen ? this.errors.abdomen[0] : ''">
-                                        <b-input type="text" v-model="fields.abdomen"
-                                                 placeholder="Abdomen">
-                                        </b-input>
-                                    </b-field>
-                                    <b-field label="Rectum" label-position="on-border"
-                                             :type="this.errors.rectum ? 'is-danger':''"
-                                             :message="this.errors.rectum ? this.errors.rectum[0] : ''">
-                                        <b-input type="text" v-model="fields.rectum"
-                                                 placeholder="Rectum">
-                                        </b-input>
-                                    </b-field>
-                                    <b-field label="Genetalia" label-position="on-border"
-                                             :type="this.errors.genetalia ? 'is-danger':''"
-                                             :message="this.errors.genetalia ? this.errors.genetalia[0] : ''">
-                                        <b-input type="text" v-model="fields.genetalia"
-                                                 placeholder="Genetalia">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Musculoskeletal" label-position="on-border"
-                                             :type="this.errors.musculoskeletal ? 'is-danger':''"
-                                             :message="this.errors.musculoskeletal ? this.errors.musculoskeletal[0] : ''">
-                                        <b-input type="text" v-model="fields.musculoskeletal"
-                                                 placeholder="Musculoskeletal">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Extremities" label-position="on-border"
-                                             :type="this.errors.extremities ? 'is-danger':''"
-                                             :message="this.errors.extremities ? this.errors.extremities[0] : ''">
-                                        <b-input type="text" v-model="fields.extremities"
-                                                 placeholder="Extremities">
-                                        </b-input>
-                                    </b-field>
-
-                                    <b-field label="Neurological" label-position="on-border"
-                                             :type="this.errors.neurological ? 'is-danger':''"
-                                             :message="this.errors.neurological ? this.errors.neurological[0] : ''">
-                                        <b-input type="text" v-model="fields.neurological"
-                                                 placeholder="Neurological">
-                                        </b-input>
-                                    </b-field>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <footer class="modal-card-foot">
-                        <b-button
-                            label="Close"
-                            @click="modalDiagnose=false"/>
-                        <button
-                            class="button is-primary">SAVE</button>
-                    </footer>
-                </div>
-            </form><!--close form-->
-        </b-modal>
-        <!--close modal-->
-
     </div>
 </template>
 
@@ -323,23 +175,16 @@ export default{
             data: [],
             total: 0,
             loading: false,
-            sortField: 'patient_diagnose_id',
+            sortField: 'patient_id',
             sortOrder: 'desc',
             page: 1,
             perPage: 10,
             defaultSortDirection: 'asc',
 
-
-
-
             search: {
                 lname: '',
                 fname: '',
             },
-
-
-
-            modalDiagnose: false,
 
 
             fields: {
@@ -494,7 +339,9 @@ export default{
             }).catch(err=>{
 
             })
-        }
+        },
+
+
 
     },
 

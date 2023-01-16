@@ -27,13 +27,22 @@ class DoctorPatientController extends Controller
 
         $sort = explode('.', $req->sort_by);
 
-        $data = DB::table('patient_diagnoses as a')
-            ->join('patients as b', 'a.patient_id', 'b.patient_id')
-            ->where('b.lname', 'like', $req->lname . '%')
-            ->where('b.fname', 'like', $req->fname . '%')
-            ->where('a.doctor_id', $user->user_id)
+        // $data = DB::table('patients as a')
+        //     ->join('nurse_patients as b', 'a.patient_id', 'b.patient_id')
+        //     ->join('patient_admissions', function($join){
+        //         $join->on('patient_admissions.patient_id', 'a.patient_id');
+        //     })
+        //     ->where('a.lname', 'like', $req->lname . '%')
+        //     ->where('a.fname', 'like', $req->fname . '%')
+        //     ->orderBy('a.' . $sort[0], $sort[1])
+        //     ->paginate($req->perpage);
+
+        $data =  Patient::with(['patient_admissions'])
+            ->where('lname', 'like', $req->lname . '%')
+            ->where('fname', 'like', $req->fname . '%')
             ->orderBy($sort[0], $sort[1])
             ->paginate($req->perpage);
+
         return $data;
     }
 }

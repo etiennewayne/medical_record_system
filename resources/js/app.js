@@ -65,6 +65,37 @@ Vue.filter('formatTime', function(value) {
 });
 
 
+Vue.filter('formatDateAndTime', function(value) {
+    let myDate = new Date(value)
+
+    let realDate =
+        myDate.getFullYear() +
+        "-" +
+        ("0" + (myDate.getMonth() + 1)).slice(-2) +
+        "-" +
+        ("0" + myDate.getDate()).slice(-2);
+
+    let realTime =
+        myDate.getHours() +
+        ':' +
+        ('0' + myDate.getMinutes()).slice(-2) +
+        ':' +
+        ('0' + myDate.getSeconds()).slice(-2);
+
+
+    let timeString = realTime;
+    let H = +timeString.substr(0, 2);
+    let h = (H % 12) || 12;
+    let ampm = H < 12 ? " AM" : " PM";
+    timeString = h + timeString.substr(2, 3) + ampm;
+
+    return realDate + ' ' + timeString
+});
+
+
+
+
+
 const app = new Vue({
     el: '#app',
 });

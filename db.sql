@@ -43917,11 +43917,55 @@ CREATE TABLE `password_resets` (
 
 /*Data for the table `password_resets` */
 
-/*Table structure for table `patient_diagnoses` */
+/*Table structure for table `patient_admissions` */
 
-DROP TABLE IF EXISTS `patient_diagnoses`;
+DROP TABLE IF EXISTS `patient_admissions`;
 
-CREATE TABLE `patient_diagnoses` (
+CREATE TABLE `patient_admissions` (
+  `patient_admission_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `patient_id` bigint(20) unsigned NOT NULL,
+  `admission_date` datetime DEFAULT NULL,
+  `discharge_date` datetime DEFAULT NULL,
+  `ward_room` varchar(50) DEFAULT NULL,
+  `total_day` int(11) DEFAULT NULL,
+  `admitting_physician` varchar(255) DEFAULT NULL,
+  `admitting_clerk` varchar(255) DEFAULT NULL,
+  `attending_physician` varchar(255) DEFAULT NULL,
+  `referred_by` varchar(255) DEFAULT NULL,
+  `social_service_classification` varchar(255) DEFAULT NULL,
+  `allergic_to` varchar(255) DEFAULT NULL,
+  `hospitalization_name` varchar(255) DEFAULT NULL,
+  `health_inssurance` varchar(255) DEFAULT NULL,
+  `phic` varchar(255) DEFAULT NULL,
+  `data_furnished_by` varchar(255) DEFAULT NULL,
+  `address_informant` varchar(255) DEFAULT NULL,
+  `patient_relation` varchar(255) DEFAULT NULL,
+  `admission_diagnosis` text DEFAULT NULL,
+  `bp` varchar(255) DEFAULT NULL,
+  `cr` varchar(255) DEFAULT NULL,
+  `rr` varchar(255) DEFAULT NULL,
+  `temp` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`patient_admission_id`),
+  KEY `patient_id` (`patient_id`),
+  CONSTRAINT `patient_admissions_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `patients` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `patient_admissions` */
+
+insert  into `patient_admissions`(`patient_admission_id`,`patient_id`,`admission_date`,`discharge_date`,`ward_room`,`total_day`,`admitting_physician`,`admitting_clerk`,`attending_physician`,`referred_by`,`social_service_classification`,`allergic_to`,`hospitalization_name`,`health_inssurance`,`phic`,`data_furnished_by`,`address_informant`,`patient_relation`,`admission_diagnosis`,`bp`,`cr`,`rr`,`temp`,`created_at`,`updated_at`) values 
+(2,1,NULL,NULL,NULL,NULL,NULL,NULL,'ako',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'100/90',NULL,NULL,'30deg','2023-01-14 22:50:19','2023-01-14 22:50:19'),
+(5,18,'2023-01-15 15:00:00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2023-01-15 07:11:26','2023-01-15 07:11:26'),
+(6,18,'2023-01-18 17:00:00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'C',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'11','22','33','44','2023-01-15 15:06:16','2023-01-15 15:06:16'),
+(7,19,'2023-01-15 18:00:00',NULL,NULL,NULL,NULL,NULL,'goc ong',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'120/90',NULL,NULL,'37deg','2023-01-15 21:53:02','2023-01-15 21:53:02'),
+(8,19,'2023-01-16 05:00:00',NULL,'134',NULL,'Rofel Cago','Rofel Cago','Rofel Cago',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'120/80',NULL,NULL,'37deg','2023-01-16 12:32:25','2023-01-16 12:32:25');
+
+/*Table structure for table `patient_diagnoses_xxxxx` */
+
+DROP TABLE IF EXISTS `patient_diagnoses_xxxxx`;
+
+CREATE TABLE `patient_diagnoses_xxxxx` (
   `patient_diagnose_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `patient_id` bigint(20) unsigned NOT NULL,
   `date_admission` date DEFAULT NULL,
@@ -43947,14 +43991,142 @@ CREATE TABLE `patient_diagnoses` (
   PRIMARY KEY (`patient_diagnose_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
-/*Data for the table `patient_diagnoses` */
+/*Data for the table `patient_diagnoses_xxxxx` */
 
-insert  into `patient_diagnoses`(`patient_diagnose_id`,`patient_id`,`date_admission`,`present_complain`,`admission_diagnose`,`principal_diagnose`,`doctor_id`,`skin`,`head_eent`,`lymp_notes`,`chest`,`lungs`,`cardiovascular`,`breast`,`abdoment`,`rectum`,`genetalia`,`musculoskeletal`,`extremities`,`neurological`,`created_at`,`updated_at`) values 
+insert  into `patient_diagnoses_xxxxx`(`patient_diagnose_id`,`patient_id`,`date_admission`,`present_complain`,`admission_diagnose`,`principal_diagnose`,`doctor_id`,`skin`,`head_eent`,`lymp_notes`,`chest`,`lungs`,`cardiovascular`,`breast`,`abdoment`,`rectum`,`genetalia`,`musculoskeletal`,`extremities`,`neurological`,`created_at`,`updated_at`) values 
 (1,8,'2023-01-05','sakit likod, magsuka','buros',NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2023-01-05 23:59:24','2023-01-05 23:59:24'),
 (2,7,'2023-01-06','Hard to walk','Rayoma','rayoma',10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2023-01-06 00:31:11','2023-01-06 00:31:11'),
 (3,8,'2023-01-06',NULL,'di kalakaw','overfatigue',9,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2023-01-06 01:19:22','2023-01-06 01:19:22'),
 (6,8,'2023-01-06','sakit dughan neg ubo','Covid 19',NULL,10,'aa','bb','cc','dd','ee','ff','gg',NULL,'ii','jj','kk','ll','mm','2023-01-06 02:57:40','2023-01-06 02:57:40'),
 (7,6,'2023-01-06','Katol ang panit','Kagid',NULL,11,'nag uga','nagbasa',NULL,'huot','lisud ginhawa',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2023-01-06 03:19:00','2023-01-06 03:19:00');
+
+/*Table structure for table `patient_doctor_diagnoses` */
+
+DROP TABLE IF EXISTS `patient_doctor_diagnoses`;
+
+CREATE TABLE `patient_doctor_diagnoses` (
+  `patient_doctor_diagnose_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `patient_admission_id` bigint(20) unsigned NOT NULL,
+  `patient_id` bigint(20) unsigned NOT NULL,
+  `admission_diagnosis` text DEFAULT NULL,
+  `principal_diagnosis` text DEFAULT NULL,
+  `other_diagnosis` text DEFAULT NULL,
+  `icd_code_no` varchar(255) DEFAULT NULL,
+  `principal_operation_procedure` text DEFAULT NULL,
+  `other_principal_operation_procedure` text DEFAULT NULL,
+  `accident_injuries` text DEFAULT NULL,
+  `place_occurence` text DEFAULT NULL,
+  `disposition` varchar(255) DEFAULT NULL,
+  `result` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`patient_doctor_diagnose_id`),
+  KEY `patient_admission_id` (`patient_admission_id`),
+  CONSTRAINT `patient_doctor_diagnoses_ibfk_1` FOREIGN KEY (`patient_admission_id`) REFERENCES `patient_admissions` (`patient_admission_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `patient_doctor_diagnoses` */
+
+insert  into `patient_doctor_diagnoses`(`patient_doctor_diagnose_id`,`patient_admission_id`,`patient_id`,`admission_diagnosis`,`principal_diagnosis`,`other_diagnosis`,`icd_code_no`,`principal_operation_procedure`,`other_principal_operation_procedure`,`accident_injuries`,`place_occurence`,`disposition`,`result`,`created_at`,`updated_at`) values 
+(3,6,18,'sample diag',NULL,NULL,NULL,NULL,NULL,'sample',NULL,NULL,NULL,'2023-01-15 16:12:00','2023-01-15 16:40:27'),
+(5,5,18,'another diagnose nimo choi',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2023-01-15 16:40:49','2023-01-15 16:40:49'),
+(6,7,19,'allergy ang ubo',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Improved','2023-01-15 21:54:56','2023-01-15 21:55:17'),
+(7,8,19,'gahi ug ubo','inum lang tambal',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2023-01-16 12:42:21','2023-01-16 12:42:21');
+
+/*Table structure for table `patient_histories` */
+
+DROP TABLE IF EXISTS `patient_histories`;
+
+CREATE TABLE `patient_histories` (
+  `patient_history_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `patient_admission_id` bigint(20) unsigned NOT NULL,
+  `patient_id` bigint(20) unsigned NOT NULL,
+  `general_data` text DEFAULT NULL,
+  `present_complain` text DEFAULT NULL,
+  `past_history` text DEFAULT NULL,
+  `family_history` text DEFAULT NULL,
+  `occupation_environment` text DEFAULT NULL,
+  `alcohol` text DEFAULT NULL,
+  `tobacco` text DEFAULT NULL,
+  `drug_allergies` text DEFAULT NULL,
+  `other_allergies` text DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`patient_history_id`),
+  KEY `patient_admission_id` (`patient_admission_id`),
+  CONSTRAINT `patient_histories_ibfk_1` FOREIGN KEY (`patient_admission_id`) REFERENCES `patient_admissions` (`patient_admission_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `patient_histories` */
+
+insert  into `patient_histories`(`patient_history_id`,`patient_admission_id`,`patient_id`,`general_data`,`present_complain`,`past_history`,`family_history`,`occupation_environment`,`alcohol`,`tobacco`,`drug_allergies`,`other_allergies`,`created_at`,`updated_at`) values 
+(2,6,18,'asdaw',NULL,'wala man sad','wala sad',NULL,'palahubog 3x a week',NULL,NULL,'none','2023-01-15 17:20:17','2023-01-15 17:20:17'),
+(3,7,19,NULL,NULL,'wala','wala',NULL,'palahubg',NULL,NULL,NULL,'2023-01-15 21:55:57','2023-01-15 21:55:57'),
+(4,8,19,'hubakon','Hubag ang teel','hubakon',NULL,NULL,NULL,NULL,NULL,NULL,'2023-01-16 12:42:54','2023-01-16 12:42:54');
+
+/*Table structure for table `patient_physical_exams` */
+
+DROP TABLE IF EXISTS `patient_physical_exams`;
+
+CREATE TABLE `patient_physical_exams` (
+  `patient_physical_exam_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `patient_id` bigint(20) unsigned NOT NULL,
+  `patient_admission_id` bigint(20) unsigned NOT NULL,
+  `skin` varchar(255) DEFAULT NULL,
+  `head_eent` varchar(255) DEFAULT NULL,
+  `lymp_notes` varchar(255) DEFAULT NULL,
+  `chest` varchar(255) DEFAULT NULL,
+  `lungs` varchar(255) DEFAULT NULL,
+  `cardiovascular` varchar(255) DEFAULT NULL,
+  `breast` varchar(255) DEFAULT NULL,
+  `abdomen` varchar(255) DEFAULT NULL,
+  `rectum` varchar(255) DEFAULT NULL,
+  `genitalia` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`patient_physical_exam_id`),
+  KEY `patient_id` (`patient_id`),
+  KEY `patient_admission_id` (`patient_admission_id`),
+  CONSTRAINT `patient_physical_exams_ibfk_1` FOREIGN KEY (`patient_admission_id`) REFERENCES `patient_admissions` (`patient_admission_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `patient_physical_exams` */
+
+insert  into `patient_physical_exams`(`patient_physical_exam_id`,`patient_id`,`patient_admission_id`,`skin`,`head_eent`,`lymp_notes`,`chest`,`lungs`,`cardiovascular`,`breast`,`abdomen`,`rectum`,`genitalia`,`created_at`,`updated_at`) values 
+(1,19,8,'sample physical exam',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'sasda','2023-01-16 13:24:54','2023-01-16 13:27:00');
+
+/*Table structure for table `patient_system_reviews` */
+
+DROP TABLE IF EXISTS `patient_system_reviews`;
+
+CREATE TABLE `patient_system_reviews` (
+  `patient_system_review_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `patient_admission_id` bigint(20) unsigned NOT NULL,
+  `patient_id` bigint(20) unsigned NOT NULL,
+  `general` text DEFAULT NULL,
+  `skin` text DEFAULT NULL,
+  `eent` text DEFAULT NULL,
+  `musculoskeletal` text DEFAULT NULL,
+  `respiratory` text DEFAULT NULL,
+  `cardiovascular` text DEFAULT NULL,
+  `gastrointestinal` text DEFAULT NULL,
+  `genitourinary` text DEFAULT NULL,
+  `female_reproductive` text DEFAULT NULL,
+  `nervous` text DEFAULT NULL,
+  `past_disease` text DEFAULT NULL,
+  `history_cancer` text DEFAULT NULL,
+  `ptb` varchar(255) DEFAULT NULL,
+  `asthma` varchar(255) DEFAULT NULL,
+  `cancer` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`patient_system_review_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `patient_system_reviews` */
+
+insert  into `patient_system_reviews`(`patient_system_review_id`,`patient_admission_id`,`patient_id`,`general`,`skin`,`eent`,`musculoskeletal`,`respiratory`,`cardiovascular`,`gastrointestinal`,`genitourinary`,`female_reproductive`,`nervous`,`past_disease`,`history_cancer`,`ptb`,`asthma`,`cancer`,`created_at`,`updated_at`) values 
+(2,8,19,'sample review',NULL,'asdw',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'-','-','-','2023-01-16 12:49:15','2023-01-16 12:51:26');
 
 /*Table structure for table `patients` */
 
@@ -43962,18 +44134,18 @@ DROP TABLE IF EXISTS `patients`;
 
 CREATE TABLE `patients` (
   `patient_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `admission_type` varchar(50) DEFAULT NULL,
   `lname` varchar(255) DEFAULT NULL,
   `fname` varchar(255) DEFAULT NULL,
   `mname` varchar(255) DEFAULT NULL,
   `suffix` varchar(255) DEFAULT NULL,
-  `province` varchar(255) DEFAULT NULL,
-  `city` varchar(255) DEFAULT NULL,
-  `barangay` varchar(255) DEFAULT NULL,
-  `street` varchar(255) DEFAULT NULL,
+  `ward_room` varchar(255) DEFAULT NULL,
+  `per_address` varchar(255) DEFAULT NULL,
   `contact_no` varchar(255) DEFAULT NULL,
   `sex` varchar(255) DEFAULT NULL,
   `civil_status` varchar(255) DEFAULT NULL,
   `bdate` date DEFAULT NULL,
+  `age` varchar(255) DEFAULT NULL,
   `birthplace` varchar(255) DEFAULT NULL,
   `nationality` varchar(255) DEFAULT NULL,
   `religion` varchar(255) DEFAULT NULL,
@@ -43983,26 +44155,36 @@ CREATE TABLE `patients` (
   `employer_contact_no` varchar(255) DEFAULT NULL,
   `father_name` varchar(255) DEFAULT NULL,
   `father_address` varchar(255) DEFAULT NULL,
+  `father_contact_no` varchar(50) DEFAULT NULL,
   `mother_maiden_name` varchar(255) DEFAULT NULL,
   `mother_address` varchar(255) DEFAULT NULL,
+  `mother_contact_no` varchar(50) DEFAULT NULL,
   `spouse_name` varchar(255) DEFAULT NULL,
   `spouse_address` varchar(255) DEFAULT NULL,
+  `spouse_contact_no` varbinary(50) DEFAULT NULL,
   `admission_date` date DEFAULT NULL,
-  `family_history` text DEFAULT NULL,
+  `discharge_date` date DEFAULT NULL,
+  `total_day` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`patient_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `patients` */
 
-insert  into `patients`(`patient_id`,`lname`,`fname`,`mname`,`suffix`,`province`,`city`,`barangay`,`street`,`contact_no`,`sex`,`civil_status`,`bdate`,`birthplace`,`nationality`,`religion`,`occupation`,`employer`,`employer_address`,`employer_contact_no`,`father_name`,`father_address`,`mother_maiden_name`,`mother_address`,`spouse_name`,`spouse_address`,`admission_date`,`family_history`,`created_at`,`updated_at`) values 
-(1,'CAGO','ROFEL','','','1481','148105','148105013','sample','0916','MALE','SINGLE','2023-01-27','LANAO','FILIPINO','ROMAN CATHOLIC',NULL,NULL,NULL,NULL,'ROGEN ABRINICA CAGO',NULL,'FLORIE FE MONTALLA DELA CERNA',NULL,NULL,NULL,NULL,NULL,'2023-01-05 21:48:01','2023-01-05 22:58:17'),
-(4,'VARGAS','CHARLES','','','0410','041015','041015015',NULL,'2222','MALE','SINGLE','2023-01-03','BUKIDNON','FILIPINO','ROMAN CATHOLIC',NULL,NULL,NULL,NULL,'JOMARIE GUMAWA VARGAS',NULL,'CHARLICE JEAN ALFORQUE LANSAM',NULL,NULL,NULL,'2023-01-05',NULL,'2023-01-05 22:43:16','2023-01-05 22:57:54'),
-(5,'SAQUIN','CHERRY','','','0606','060603','060603007',NULL,'23123','FEMALE','SINGLE','2004-04-13','BUKIDNON','FILIPINO','ROMAN CATHOLIC',NULL,NULL,NULL,NULL,'BERNY WAIS SAQUIN',NULL,'MAJA SALVADOR ANTIQUINA',NULL,NULL,NULL,'2023-01-05',NULL,'2023-01-05 22:44:06','2023-01-05 22:56:50'),
-(6,'LAPINIG','DANIEL','','','1013','101311','101311010',NULL,'2222','MALE','SINGLE','2023-08-15','','','ROMAN CATHOLIC',NULL,NULL,NULL,NULL,'MARK CUYOS LAPINIG',NULL,'VIRGILIA SANTOS SETIMA',NULL,NULL,NULL,'2023-01-05',NULL,'2023-01-05 22:44:44','2023-01-05 22:55:17'),
-(7,'SERINO','VILMA','','','0410','041014','041014016',NULL,'235123','FEMALE','SINGLE','1993-11-24','CUMBA','','ROMAN CATHOLIC',NULL,NULL,NULL,NULL,'ROGER BETA SERINO',NULL,'THELMA VARGAS ABIABI',NULL,NULL,NULL,'2023-01-05',NULL,'2023-01-05 22:45:28','2023-01-05 22:54:02'),
-(8,'PRADIA','GERLIZA','','','1411','141110','141110015',NULL,'4765','FEMALE','SINGLE','2023-01-03','','','ROMAN CATHOLIC',NULL,NULL,NULL,NULL,'VICTOR VILLA PRADIA',NULL,'ANTONYA SERIO CABALLES',NULL,NULL,NULL,'2023-01-05',NULL,'2023-01-05 23:13:19','2023-01-06 00:05:55');
+insert  into `patients`(`patient_id`,`admission_type`,`lname`,`fname`,`mname`,`suffix`,`ward_room`,`per_address`,`contact_no`,`sex`,`civil_status`,`bdate`,`age`,`birthplace`,`nationality`,`religion`,`occupation`,`employer`,`employer_address`,`employer_contact_no`,`father_name`,`father_address`,`father_contact_no`,`mother_maiden_name`,`mother_address`,`mother_contact_no`,`spouse_name`,`spouse_address`,`spouse_contact_no`,`admission_date`,`discharge_date`,`total_day`,`created_at`,`updated_at`) values 
+(1,'OLD','CAGO','ROFEL','','','1481','148105','148105013','SAMPLE','0916','2023-01-27','SINGLE','2023-01-27','LANAO','FILIPINO','ROMAN CATHOLIC','','','','ROGEN ABRINICA CAGO','','','FLORIE FE MONTALLA DELA CERNA','','','','','',NULL,NULL,NULL,'2023-01-05 21:48:01','2023-01-14 22:49:32'),
+(4,'OLD','VARGAS','CHARLES','','','0410','041015','041015015',NULL,'2222','2023-01-03','SINGLE','2023-01-03','BUKIDNON','FILIPINO','ROMAN CATHOLIC',NULL,NULL,NULL,'JOMARIE GUMAWA VARGAS',NULL,NULL,'CHARLICE JEAN ALFORQUE LANSAM',NULL,NULL,NULL,NULL,NULL,'2023-01-05',NULL,NULL,'2023-01-05 22:43:16','2023-01-05 22:57:54'),
+(5,'OLD','SAQUIN','CHERRY','','','0606','060603','060603007',NULL,'23123','2004-04-13','SINGLE','2004-04-13','BUKIDNON','FILIPINO','ROMAN CATHOLIC',NULL,NULL,NULL,'BERNY WAIS SAQUIN',NULL,NULL,'MAJA SALVADOR ANTIQUINA',NULL,NULL,NULL,NULL,NULL,'2023-01-05',NULL,NULL,'2023-01-05 22:44:06','2023-01-05 22:56:50'),
+(6,'OLD','LAPINIG','DANIEL','','','1013','101311','101311010',NULL,'2222','2023-08-15','SINGLE','2023-08-15','','','ROMAN CATHOLIC',NULL,NULL,NULL,'MARK CUYOS LAPINIG',NULL,NULL,'VIRGILIA SANTOS SETIMA',NULL,NULL,NULL,NULL,NULL,'2023-01-05',NULL,NULL,'2023-01-05 22:44:44','2023-01-05 22:55:17'),
+(7,'OLD','SERINO','VILMA','','','0410','041014','041014016',NULL,'235123','1993-11-24','SINGLE','1993-11-24','CUMBA','','ROMAN CATHOLIC',NULL,NULL,NULL,'ROGER BETA SERINO',NULL,NULL,'THELMA VARGAS ABIABI',NULL,NULL,NULL,NULL,NULL,'2023-01-05',NULL,NULL,'2023-01-05 22:45:28','2023-01-05 22:54:02'),
+(8,'OLD','PRADIA','GERLIZA','','','1411','141110','141110015',NULL,'4765','2023-01-03','SINGLE','2023-01-03','','','ROMAN CATHOLIC',NULL,NULL,NULL,'VICTOR VILLA PRADIA',NULL,NULL,'ANTONYA SERIO CABALLES',NULL,NULL,NULL,NULL,NULL,'2023-01-05',NULL,NULL,'2023-01-05 23:13:19','2023-01-06 00:05:55'),
+(9,'OLD','MANSUETO','LEDA','','','','MISAMIC OCCIDENTAL, OZAMIS CITY','09167789585','MALE','MARRIED','2023-01-03','28','','FILIPINO','ROMAN CATHOLIC','STUDENT','','','','','','','','','','','','',NULL,NULL,NULL,'2023-01-14 15:20:26','2023-01-14 15:20:26'),
+(11,'OLD','SERINO','VILMA','','','','LANIPAO LANAO','2134654','FEMALE','SINGLE','2023-01-10','24','','FILIPINO','ROMAN CATHOLIC','','','','','','','','','','','','','',NULL,NULL,NULL,NULL,'2023-01-14 17:36:05'),
+(16,'NEW','BB','BB','','','','BB','bb','MALE','','2023-01-12','23','','','','','','','','','','','','','','','','',NULL,NULL,NULL,'2023-01-14 17:38:47','2023-01-14 17:38:47'),
+(17,'OLD','CC','CAGO','','','','CC','cc','MALE','','2023-01-04','12','','','','','','','','','','','','','','','','',NULL,NULL,NULL,'2023-01-14 17:39:47','2023-01-14 17:40:12'),
+(18,'OLD','LAPINIG','DANIEL','DD','','','DD','dd','MALE','','2023-01-11','12','','','','','','','','','','','','','','','','',NULL,NULL,NULL,'2023-01-14 17:41:51','2023-01-15 14:58:16'),
+(19,'OLD','BECAHY','JESA','','','','MALORO','1324','MALE','WIDOWED','2023-01-18','40','MALORO','','','','','','','','','','','','','','','',NULL,NULL,NULL,'2023-01-15 21:50:48','2023-01-16 12:31:01');
 
 /*Table structure for table `personal_access_tokens` */
 
@@ -44176,7 +44358,7 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`user_id`,`username`,`lname`,`fname`,`mname`,`suffix`,`sex`,`designation`,`contact_no`,`role`,`email_verified_at`,`password`,`remember_token`,`created_at`,`updated_at`) values 
-(4,'aa','AMPARADO','ETIENNE','','','MALE','ADMINISTRATIVE AIDE II','123','CHIEF NURSE',NULL,'$2y$10$gRQpOAJXedNp0zT82ewfqO4C8m40ZeILFZCaioIfuQX04VbCMeLPi',NULL,'2023-01-05 19:02:24','2023-01-05 19:14:05'),
+(4,'aa','MANSUETO','LEDA','','','MALE','ADMINISTRATIVE AIDE II','123','CHIEF NURSE',NULL,'$2y$10$gRQpOAJXedNp0zT82ewfqO4C8m40ZeILFZCaioIfuQX04VbCMeLPi',NULL,'2023-01-05 19:02:24','2023-01-05 19:14:05'),
 (6,'maria.amora1','AMORA','MARIA','PETALINO','','FEMALE','ADMINISTRATIVE AIDE I','09123456789','RECORD OFFICER',NULL,'$2y$10$etXdP0tDdusu/A/EtfHEiu/2JR8cCXpYd8dcth4XWjTxymy42Y/ZG',NULL,'2023-01-05 19:22:38','2023-01-05 19:22:38'),
 (7,'vicky.maaba1','MAABA','VICKY','','','FEMALE','ADMINISTRATIVE AIDE V','09998876543','ADMINISTRATOR',NULL,'$2y$10$khaxN2xmyB/aG4MZw8.bJ.fhKp85.hl8BE3xvLjb/XwKDo4hLIJ5K',NULL,'2023-01-05 19:23:57','2023-01-05 19:40:47'),
 (8,'nurse','BECIAS','ANNA','','','FEMALE','ADMINISTRATIVE AIDE I','4444','NURSE',NULL,'$2y$10$xx6uaK0HJhwlS2pyRKs6hOlTfddWyPe3s7V4US40Pn8vC3sujv.Ei',NULL,'2023-01-05 19:49:20','2023-01-05 19:49:31'),

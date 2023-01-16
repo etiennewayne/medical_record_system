@@ -1,258 +1,182 @@
 <template>
     <div>
         <div class="section">
+
             <div class="columns is-centered">
-                <div class="column is-8">
-                    <div class="form-diagnose">
-                        <div class="box">
-                            <div class="box-heading">
-                                <div class="box-text">
-                                    Patient Diagnose
-                                </div>
+                <div class="column is-6-desktop is-8-tablet">
+                    
+                    <div class="box">
+                        <div class="box-header">
+                            <div class="box-header-text">
+                                PATIENT ADMISSION
                             </div>
-                            <div class="columns is-centered">
-                                <div class="column is-6">
-                                    <div>
-                                        <span>Patient Name: </span> {{ data.patient.lname }}, {{ data.patient.fname }} {{ data.patient.mname }}
-                                    </div>
-            
-                                    <div>
-                                        <span>Complain: </span> {{ data.present_complain }}
-                                    </div>
-
-                                    <div>
-                                        <span>Admission Diagnose: </span> {{ data.admission_diagnose }}
-                                    </div>
-
-                                    <!-- <div>
-                                        <span>Principal Diagnose: </span> {{ data.principal_diagnose }}
-                                    </div> -->
-                                </div>
-                            </div>
-                            
-
-                            <div class="columns is-centered">
-                                <div class="column is-6">
-                                    <p class="subtitle mt-5" style="text-align: center;">Pyhsical Examination</p>
-                                    <div class="columns">
-                                        <div class="column">
-                                            <div>
-                                                Skin: {{ data.skin }}
-                                            </div>
-                                            <div>
-                                                Head EENT: {{ data.head_eent }}
-                                            </div>
-                                            <div>
-                                                Lymp Notes: {{ data.lymp_notes }}
-                                            </div>
-                                        </div>
-                                        <div class="column">
-                                            <div>
-                                                Chest: {{ data.chest }}
-                                            </div>
-                                            <div>
-                                                Lungs: {{ data.lungs }}
-                                            </div>
-                                            <div>
-                                                Cardiovascular: {{ data.cardiovascular }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="columns">
-                                        <div class="column">
-                                            <div>
-                                                Breast: {{ data.breast }}
-                                            </div>
-                                            <div>
-                                                Abdoment: {{ data.abdoment }}
-                                            </div>
-                                            <div>
-                                                Rectum: {{ data.rectum }}
-                                            </div>
-                                        </div>
-                                        <div class="column">
-                                            <div>
-                                                Genetalia: {{ data.genetalia }}
-                                            </div>
-                                            <div>
-                                                Musculoskeletal: {{ data.musculoskeletal }}
-                                            </div>
-                                            <div>
-                                                Extremities: {{ data.extremities }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="columns">
-                                        <div class="column">
-                                            <div>
-                                                Neurological: {{ data.neurological }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!--box-->
-
-                        <div class="box">
-                            <div class="box-heading">
-                                <div class="box-text">
-                                    Create Order
-                                </div>
-                            </div>
+        
                             <div class="box-body">
-                                <div v-for="(item, ix1) in fields.orders" :key="ix1">
-                                    <div class="buttons is-right">
-                                        <b-button type="is-danger" 
-                                            class="is-small mt-5" 
-                                            label="X"
-                                            @click="removeOrder(ix1)"
-                                        ></b-button>
+                                <div class="columns">
+                                    <div class="column">
+                                        <b-field label="Admission Diagnosis">
+                                            <b-input type="textarea"
+                                                placeholder="Admission Diagnosis"
+                                                v-model="fields.admission_diagnosis">
+                                            </b-input>
+                                        </b-field>
                                     </div>
-                                    
-                                    <b-field label="Progress Note" label-position="on-border">
-                                        <b-input type="text" v-model="item.progress_notes"
-                                            placeholder="Progress Notes"
-                                        ></b-input>
-                                    </b-field>
-                                    <b-field label="Order" label-position="on-border">
-                                        <b-input type="text" v-model="item.order"
-                                            placeholder="Order"
-                                        ></b-input>
-                                    </b-field>
-                            
-                                    <hr>
                                 </div>
-                                
-                                <div class="buttons">
-                                    <b-button type="is-primary" 
-                                        class="is-small mt-5" 
-                                        label="Add Order"
-                                        @click="addOrder"
-                                    ></b-button>
+        
+                                <div class="columns">
+                                    <div class="column">
+                                        <b-field label="Principal Diagnosis">
+                                            <b-input type="textarea"
+                                                placeholder="Principal Diagnosis"
+                                                v-model="fields.principal_diagnosis">
+                                            </b-input>
+                                        </b-field>
+                                    </div>
                                 </div>
-                            </div> <!--box body -->
-                        </div><!--box-->
+                                <div class="columns">
+                                    <div class="column">
+                                        <b-field label="Other Diagnosis">
+                                            <b-input type="textarea"
+                                                placeholder="Other Diagnosis"
+                                                v-model="fields.other_diagnosis">
+                                            </b-input>
+                                        </b-field>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column">
+                                        <b-field label="ICD Code No.">
+                                            <b-input type="text"
+                                                placeholder="ICD Code No."
+                                                v-model="fields.icd_code_no">
+                                            </b-input>
+                                        </b-field>
+                                    </div>
+                                </div>
 
-                        <div class="box">
-                            <div class="box-heading">
-                                <div class="box-text">
-                                    Create Medication
+                                <div class="divider"></div>
+        
+                                <div class="columns">
+                                    <div class="column">
+                                        <b-field label="Principal Operation Procedure">
+                                            <b-input type="textarea"
+                                                placeholder="Principal Operation Procedure"
+                                                v-model="fields.principal_operation_procedure">
+                                            </b-input>
+                                        </b-field>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div v-for="(item, ix2) in fields.medications" :key="ix2">
+                                <div class="columns">
+                                    <div class="column">
+                                        <b-field label="Other Principal Operation Procedure">
+                                            <b-input type="textarea"
+                                                placeholder="Other Principal Operation Procedure"
+                                                v-model="fields.other_principal_operation_procedure">
+                                            </b-input>
+                                        </b-field>
+                                    </div>
+                                </div>
+
+                                <div class="columns">
+                                    <div class="column">
+                                        <b-field label="Accident/Injuries/Poisoning (E code)">
+                                            <b-input type="textarea"
+                                                placeholder="Accident/Injuries/Poisoning (E code)"
+                                                v-model="fields.accident_injuries">
+                                            </b-input>
+                                        </b-field>
+                                    </div>
+                                </div>
+
+                                <div class="columns">
+                                    <div class="column">
+                                        <b-field label="Place of Occurence">
+                                            <b-input type="text"
+                                                placeholder="Place of Occurence"
+                                                v-model="fields.place_occurence">
+                                            </b-input>
+                                        </b-field>
+                                    </div>
+                                </div>
+
+                                <div class="columns">
+                                    <div class="column">
+                                        <b-field label="Disposition" expanded>
+                                            <b-select expanded
+                                                placeholder="Disposition"
+                                                v-model="fields.disposition">
+                                                <option value="Discharge">Discharge</option>
+                                                <option value="Transfered">Transfered</option>
+                                                <option value="Dama">Dama</option>
+                                                <option value="Absconded">Absconded</option>
+                                            </b-select>
+                                        </b-field>
+                                    </div>
+
+                                    <div class="column">
+                                        <b-field label="Results" expanded>
+                                            <b-select expanded
+                                                placeholder="Results"
+                                                v-model="fields.result">
+                                                <option value="Recovered">Recovered</option>
+                                                <option value="Improved">Improved</option>
+                                                <option value="Unimproved">Unimproved</option>
+                                                <option value="Died">Died</option>
+                                                <option value="-48 Hours">-48 Hours</option>
+                                                <option value="+48 Hours">+48 Hours</option>
+                                                <option value="Autopsy">Autopsy</option>
+                                                <option value="No Autopsy">No Autopsy</option>
+                                            </b-select>
+                                        </b-field>
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+
                                 <div class="buttons is-right">
-                                    <b-button type="is-danger" 
-                                        class="is-small mt-5" 
-                                        label="X"
-                                        @click="removeMedication(ix2)"
-                                    ></b-button>
+                                    <b-button 
+                                        @click="submit"
+                                        label="Save"
+                                        type="is-primary"
+                                        ></b-button>
                                 </div>
-                                
-                                <b-field label="Name of Drugs" label-position="on-border">
-                                    <b-input type="text" v-model="item.name_of_drugs"
-                                        placeholder="Name of Drugs"
-                                    ></b-input>
-                                </b-field>
-                                <b-field label="Instruction" label-position="on-border">
-                                    <b-input type="text" v-model="item.instruction"
-                                        placeholder="Instruction"
-                                    ></b-input>
-                                </b-field>
-                        
-                                <hr>
-                            </div>
-                            
-                            <div class="buttons">
-                                <b-button type="is-primary" 
-                                    class="is-small mt-5" 
-                                    label="Add Medication"
-                                    @click="addMedication"
-                                ></b-button>
-                            </div><!--box body-->
-                        </div><!--box-->
 
-
-                        <div class="box">
-                            <div class="buttons is-centered">
-                                <b-button type="is-primary" label="Save" @click="submit"></b-button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!--root div -->
-
+                            </div> <!-- box body -->
+                        </div> <!--box -header -->
+                    </div> <!--box-->
+                </div> <!--col-->
+            </div><!--cols-->
+        </div><!--section-->
+    </div> <!--root-->
 </template>
 
 <script>
 
-export default {
-    props: ['propData'],
-    data(){
-        return{
-            data: [],
+export default{
+    props: ['propPatientAdmissionId', 'propPatientId'],
 
-            fields: {
-                patient_diagnose_id: 0,
-                patient_id: 0,
-                orders: [],
-                medications: [],
-            }
-           
+    data(){
+        return {
+            fields: {},
+            errors: {},
         }
     },
 
     methods: {
-        initData(){
-            this.data = JSON.parse(this.propData)
-        },
+        submit(){
+            this.fields.patient_id = this.propPatientId;
+            this.fields.patient_admission_id = this.propPatientAdmissionId;
 
-        addOrder(){
-            this.fields.orders.push({
-                patient_id: 0,
-                patient_diagnose_id: 0,
-                doctor_order_id: 0,
-                progress_notes: '',
-                order: '',
-                letter_c: 0,
-                letter_a: 0,
-                letter_r: 0,
-                letter_e: 0,
-                letter_d: 0,
-            });
-        },
-        removeOrder(ix){
-            this.fields.orders.splice(ix, 1);
-        },
-
-        addMedication(){
-            this.fields.medications.push({
-                doctor_medication_id: 0,
-                patient_id: 0,
-                patient_diagnose_id: 0,
-                name_of_drugs: '',
-                instruction: '',
-            });
-        },
-        removeMedication(ix){
-            this.fields.medications.splice(ix, 1);
-        },
-
-
-        submit: function(){
-            
-            axios.post('/doctor-patient-diagnose-submit', this.fields).then(res=>{
+            axios.post('/doctor-patient-diagnose', this.fields).then(res=>{
                 if(res.data.status === 'saved'){
                     this.$buefy.dialog.alert({
-                        title: 'Saved!',
+                        title: 'SAVED!',
                         message: 'Successfully saved.',
                         type: 'is-success',
+                        confirmText: 'OK',
                         onConfirm: () => {
-                           window.location = '/doctor-patients'
+                            window.location = '/doctor-patients'
                         }
                     })
                 }
@@ -261,29 +185,18 @@ export default {
             })
         },
 
-        assignDefault(){
-            this.fields = {
-                patient_diagnose_id: this.data.patient_diagnose_id,
-                patient_id: this.data.patient.patient_id,
-                orders: [],
-                medications: [],
-            }
+        checkIfHaveDiagnose(){
+            axios.get(`/get-patient-diagnose-by-admission-and-patient/${this.propPatientAdmissionId}/${this.propPatientId}`)
+                .then(res=>{
+                    if(res.data){
+                        this.fields = res.data
+                    }
+                })
         }
     },
 
-    created(){
-        this.initData()
-    },
-
-    mounted() {
-        console.log(this.data);
-        this.assignDefault()
+    mounted(){
+        this.checkIfHaveDiagnose()
     }
 }
 </script>
-
-<style scoped>
-    .form-diagnose{
-        padding: 25px;
-    }
-</style>

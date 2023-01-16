@@ -17,19 +17,12 @@
 
             <div class="box-menu">
                 <div class="box home-box">
-                    <div>NEW ADMISSION</div>
+                    <div class="subtitle">ADMISSION</div>
                     <div class="buttons">
                         <b-button
                             tag="a"
-                            href="/new-admission"
+                            href="/admission"
                             icon-right="arrow-right" label="Proceed"></b-button>
-                    </div>
-                </div>
-
-                <div class="box home-box">
-                    <div>ALREADY ADMITTED BEFORE</div>
-                    <div class="buttons">
-                        <b-button icon-right="arrow-right" label="Proceed"></b-button>
                     </div>
                 </div>
             </div>

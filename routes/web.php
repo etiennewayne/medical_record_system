@@ -44,7 +44,6 @@ Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'
 
 Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
-Route::get('/sample',[App\Http\Controllers\SampleController::class,'index']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -90,9 +89,22 @@ Route::get('/load-open-nationalities', [App\Http\Controllers\OpenController::cla
 Route::get('/load-open-religions', [App\Http\Controllers\OpenController::class, 'loadReligions']);
 
 
+Route::get('/get-browse-patient', [App\Http\Controllers\Nurse\AdmissionController::class, 'browsePatient']);
+
+
+
 // -----------------------NURSE-------------------------------------------
 
-Route::resource('/new-admission', App\Http\Controllers\Nurse\NewAdmissionController::class);
+Route::resource('/admission', App\Http\Controllers\Nurse\AdmissionController::class);
+
+Route::resource('/patient-profile', App\Http\Controllers\Nurse\PatientProfileController::class,);
+Route::resource('/patient-admission', App\Http\Controllers\Nurse\PatientAdmissionController::class,);
+
+
+
+//patient admission, si nurse ang mag input ug save
+Route::post('/patient-admission-store', [App\Http\Controllers\Nurse\PatientAdmissionController::class, 'store']);
+Route::delete('/doctor-patient-delete-nurse-patient/{id}', [App\Http\Controllers\Nurse\NursePatientController::class, 'destroy']);
 
 
 
@@ -114,7 +126,6 @@ Route::get('/get-nurse-patient-diagnose-doctor-orders/{id}',[App\Http\Controller
 Route::post('/nurse-patient-diagnose-doctor-orders-detail-update/{id}',[App\Http\Controllers\Nurse\NursePatientDiagnoseDoctorOrderController::class, 'updateOrderDetail']);
 
 
-
 // -----------------------NURSE-------------------------------------------
 
 
@@ -122,16 +133,40 @@ Route::post('/nurse-patient-diagnose-doctor-orders-detail-update/{id}',[App\Http
 // -----------------------DOCTOR-------------------------------------------
 Route::resource('/doctor-home', App\Http\Controllers\Doctor\DoctorHomeController::class);
 
-
-
 Route::resource('/doctor-patients', App\Http\Controllers\Doctor\DoctorPatientController::class);
 Route::get('/get-doctor-patients', [App\Http\Controllers\Doctor\DoctorPatientController::class, 'getDoctorPatients']);
 
-Route::get('/doctor-patient-diagnoses/{id}', [App\Http\Controllers\Doctor\PatientDiagnoseController::class, 'index']);
+Route::get('/doctor-patient-diagnose/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientDiagnoseController::class, 'index']);
+Route::post('/doctor-patient-diagnose', [App\Http\Controllers\Doctor\DoctorPatientDiagnoseController::class, 'store']);
+Route::get('/get-patient-diagnose-by-admission-and-patient/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientDiagnoseController::class, 'getDiagnose']);
 
-Route::post('/doctor-patient-diagnose-submit', [App\Http\Controllers\Doctor\PatientDiagnoseController::class, 'store']);
+Route::get('/doctor-patient-history/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientHistory::class, 'index']);
+Route::post('/doctor-patient-history/', [App\Http\Controllers\Doctor\DoctorPatientHistory::class, 'store']);
+Route::get('/get-patient-history-by-admission-and-patient/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientHistory::class, 'getHistory']);
 
-// -----------------------DOCTOR-------------------------------------------
+Route::get('/doctor-patient-system-review/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientSystemReviewController::class, 'index']);
+Route::post('/doctor-patient-system-review', [App\Http\Controllers\Doctor\DoctorPatientSystemReviewController::class, 'store']);
+Route::get('/get-patient-system-review-by-admission-and-patient/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientSystemReviewController::class, 'getSystemReview']);
+
+
+Route::get('/doctor-patient-physical-exam/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientPhysicalExamController::class, 'index']);
+Route::post('/doctor-patient-physical-exam', [App\Http\Controllers\Doctor\DoctorPatientPhysicalExamController::class, 'store']);
+Route::get('/get-patient-physical-exam-by-admission-and-patient/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientPhysicalExamController::class, 'getPhysicalExam']);
+
+
+
+Route::get('/doctor-patient-disposition/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientDispositionController::class, 'index']);
+Route::get('/get-patient-all-data/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientDispositionController::class, 'getPatientInfo']);
+
+
+
+//Route::get('/doctor-admission/{id}', [App\Http\Controllers\Doctor\DoctorAdmissionPatient::class, 'index']);
+//Route::post('/doctor-admission/{id}', [App\Http\Controllers\Doctor\DoctorAdmissionPatient::class, 'store']);
+
+
+
+
+// -------------------------------DOCTOR-------------------------------------------
 
 
 
