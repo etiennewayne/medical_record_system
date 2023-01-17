@@ -15,10 +15,15 @@ class DoctorOrder extends Model
 
     protected $fillable = [
         'patient_id',
-        'patient_diagnose_id',
-        'date_order_created',
-        'doctor_id',
-
+        'patient_admission_id',
+        'doctor_date_time_created',
+        'progress_notes',
+        'order',
+        'letter_c',
+        'letter_a',
+        'letter_r',
+        'letter_e',
+        'letter_d',
     ];
     
 
@@ -26,12 +31,9 @@ class DoctorOrder extends Model
         return $this->hasOne(Patient::class, 'patient_id', 'patient_id');
     }
 
-    public function patient_diagnose(){
-        return $this->hasOne(PatientDiagnose::class, 'patient_diagnose_id', 'patient_diagnose_id');
-    }
 
-    public function doctor_order_details(){
-        return $this->hasMany(DoctorOrderDetail::class, 'doctor_order_id', 'doctor_order_id')
+    public function diagnose(){
+        return $this->hasOne(PatientDoctorDiagnose::class, 'patient_id', 'patient_id')
         ->with('nurse');
     }
 

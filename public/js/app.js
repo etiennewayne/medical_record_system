@@ -9258,6 +9258,1093 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefHome.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefHome.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      info: {}
+    };
+  },
+  methods: {},
+  mounted: function mounted() {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      open: false,
+      overlay: false,
+      fullheight: true,
+      fullwidth: false,
+      right: true,
+      expandOnHover: true,
+      reduce: false,
+      mobile: "reduce",
+      user: {
+        role: '',
+        lname: '',
+        fname: '',
+        mname: ''
+      }
+    };
+  },
+  methods: {
+    logout: function logout() {
+      axios.post('/logout').then(function () {
+        window.location = '/';
+      });
+    },
+    loadUser: function loadUser() {
+      var _this = this;
+
+      axios.get('/load-user').then(function (res) {
+        _this.user = res.data;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.loadUser();
+  },
+  computed: {
+    userRole: function userRole() {
+      return this.user.role.toUpperCase() + ' (' + this.user.lname.toUpperCase() + ', ' + this.user.fname.toUpperCase() + ')';
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['propPatientAdmissionId', 'propPatientId'],
+  data: function data() {
+    return {
+      data: []
+    };
+  },
+  methods: {
+    getPatientInformation: function getPatientInformation() {
+      var _this = this;
+
+      axios.get("/get-summary-patient/".concat(this.propPatientAdmissionId, "/").concat(this.propPatientId)).then(function (res) {
+        _this.data = res.data;
+        console.log(res.data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getPatientInformation();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['propDesignations', 'propDoctors'],
+  data: function data() {
+    return {
+      data: [],
+      total: 0,
+      loading: false,
+      sortField: 'patient_id',
+      sortOrder: 'desc',
+      page: 1,
+      perPage: 10,
+      defaultSortDirection: 'asc',
+      search: {
+        lname: '',
+        fname: ''
+      },
+      fields: {
+        patient_id: 0,
+        date_admission: null,
+        admission_diagnose: '',
+        principal_diagnose: '',
+        doctor_id: 0
+      },
+      errors: {},
+      doctors: []
+    };
+  },
+  methods: {
+    /*
+    * Load async data
+    */
+    loadAsyncData: function loadAsyncData() {
+      var _this = this;
+
+      var params = ["sort_by=".concat(this.sortField, ".").concat(this.sortOrder), "lname=".concat(this.search.lname), "fname=".concat(this.search.fname), "perpage=".concat(this.perPage), "page=".concat(this.page)].join('&');
+      this.loading = true;
+      axios.get("/get-nurse-patients?".concat(params)).then(function (_ref) {
+        var data = _ref.data;
+        _this.data = [];
+        var currentTotal = data.total;
+
+        if (data.total / _this.perPage > 1000) {
+          currentTotal = _this.perPage * 1000;
+        }
+
+        _this.total = currentTotal;
+        data.data.forEach(function (item) {
+          //item.release_date = item.release_date ? item.release_date.replace(/-/g, '/') : null
+          _this.data.push(item);
+        });
+        _this.loading = false;
+      })["catch"](function (error) {
+        _this.data = [];
+        _this.total = 0;
+        _this.loading = false;
+        throw error;
+      });
+    },
+
+    /*
+    * Handle page-change event
+    */
+    onPageChange: function onPageChange(page) {
+      this.page = page;
+      this.loadAsyncData();
+    },
+    onSort: function onSort(field, order) {
+      this.sortField = field;
+      this.sortOrder = order;
+      this.loadAsyncData();
+    },
+    setPerPage: function setPerPage() {
+      this.loadAsyncData();
+    },
+    openModal: function openModal() {
+      this.isModalCreate = true;
+      this.fields = {};
+      this.errors = {};
+    },
+    //alert box ask for deletion
+    confirmDelete: function confirmDelete(delete_id) {
+      var _this2 = this;
+
+      this.$buefy.dialog.confirm({
+        title: 'DELETE!',
+        type: 'is-danger',
+        message: 'Are you sure you want to delete this data?',
+        cancelText: 'Cancel',
+        confirmText: 'Delete',
+        onConfirm: function onConfirm() {
+          return _this2.deleteSubmit(delete_id);
+        }
+      });
+    },
+    //execute delete after confirming
+    deleteSubmit: function deleteSubmit(delete_id) {
+      var _this3 = this;
+
+      axios["delete"]('/nurse-patient/' + delete_id).then(function (res) {
+        _this3.loadAsyncData();
+
+        _this3.clearFields();
+      })["catch"](function (err) {
+        if (err.response.status === 422) {
+          _this3.errors = err.response.data.errors;
+        }
+      });
+    },
+    clearFields: function clearFields() {
+      this.fields = {
+        patient_id: 0,
+        date_admission: null,
+        admission_diagnose: '',
+        principal_diagnose: '',
+        doctor_id: 0
+      };
+    },
+    //update code here
+    getData: function getData(data_id) {
+      var _this4 = this;
+
+      this.clearFields();
+      this.global_id = data_id;
+      this.isModalCreate = true; //nested axios for getting the address 1 by 1 or request by request
+
+      axios.get('/designations/' + data_id).then(function (res) {
+        _this4.fields = res.data;
+      });
+    },
+    initData: function initData() {//this.doctors = JSON.parse(this.propDoctors)
+    },
+    openModalDiagnose: function openModalDiagnose(row) {
+      this.modalDiagnose = true;
+      this.fields = {
+        patient_id: row.patient_id
+      };
+    },
+    submitDiagnose: function submitDiagnose() {
+      var _this5 = this;
+
+      axios.post('/nurse-patient-submit-diagnose', this.fields).then(function (res) {
+        if (res.data.status === 'saved') {
+          _this5.$buefy.dialog.alert({
+            title: 'Saved!',
+            message: 'Successfully saved.',
+            type: 'is-success',
+            onConfirm: function onConfirm() {
+              _this5.loadAsyncData();
+
+              _this5.clearFields();
+
+              _this5.modalDiagnose = false;
+            }
+          });
+        }
+      })["catch"](function (err) {});
+    }
+  },
+  mounted: function mounted() {
+    this.loadAsyncData();
+    this.initData();
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorHome.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorHome.vue?vue&type=script&lang=js& ***!
@@ -9389,6 +10476,236 @@ __webpack_require__.r(__webpack_exports__);
     userRole: function userRole() {
       return this.user.role.toUpperCase() + ' (' + this.user.lname.toUpperCase() + ', ' + this.user.fname.toUpperCase() + ')';
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorOrder.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorOrder.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['propPatientAdmissionId', 'propPatientId'],
+  data: function data() {
+    return {
+      fields: {},
+      errors: {},
+      doctor_orders: []
+    };
+  },
+  methods: {
+    addOrder: function addOrder() {
+      this.doctor_orders.push({
+        doctor_order_id: 0,
+        doctor_date_time_created: new Date(),
+        progress_notes: '',
+        order: '',
+        letter_c: 0,
+        letter_a: 0,
+        letter_r: 0,
+        letter_e: 0,
+        letter_d: 0
+      });
+    },
+    removeOrder: function removeOrder(index) {
+      this.doctor_orders.splice(index, 1);
+    },
+    submit: function submit() {
+      var _this = this;
+
+      this.fields = []; // this.fields.patient_id = this.propPatientId;
+      //this.fields.patient_admission_id = this.propPatientAdmissionId;
+
+      this.doctor_orders.forEach(function (el) {
+        _this.fields.push({
+          doctor_order_id: el.doctor_order_id,
+          patient_admission_id: _this.propPatientAdmissionId,
+          patient_id: _this.propPatientId,
+          doctor_date_time_created: _this.formatDateAndTime(el.doctor_date_time_created),
+          progress_notes: el.progress_notes,
+          order: el.order,
+          letter_c: el.letter_c,
+          letter_a: el.letter_a,
+          letter_r: el.letter_r,
+          letter_e: el.letter_e,
+          letter_d: el.letter_d
+        });
+      });
+      axios.post('/doctor-orders-submit', this.fields).then(function (res) {
+        if (res.data.status === 'saved') {
+          _this.$buefy.dialog.alert({
+            title: 'SAVED!',
+            message: 'Successfully saved.',
+            type: 'is-success',
+            confirmText: 'OK',
+            onConfirm: function onConfirm() {
+              window.location = '/doctor-patients';
+            }
+          });
+        }
+      })["catch"](function (err) {});
+    },
+    checkIfHaveData: function checkIfHaveData() {
+      var _this2 = this;
+
+      axios.get("/get-patient-doctor-orders/".concat(this.propPatientAdmissionId, "/").concat(this.propPatientId)).then(function (res) {
+        _this2.doctor_orders = [];
+        res.data.forEach(function (el) {
+          _this2.doctor_orders.push({
+            doctor_order_id: el.doctor_order_id,
+            doctor_date_time_created: new Date(el.doctor_date_time_created),
+            progress_notes: el.progress_notes,
+            order: el.order,
+            letter_c: el.letter_c,
+            letter_a: el.letter_a,
+            letter_r: el.letter_r,
+            letter_e: el.letter_e,
+            letter_d: el.letter_d
+          });
+        });
+      });
+    },
+    formatDateAndTime: function formatDateAndTime(value) {
+      var myDate = new Date(value);
+      var realDate = myDate.getFullYear() + "-" + ("0" + (myDate.getMonth() + 1)).slice(-2) + "-" + ("0" + myDate.getDate()).slice(-2);
+      var realTime = myDate.getHours() + ':' + ('0' + myDate.getMinutes()).slice(-2) + ':' + ('0' + myDate.getSeconds()).slice(-2);
+      var timeString = realTime;
+      var H = +timeString.substr(0, 2);
+      var h = H % 12 || 12;
+      var ampm = H < 12 ? " AM" : " PM";
+      timeString = h + timeString.substr(2, 3) + ampm;
+      return realDate + ' ' + realTime;
+    }
+  },
+  mounted: function mounted() {
+    this.checkIfHaveData();
   }
 });
 
@@ -10069,6 +11386,31 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorPatientSystemReview.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorPatientSystemReview.vue?vue&type=script&lang=js& ***!
@@ -10323,6 +11665,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -10940,6 +12297,586 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['propPatientAdmissionId', 'propPatientId'],
+  data: function data() {
+    return {
+      data: []
+    };
+  },
+  methods: {
+    getPatientInformation: function getPatientInformation() {
+      var _this = this;
+
+      axios.get("/get-summary-patient/".concat(this.propPatientAdmissionId, "/").concat(this.propPatientId)).then(function (res) {
+        _this.data = res.data;
+        console.log(res.data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getPatientInformation();
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Login.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Login.vue?vue&type=script&lang=js& ***!
@@ -10951,7 +12888,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
 //
 //
 //
@@ -11009,6 +12945,10 @@ __webpack_require__.r(__webpack_exports__);
 
         if (res.data.role === 'DOCTOR') {
           window.location = '/doctor-home';
+        }
+
+        if (res.data.role === 'CHIEF NURSE') {
+          window.location = '/chief-home';
         } //window.location = '/dashboard';
 
       })["catch"](function (err) {
@@ -12235,6 +14175,237 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseCared.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseCared.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['propPatientAdmissionId', 'propPatientId'],
+  data: function data() {
+    return {
+      fields: {},
+      errors: {},
+      doctor_orders: []
+    };
+  },
+  methods: {
+    addOrder: function addOrder() {
+      this.doctor_orders.push({
+        doctor_order_id: 0,
+        doctor_date_time_created: new Date(),
+        progress_notes: '',
+        order: '',
+        letter_c: 0,
+        letter_a: 0,
+        letter_r: 0,
+        letter_e: 0,
+        letter_d: 0
+      });
+    },
+    removeOrder: function removeOrder(index) {
+      this.doctor_orders.splice(index, 1);
+    },
+    submit: function submit() {
+      var _this = this;
+
+      this.fields = []; // this.fields.patient_id = this.propPatientId;
+      //this.fields.patient_admission_id = this.propPatientAdmissionId;
+
+      this.doctor_orders.forEach(function (el) {
+        _this.fields.push({
+          doctor_order_id: el.doctor_order_id,
+          patient_admission_id: _this.propPatientAdmissionId,
+          patient_id: _this.propPatientId,
+          doctor_date_time_created: _this.formatDateAndTime(el.doctor_date_time_created),
+          progress_notes: el.progress_notes,
+          order: el.order,
+          letter_c: el.letter_c,
+          letter_a: el.letter_a,
+          letter_r: el.letter_r,
+          letter_e: el.letter_e,
+          letter_d: el.letter_d
+        });
+      });
+      axios.post('/nurse-cared-submit', this.fields).then(function (res) {
+        if (res.data.status === 'saved') {
+          _this.$buefy.dialog.alert({
+            title: 'SAVED!',
+            message: 'Successfully saved.',
+            type: 'is-success',
+            confirmText: 'OK',
+            onConfirm: function onConfirm() {
+              window.location = '/nurse-patient';
+            }
+          });
+        }
+      })["catch"](function (err) {});
+    },
+    checkIfHaveData: function checkIfHaveData() {
+      var _this2 = this;
+
+      axios.get("/get-nurse-cared/".concat(this.propPatientAdmissionId, "/").concat(this.propPatientId)).then(function (res) {
+        console.log(res.data);
+        _this2.doctor_orders = [];
+        res.data.forEach(function (el) {
+          _this2.doctor_orders.push({
+            doctor_order_id: el.doctor_order_id,
+            doctor_date_time_created: new Date(el.doctor_date_time_created),
+            progress_notes: el.progress_notes,
+            order: el.order,
+            letter_c: el.letter_c,
+            letter_a: el.letter_a,
+            letter_r: el.letter_r,
+            letter_e: el.letter_e,
+            letter_d: el.letter_d
+          });
+        });
+      });
+    },
+    formatDateAndTime: function formatDateAndTime(value) {
+      var myDate = new Date(value);
+      var realDate = myDate.getFullYear() + "-" + ("0" + (myDate.getMonth() + 1)).slice(-2) + "-" + ("0" + myDate.getDate()).slice(-2);
+      var realTime = myDate.getHours() + ':' + ('0' + myDate.getMinutes()).slice(-2) + ':' + ('0' + myDate.getSeconds()).slice(-2);
+      var timeString = realTime;
+      var H = +timeString.substr(0, 2);
+      var h = H % 12 || 12;
+      var ampm = H < 12 ? " AM" : " PM";
+      timeString = h + timeString.substr(2, 3) + ampm;
+      return realDate + ' ' + realTime;
+    }
+  },
+  mounted: function mounted() {
+    this.checkIfHaveData();
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseHome.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseHome.vue?vue&type=script&lang=js& ***!
@@ -12382,6 +14553,208 @@ __webpack_require__.r(__webpack_exports__);
     userRole: function userRole() {
       return this.user.role.toUpperCase() + ' (' + this.user.lname.toUpperCase() + ', ' + this.user.fname.toUpperCase() + ')';
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseNotes.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseNotes.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['propPatientAdmissionId', 'propPatientId'],
+  data: function data() {
+    return {
+      fields: {},
+      errors: {},
+      nurse_notes: [],
+      doctor_orders: []
+    };
+  },
+  methods: {
+    addOrder: function addOrder() {
+      this.nurse_notes.push({
+        nurse_note_id: 0,
+        date_time_created: new Date(),
+        focus: '',
+        nurse_notes: ''
+      });
+    },
+    removeOrder: function removeOrder(index) {
+      this.nurse_notes.splice(index, 1);
+    },
+    getDoctorOrders: function getDoctorOrders() {
+      var _this = this;
+
+      axios.get("/get-doctor-orders-for-patient/".concat(this.propPatientAdmissionId, "/").concat(this.propPatientId)).then(function (res) {
+        _this.doctor_orders = res.data;
+      });
+    },
+    submit: function submit() {
+      var _this2 = this;
+
+      this.fields = []; // this.fields.patient_id = this.propPatientId;
+      //this.fields.patient_admission_id = this.propPatientAdmissionId;
+
+      this.nurse_notes.forEach(function (el) {
+        _this2.fields.push({
+          nurse_note_id: el.nurse_note_id,
+          doctor_order: el.doctor_order,
+          patient_admission_id: _this2.propPatientAdmissionId,
+          patient_id: _this2.propPatientId,
+          date_time_created: _this2.formatDateAndTime(el.date_time_created),
+          focus: el.focus,
+          nurse_notes: el.nurse_notes
+        });
+      });
+      axios.post('/nurse-notes-submit', this.fields).then(function (res) {
+        if (res.data.status === 'saved') {
+          _this2.$buefy.dialog.alert({
+            title: 'SAVED!',
+            message: 'Successfully saved.',
+            type: 'is-success',
+            confirmText: 'OK',
+            onConfirm: function onConfirm() {
+              window.location = '/nurse-patient';
+            }
+          });
+        }
+      })["catch"](function (err) {});
+    },
+    checkIfHaveData: function checkIfHaveData() {
+      var _this3 = this;
+
+      axios.get("/get-nurse-notes/".concat(this.propPatientAdmissionId, "/").concat(this.propPatientId)).then(function (res) {
+        _this3.nurse_notes = [];
+        res.data.forEach(function (el) {
+          _this3.nurse_notes.push({
+            doctor_order: el.doctor_order,
+            nurse_note_id: el.nurse_note_id,
+            date_time_created: new Date(el.date_time_created),
+            focus: el.focus,
+            nurse_notes: el.nurse_notes
+          });
+        });
+      });
+    },
+    formatDateAndTime: function formatDateAndTime(value) {
+      var myDate = new Date(value);
+      var realDate = myDate.getFullYear() + "-" + ("0" + (myDate.getMonth() + 1)).slice(-2) + "-" + ("0" + myDate.getDate()).slice(-2);
+      var realTime = myDate.getHours() + ':' + ('0' + myDate.getMinutes()).slice(-2) + ':' + ('0' + myDate.getSeconds()).slice(-2);
+      var timeString = realTime;
+      var H = +timeString.substr(0, 2);
+      var h = H % 12 || 12;
+      var ampm = H < 12 ? " AM" : " PM";
+      timeString = h + timeString.substr(2, 3) + ampm;
+      return realDate + ' ' + realTime;
+    }
+  },
+  mounted: function mounted() {
+    this.getDoctorOrders();
+    this.checkIfHaveData();
   }
 });
 
@@ -12549,172 +14922,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['propDesignations', 'propDoctors'],
   data: function data() {
@@ -12731,7 +14938,6 @@ __webpack_require__.r(__webpack_exports__);
         lname: '',
         fname: ''
       },
-      modalDiagnose: false,
       fields: {
         patient_id: 0,
         date_admission: null,
@@ -12845,8 +15051,7 @@ __webpack_require__.r(__webpack_exports__);
         _this4.fields = res.data;
       });
     },
-    initData: function initData() {
-      this.doctors = JSON.parse(this.propDoctors);
+    initData: function initData() {//this.doctors = JSON.parse(this.propDoctors)
     },
     openModalDiagnose: function openModalDiagnose(row) {
       this.modalDiagnose = true;
@@ -13828,6 +16033,209 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.loadAsyncData();
     this.initData();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['propPatientAdmissionId', 'propPatientId'],
+  data: function data() {
+    return {
+      fields: {},
+      errors: {},
+      patient_medications: [],
+      doctor_orders: []
+    };
+  },
+  methods: {
+    add: function add() {
+      this.patient_medications.push({
+        doctor_order: '',
+        patient_medication_id: 0,
+        datetime_created: new Date(),
+        medication: '',
+        remarks: ''
+      });
+    },
+    remove: function remove(index) {
+      this.patient_medications.splice(index, 1);
+    },
+    getDoctorOrders: function getDoctorOrders() {
+      var _this = this;
+
+      axios.get("/get-doctor-orders-for-patient/".concat(this.propPatientAdmissionId, "/").concat(this.propPatientId)).then(function (res) {
+        _this.doctor_orders = res.data;
+      });
+    },
+    submit: function submit() {
+      var _this2 = this;
+
+      this.fields = []; // this.fields.patient_id = this.propPatientId;
+      //this.fields.patient_admission_id = this.propPatientAdmissionId;
+
+      this.patient_medications.forEach(function (el) {
+        _this2.fields.push({
+          patient_medication_id: el.patient_medication_id,
+          doctor_order: el.doctor_order,
+          patient_admission_id: _this2.propPatientAdmissionId,
+          patient_id: _this2.propPatientId,
+          datetime_created: _this2.formatDateAndTime(el.datetime_created),
+          medication: el.medication,
+          remarks: el.remarks
+        });
+      });
+      axios.post('/nurse-patient-medication-submit', this.fields).then(function (res) {
+        if (res.data.status === 'saved') {
+          _this2.$buefy.dialog.alert({
+            title: 'SAVED!',
+            message: 'Successfully saved.',
+            type: 'is-success',
+            confirmText: 'OK',
+            onConfirm: function onConfirm() {
+              window.location = '/nurse-patient';
+            }
+          });
+        }
+      })["catch"](function (err) {});
+    },
+    checkIfHaveData: function checkIfHaveData() {
+      var _this3 = this;
+
+      axios.get("/get-patient-medications/".concat(this.propPatientAdmissionId, "/").concat(this.propPatientId)).then(function (res) {
+        _this3.patient_medications = [];
+        res.data.forEach(function (el) {
+          _this3.patient_medications.push({
+            doctor_order: el.doctor_order,
+            patient_medication_id: el.patient_medication_id,
+            datetime_created: new Date(el.datetime_created),
+            medication: el.medication,
+            remarks: el.remarks
+          });
+        });
+      });
+    },
+    formatDateAndTime: function formatDateAndTime(value) {
+      var myDate = new Date(value);
+      var realDate = myDate.getFullYear() + "-" + ("0" + (myDate.getMonth() + 1)).slice(-2) + "-" + ("0" + myDate.getDate()).slice(-2);
+      var realTime = myDate.getHours() + ':' + ('0' + myDate.getMinutes()).slice(-2) + ':' + ('0' + myDate.getSeconds()).slice(-2);
+      var timeString = realTime;
+      var H = +timeString.substr(0, 2);
+      var h = H % 12 || 12;
+      var ampm = H < 12 ? " AM" : " PM";
+      timeString = h + timeString.substr(2, 3) + ampm;
+      return realDate + ' ' + realTime;
+    }
+  },
+  mounted: function mounted() {
+    this.getDoctorOrders();
+    this.checkIfHaveData();
   }
 });
 
@@ -32956,6 +35364,78 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n.table > tbody > tr {\n    /* backgr
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n\r\n\r\n/* .hero{\r\n      background-image: url(\"/img/bg-hero.jpg\");\r\n      background-repeat: no-repeat;\r\n      background-size: cover;\r\n  } */\r\n\r\n\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.field-prop[data-v-57413dc1]{\n    font-weight: bold;\n}\n.title-header-text[data-v-57413dc1]{\n    font-weight: bold;\n    font-size: 1.2em;\n    text-align: center;\n    margin-bottom: 15px;\n    padding: 15px;\n    border-bottom: 1px solid gray;\n}\n\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.table > tbody > tr {\r\n    /* background-color: blue; */\r\n    transition: background-color 0.5s ease;\n}\n.table > tbody > tr:hover {\r\n    background-color: rgb(233, 233, 233);\n}\r\n\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorNavbar.vue?vue&type=style&index=0&id=5a5bbb84&scoped=true&lang=css&":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorNavbar.vue?vue&type=style&index=0&id=5a5bbb84&scoped=true&lang=css& ***!
@@ -33076,6 +35556,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n.form-diagnose[data-v-964d2e5c]{\n  
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.field-prop[data-v-6960a3d4]{\n    font-weight: bold;\n}\n.title-header-text[data-v-6960a3d4]{\n    font-weight: bold;\n    font-size: 1.2em;\n    text-align: center;\n    margin-bottom: 15px;\n    padding: 15px;\n    border-bottom: 1px solid gray;\n}\n\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Modals/ModalBrowsePatient.vue?vue&type=style&index=0&id=61de8d7c&scoped=true&lang=css&":
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Modals/ModalBrowsePatient.vue?vue&type=style&index=0&id=61de8d7c&scoped=true&lang=css& ***!
@@ -33189,7 +35693,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.table > tbody > tr {\n    /* background-color: blue; */\n    transition: background-color 0.5s ease;\n}\n.table > tbody > tr:hover {\n    background-color: rgb(233, 233, 233);\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.table > tbody > tr {\r\n    /* background-color: blue; */\r\n    transition: background-color 0.5s ease;\n}\n.table > tbody > tr:hover {\r\n    background-color: rgb(233, 233, 233);\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -33406,6 +35910,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".loader-3[data-v-4e189151] {\r\n    width: 10em;\r\n    display: flex;\r\n    justify-content: space-evenly;\n}\n.circle[data-v-4e189151] {\r\n    width: 1em;\r\n    height: 1em;\r\n    border-radius: 50%;\r\n    position: relative;\n}\n.circle[data-v-4e189151]:nth-child(1) {\r\n    background-color: #90be6d;\n}\n.circle[data-v-4e189151]:nth-child(2) {\r\n    background-color: #f9c74f;\n}\n.circle[data-v-4e189151]:nth-child(3) {\r\n    background-color: #f8961e;\n}\n.circle[data-v-4e189151]:nth-child(4) {\r\n    background-color: #f3722c;\n}\n.circle[data-v-4e189151]:nth-child(5) {\r\n    background-color: #f94346;\n}\n.circle[data-v-4e189151]::before {\r\n    content: \"\";\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    border-radius: 50%;\r\n    opacity: 0.5;\r\n    -webkit-animation: animateLoader38-data-v-4e189151 2s ease-out infinite;\r\n            animation: animateLoader38-data-v-4e189151 2s ease-out infinite;\n}\n.circle[data-v-4e189151]:nth-child(1)::before {\r\n    background-color: #90be6d;\n}\n.circle[data-v-4e189151]:nth-child(2)::before {\r\n    background-color: #f9c74f;\r\n    -webkit-animation-delay: 0.2s;\r\n            animation-delay: 0.2s;\n}\n.circle[data-v-4e189151]:nth-child(3)::before {\r\n    background-color: #f8961e;\r\n    -webkit-animation-delay: 0.4s;\r\n            animation-delay: 0.4s;\n}\n.circle[data-v-4e189151]:nth-child(4)::before {\r\n    background-color: #f3722c;\r\n    -webkit-animation-delay: 0.6s;\r\n            animation-delay: 0.6s;\n}\n.circle[data-v-4e189151]:nth-child(5)::before {\r\n    background-color: #f94346;\r\n    -webkit-animation-delay: 0.8s;\r\n            animation-delay: 0.8s;\n}\n@-webkit-keyframes animateLoader38-data-v-4e189151 {\n0% {\r\n        transform: scale(1);\n}\n50%,\r\n    75% {\r\n        transform: scale(2.5);\n}\n80%,\r\n    100% {\r\n        opacity: 0;\n}\n}\n@keyframes animateLoader38-data-v-4e189151 {\n0% {\r\n        transform: scale(1);\n}\n50%,\r\n    75% {\r\n        transform: scale(2.5);\n}\n80%,\r\n    100% {\r\n        opacity: 0;\n}\n}\n.welcome-container[data-v-4e189151]{\r\n    height: 100vh;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\n}\n.welcome-text[data-v-4e189151]{\r\n    font-weight: bold;\r\n    font-size: 1.8em;\r\n    margin: 15px;\n}\r\n\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./resources/css/admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./resources/css/admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".loader-3[data-v-665988bf] {\r\n    width: 10em;\r\n    display: flex;\r\n    justify-content: space-evenly;\n}\n.circle[data-v-665988bf] {\r\n    width: 1em;\r\n    height: 1em;\r\n    border-radius: 50%;\r\n    position: relative;\n}\n.circle[data-v-665988bf]:nth-child(1) {\r\n    background-color: #90be6d;\n}\n.circle[data-v-665988bf]:nth-child(2) {\r\n    background-color: #f9c74f;\n}\n.circle[data-v-665988bf]:nth-child(3) {\r\n    background-color: #f8961e;\n}\n.circle[data-v-665988bf]:nth-child(4) {\r\n    background-color: #f3722c;\n}\n.circle[data-v-665988bf]:nth-child(5) {\r\n    background-color: #f94346;\n}\n.circle[data-v-665988bf]::before {\r\n    content: \"\";\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    border-radius: 50%;\r\n    opacity: 0.5;\r\n    -webkit-animation: animateLoader38-data-v-665988bf 2s ease-out infinite;\r\n            animation: animateLoader38-data-v-665988bf 2s ease-out infinite;\n}\n.circle[data-v-665988bf]:nth-child(1)::before {\r\n    background-color: #90be6d;\n}\n.circle[data-v-665988bf]:nth-child(2)::before {\r\n    background-color: #f9c74f;\r\n    -webkit-animation-delay: 0.2s;\r\n            animation-delay: 0.2s;\n}\n.circle[data-v-665988bf]:nth-child(3)::before {\r\n    background-color: #f8961e;\r\n    -webkit-animation-delay: 0.4s;\r\n            animation-delay: 0.4s;\n}\n.circle[data-v-665988bf]:nth-child(4)::before {\r\n    background-color: #f3722c;\r\n    -webkit-animation-delay: 0.6s;\r\n            animation-delay: 0.6s;\n}\n.circle[data-v-665988bf]:nth-child(5)::before {\r\n    background-color: #f94346;\r\n    -webkit-animation-delay: 0.8s;\r\n            animation-delay: 0.8s;\n}\n@-webkit-keyframes animateLoader38-data-v-665988bf {\n0% {\r\n        transform: scale(1);\n}\n50%,\r\n    75% {\r\n        transform: scale(2.5);\n}\n80%,\r\n    100% {\r\n        opacity: 0;\n}\n}\n@keyframes animateLoader38-data-v-665988bf {\n0% {\r\n        transform: scale(1);\n}\n50%,\r\n    75% {\r\n        transform: scale(2.5);\n}\n80%,\r\n    100% {\r\n        opacity: 0;\n}\n}\n.welcome-container[data-v-665988bf]{\r\n    height: 100vh;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\n}\n.welcome-text[data-v-665988bf]{\r\n    font-weight: bold;\r\n    font-size: 1.8em;\r\n    margin: 15px;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -33911,6 +36439,96 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefNavbar_vue_vue_type_style_index_0_id_32fb9d70_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefNavbar_vue_vue_type_style_index_0_id_32fb9d70_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefNavbar_vue_vue_type_style_index_0_id_32fb9d70_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatientSummary_vue_vue_type_style_index_0_id_57413dc1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatientSummary_vue_vue_type_style_index_0_id_57413dc1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatientSummary_vue_vue_type_style_index_0_id_57413dc1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatients_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefPatients.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatients_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatients_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorNavbar.vue?vue&type=style&index=0&id=5a5bbb84&scoped=true&lang=css&":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorNavbar.vue?vue&type=style&index=0&id=5a5bbb84&scoped=true&lang=css& ***!
@@ -34058,6 +36676,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_OldDoctorPatientDiagnosexxxx_vue_vue_type_style_index_0_id_964d2e5c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PatientSummary_vue_vue_type_style_index_0_id_6960a3d4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PatientSummary_vue_vue_type_style_index_0_id_6960a3d4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PatientSummary_vue_vue_type_style_index_0_id_6960a3d4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -34478,6 +37126,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_admin_home_css_vue_type_style_index_0_id_4e189151_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./resources/css/admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./resources/css/admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_admin_home_css_vue_type_style_index_0_id_665988bf_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./resources/css/admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_admin_home_css_vue_type_style_index_0_id_665988bf_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_admin_home_css_vue_type_style_index_0_id_665988bf_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -35085,6 +37763,170 @@ component.options.__file = "resources/js/components/Administrator/Patient/Manage
 
 /***/ }),
 
+/***/ "./resources/js/components/Chief/ChiefHome.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefHome.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ChiefHome_vue_vue_type_template_id_665988bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChiefHome.vue?vue&type=template&id=665988bf&scoped=true& */ "./resources/js/components/Chief/ChiefHome.vue?vue&type=template&id=665988bf&scoped=true&");
+/* harmony import */ var _ChiefHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChiefHome.vue?vue&type=script&lang=js& */ "./resources/js/components/Chief/ChiefHome.vue?vue&type=script&lang=js&");
+/* harmony import */ var _css_admin_home_css_vue_type_style_index_0_id_665988bf_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../css/admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css& */ "./resources/css/admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _ChiefHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ChiefHome_vue_vue_type_template_id_665988bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ChiefHome_vue_vue_type_template_id_665988bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "665988bf",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Chief/ChiefHome.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Chief/ChiefNavbar.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefNavbar.vue ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ChiefNavbar_vue_vue_type_template_id_32fb9d70_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChiefNavbar.vue?vue&type=template&id=32fb9d70&scoped=true& */ "./resources/js/components/Chief/ChiefNavbar.vue?vue&type=template&id=32fb9d70&scoped=true&");
+/* harmony import */ var _ChiefNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChiefNavbar.vue?vue&type=script&lang=js& */ "./resources/js/components/Chief/ChiefNavbar.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ChiefNavbar_vue_vue_type_style_index_0_id_32fb9d70_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css& */ "./resources/js/components/Chief/ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _ChiefNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ChiefNavbar_vue_vue_type_template_id_32fb9d70_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ChiefNavbar_vue_vue_type_template_id_32fb9d70_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "32fb9d70",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Chief/ChiefNavbar.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Chief/ChiefPatientSummary.vue":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefPatientSummary.vue ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ChiefPatientSummary_vue_vue_type_template_id_57413dc1_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChiefPatientSummary.vue?vue&type=template&id=57413dc1&scoped=true& */ "./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=template&id=57413dc1&scoped=true&");
+/* harmony import */ var _ChiefPatientSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChiefPatientSummary.vue?vue&type=script&lang=js& */ "./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ChiefPatientSummary_vue_vue_type_style_index_0_id_57413dc1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css& */ "./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _ChiefPatientSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ChiefPatientSummary_vue_vue_type_template_id_57413dc1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ChiefPatientSummary_vue_vue_type_template_id_57413dc1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "57413dc1",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Chief/ChiefPatientSummary.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Chief/ChiefPatients.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefPatients.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ChiefPatients_vue_vue_type_template_id_4b639324___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChiefPatients.vue?vue&type=template&id=4b639324& */ "./resources/js/components/Chief/ChiefPatients.vue?vue&type=template&id=4b639324&");
+/* harmony import */ var _ChiefPatients_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChiefPatients.vue?vue&type=script&lang=js& */ "./resources/js/components/Chief/ChiefPatients.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ChiefPatients_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChiefPatients.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/Chief/ChiefPatients.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _ChiefPatients_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ChiefPatients_vue_vue_type_template_id_4b639324___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ChiefPatients_vue_vue_type_template_id_4b639324___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Chief/ChiefPatients.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/Doctor/DoctorHome.vue":
 /*!*******************************************************!*\
   !*** ./resources/js/components/Doctor/DoctorHome.vue ***!
@@ -35163,6 +38005,45 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/Doctor/DoctorNavbar.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Doctor/DoctorOrder.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/Doctor/DoctorOrder.vue ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _DoctorOrder_vue_vue_type_template_id_25b9628a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DoctorOrder.vue?vue&type=template&id=25b9628a& */ "./resources/js/components/Doctor/DoctorOrder.vue?vue&type=template&id=25b9628a&");
+/* harmony import */ var _DoctorOrder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DoctorOrder.vue?vue&type=script&lang=js& */ "./resources/js/components/Doctor/DoctorOrder.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _DoctorOrder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DoctorOrder_vue_vue_type_template_id_25b9628a___WEBPACK_IMPORTED_MODULE_0__.render,
+  _DoctorOrder_vue_vue_type_template_id_25b9628a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Doctor/DoctorOrder.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -35327,6 +38208,45 @@ component.options.__file = "resources/js/components/Doctor/DoctorPatientPhysical
 
 /***/ }),
 
+/***/ "./resources/js/components/Doctor/DoctorPatientProfile.vue":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/Doctor/DoctorPatientProfile.vue ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _DoctorPatientProfile_vue_vue_type_template_id_0aad3058___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DoctorPatientProfile.vue?vue&type=template&id=0aad3058& */ "./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=template&id=0aad3058&");
+/* harmony import */ var _DoctorPatientProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DoctorPatientProfile.vue?vue&type=script&lang=js& */ "./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _DoctorPatientProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DoctorPatientProfile_vue_vue_type_template_id_0aad3058___WEBPACK_IMPORTED_MODULE_0__.render,
+  _DoctorPatientProfile_vue_vue_type_template_id_0aad3058___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Doctor/DoctorPatientProfile.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/Doctor/DoctorPatientSystemReview.vue":
 /*!**********************************************************************!*\
   !*** ./resources/js/components/Doctor/DoctorPatientSystemReview.vue ***!
@@ -35444,6 +38364,47 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/Doctor/OldDoctorPatientDiagnosexxxx.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Doctor/PatientSummary.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/Doctor/PatientSummary.vue ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PatientSummary_vue_vue_type_template_id_6960a3d4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PatientSummary.vue?vue&type=template&id=6960a3d4&scoped=true& */ "./resources/js/components/Doctor/PatientSummary.vue?vue&type=template&id=6960a3d4&scoped=true&");
+/* harmony import */ var _PatientSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PatientSummary.vue?vue&type=script&lang=js& */ "./resources/js/components/Doctor/PatientSummary.vue?vue&type=script&lang=js&");
+/* harmony import */ var _PatientSummary_vue_vue_type_style_index_0_id_6960a3d4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css& */ "./resources/js/components/Doctor/PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _PatientSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PatientSummary_vue_vue_type_template_id_6960a3d4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _PatientSummary_vue_vue_type_template_id_6960a3d4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "6960a3d4",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Doctor/PatientSummary.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -35801,6 +38762,45 @@ component.options.__file = "resources/js/components/Nurse/Admission/PatientProfi
 
 /***/ }),
 
+/***/ "./resources/js/components/Nurse/NurseCared.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Nurse/NurseCared.vue ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _NurseCared_vue_vue_type_template_id_0cba39da___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NurseCared.vue?vue&type=template&id=0cba39da& */ "./resources/js/components/Nurse/NurseCared.vue?vue&type=template&id=0cba39da&");
+/* harmony import */ var _NurseCared_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NurseCared.vue?vue&type=script&lang=js& */ "./resources/js/components/Nurse/NurseCared.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NurseCared_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NurseCared_vue_vue_type_template_id_0cba39da___WEBPACK_IMPORTED_MODULE_0__.render,
+  _NurseCared_vue_vue_type_template_id_0cba39da___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Nurse/NurseCared.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/Nurse/NurseHome.vue":
 /*!*****************************************************!*\
   !*** ./resources/js/components/Nurse/NurseHome.vue ***!
@@ -35879,6 +38879,45 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/Nurse/NurseNavbar.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Nurse/NurseNotes.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Nurse/NurseNotes.vue ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _NurseNotes_vue_vue_type_template_id_7183f361___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NurseNotes.vue?vue&type=template&id=7183f361& */ "./resources/js/components/Nurse/NurseNotes.vue?vue&type=template&id=7183f361&");
+/* harmony import */ var _NurseNotes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NurseNotes.vue?vue&type=script&lang=js& */ "./resources/js/components/Nurse/NurseNotes.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NurseNotes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NurseNotes_vue_vue_type_template_id_7183f361___WEBPACK_IMPORTED_MODULE_0__.render,
+  _NurseNotes_vue_vue_type_template_id_7183f361___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Nurse/NurseNotes.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -36043,6 +39082,45 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/Nurse/NursePatientDiagnoses.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Nurse/NursePatientMedications.vue":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Nurse/NursePatientMedications.vue ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _NursePatientMedications_vue_vue_type_template_id_ca5a7662___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NursePatientMedications.vue?vue&type=template&id=ca5a7662& */ "./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=template&id=ca5a7662&");
+/* harmony import */ var _NursePatientMedications_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NursePatientMedications.vue?vue&type=script&lang=js& */ "./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NursePatientMedications_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NursePatientMedications_vue_vue_type_template_id_ca5a7662___WEBPACK_IMPORTED_MODULE_0__.render,
+  _NursePatientMedications_vue_vue_type_template_id_ca5a7662___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Nurse/NursePatientMedications.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -36373,6 +39451,70 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Chief/ChiefHome.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefHome.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefHome.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefHome.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Chief/ChiefNavbar.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefNavbar.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefNavbar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatientSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefPatientSummary.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatientSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Chief/ChiefPatients.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefPatients.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatients_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefPatients.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatients_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/Doctor/DoctorHome.vue?vue&type=script&lang=js&":
 /*!********************************************************************************!*\
   !*** ./resources/js/components/Doctor/DoctorHome.vue?vue&type=script&lang=js& ***!
@@ -36402,6 +39544,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DoctorNavbar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorNavbar.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Doctor/DoctorOrder.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/Doctor/DoctorOrder.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorOrder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DoctorOrder.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorOrder.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorOrder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -36469,6 +39627,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorPatientProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DoctorPatientProfile.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorPatientProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/Doctor/DoctorPatientSystemReview.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************!*\
   !*** ./resources/js/components/Doctor/DoctorPatientSystemReview.vue?vue&type=script&lang=js& ***!
@@ -36514,6 +39688,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OldDoctorPatientDiagnosexxxx_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./OldDoctorPatientDiagnosexxxx.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/OldDoctorPatientDiagnosexxxx.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OldDoctorPatientDiagnosexxxx_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Doctor/PatientSummary.vue?vue&type=script&lang=js&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/Doctor/PatientSummary.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PatientSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PatientSummary.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PatientSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -36613,6 +39803,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Nurse/NurseCared.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/Nurse/NurseCared.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseCared_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NurseCared.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseCared.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseCared_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/Nurse/NurseHome.vue?vue&type=script&lang=js&":
 /*!******************************************************************************!*\
   !*** ./resources/js/components/Nurse/NurseHome.vue?vue&type=script&lang=js& ***!
@@ -36642,6 +39848,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NurseNavbar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseNavbar.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseNavbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Nurse/NurseNotes.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/Nurse/NurseNotes.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseNotes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NurseNotes.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseNotes.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseNotes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -36706,6 +39928,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NursePatientDiagnoses_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NursePatientDiagnoses.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NursePatientDiagnoses.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NursePatientDiagnoses_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NursePatientMedications_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NursePatientMedications.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NursePatientMedications_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -36818,6 +40056,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/css/admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/css/admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css& ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_admin_home_css_vue_type_style_index_0_id_665988bf_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/style-loader/dist/cjs.js!../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./resources/css/admin-home.css?vue&type=style&index=0&id=665988bf&scoped=true&lang=css&");
+
+
+/***/ }),
+
 /***/ "./resources/css/admin-home.css?vue&type=style&index=0&id=79921bd3&scoped=true&lang=css&":
 /*!***********************************************************************************************!*\
   !*** ./resources/css/admin-home.css?vue&type=style&index=0&id=79921bd3&scoped=true&lang=css& ***!
@@ -36922,6 +40173,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Chief/ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css& ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefNavbar_vue_vue_type_style_index_0_id_32fb9d70_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=style&index=0&id=32fb9d70&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css&":
+/*!************************************************************************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css& ***!
+  \************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatientSummary_vue_vue_type_style_index_0_id_57413dc1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=style&index=0&id=57413dc1&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Chief/ChiefPatients.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefPatients.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatients_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefPatients.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Doctor/DoctorNavbar.vue?vue&type=style&index=0&id=5a5bbb84&scoped=true&lang=css&":
 /*!******************************************************************************************************************!*\
   !*** ./resources/js/components/Doctor/DoctorNavbar.vue?vue&type=style&index=0&id=5a5bbb84&scoped=true&lang=css& ***!
@@ -36983,6 +40273,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_OldDoctorPatientDiagnosexxxx_vue_vue_type_style_index_0_id_964d2e5c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./OldDoctorPatientDiagnosexxxx.vue?vue&type=style&index=0&id=964d2e5c&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/OldDoctorPatientDiagnosexxxx.vue?vue&type=style&index=0&id=964d2e5c&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Doctor/PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/components/Doctor/PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css& ***!
+  \********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PatientSummary_vue_vue_type_style_index_0_id_6960a3d4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=style&index=0&id=6960a3d4&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -37241,6 +40544,74 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Chief/ChiefHome.vue?vue&type=template&id=665988bf&scoped=true&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefHome.vue?vue&type=template&id=665988bf&scoped=true& ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefHome_vue_vue_type_template_id_665988bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefHome_vue_vue_type_template_id_665988bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefHome_vue_vue_type_template_id_665988bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefHome.vue?vue&type=template&id=665988bf&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefHome.vue?vue&type=template&id=665988bf&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Chief/ChiefNavbar.vue?vue&type=template&id=32fb9d70&scoped=true&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefNavbar.vue?vue&type=template&id=32fb9d70&scoped=true& ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefNavbar_vue_vue_type_template_id_32fb9d70_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefNavbar_vue_vue_type_template_id_32fb9d70_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefNavbar_vue_vue_type_template_id_32fb9d70_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefNavbar.vue?vue&type=template&id=32fb9d70&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=template&id=32fb9d70&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=template&id=57413dc1&scoped=true&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=template&id=57413dc1&scoped=true& ***!
+  \**********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatientSummary_vue_vue_type_template_id_57413dc1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatientSummary_vue_vue_type_template_id_57413dc1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatientSummary_vue_vue_type_template_id_57413dc1_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefPatientSummary.vue?vue&type=template&id=57413dc1&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=template&id=57413dc1&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Chief/ChiefPatients.vue?vue&type=template&id=4b639324&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/Chief/ChiefPatients.vue?vue&type=template&id=4b639324& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatients_vue_vue_type_template_id_4b639324___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatients_vue_vue_type_template_id_4b639324___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChiefPatients_vue_vue_type_template_id_4b639324___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChiefPatients.vue?vue&type=template&id=4b639324& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=template&id=4b639324&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Doctor/DoctorHome.vue?vue&type=template&id=79921bd3&scoped=true&":
 /*!**************************************************************************************************!*\
   !*** ./resources/js/components/Doctor/DoctorHome.vue?vue&type=template&id=79921bd3&scoped=true& ***!
@@ -37271,6 +40642,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorNavbar_vue_vue_type_template_id_5a5bbb84_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorNavbar_vue_vue_type_template_id_5a5bbb84_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DoctorNavbar.vue?vue&type=template&id=5a5bbb84&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorNavbar.vue?vue&type=template&id=5a5bbb84&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Doctor/DoctorOrder.vue?vue&type=template&id=25b9628a&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/Doctor/DoctorOrder.vue?vue&type=template&id=25b9628a& ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorOrder_vue_vue_type_template_id_25b9628a___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorOrder_vue_vue_type_template_id_25b9628a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorOrder_vue_vue_type_template_id_25b9628a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DoctorOrder.vue?vue&type=template&id=25b9628a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorOrder.vue?vue&type=template&id=25b9628a&");
 
 
 /***/ }),
@@ -37343,6 +40731,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=template&id=0aad3058&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=template&id=0aad3058& ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorPatientProfile_vue_vue_type_template_id_0aad3058___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorPatientProfile_vue_vue_type_template_id_0aad3058___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DoctorPatientProfile_vue_vue_type_template_id_0aad3058___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DoctorPatientProfile.vue?vue&type=template&id=0aad3058& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=template&id=0aad3058&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Doctor/DoctorPatientSystemReview.vue?vue&type=template&id=7fc9b348&":
 /*!*****************************************************************************************************!*\
   !*** ./resources/js/components/Doctor/DoctorPatientSystemReview.vue?vue&type=template&id=7fc9b348& ***!
@@ -37390,6 +40795,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OldDoctorPatientDiagnosexxxx_vue_vue_type_template_id_964d2e5c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OldDoctorPatientDiagnosexxxx_vue_vue_type_template_id_964d2e5c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./OldDoctorPatientDiagnosexxxx.vue?vue&type=template&id=964d2e5c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/OldDoctorPatientDiagnosexxxx.vue?vue&type=template&id=964d2e5c&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Doctor/PatientSummary.vue?vue&type=template&id=6960a3d4&scoped=true&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/components/Doctor/PatientSummary.vue?vue&type=template&id=6960a3d4&scoped=true& ***!
+  \******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PatientSummary_vue_vue_type_template_id_6960a3d4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PatientSummary_vue_vue_type_template_id_6960a3d4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PatientSummary_vue_vue_type_template_id_6960a3d4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PatientSummary.vue?vue&type=template&id=6960a3d4&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=template&id=6960a3d4&scoped=true&");
 
 
 /***/ }),
@@ -37547,6 +40969,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Nurse/NurseCared.vue?vue&type=template&id=0cba39da&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/Nurse/NurseCared.vue?vue&type=template&id=0cba39da& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseCared_vue_vue_type_template_id_0cba39da___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseCared_vue_vue_type_template_id_0cba39da___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseCared_vue_vue_type_template_id_0cba39da___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NurseCared.vue?vue&type=template&id=0cba39da& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseCared.vue?vue&type=template&id=0cba39da&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Nurse/NurseHome.vue?vue&type=template&id=9cc71722&scoped=true&":
 /*!************************************************************************************************!*\
   !*** ./resources/js/components/Nurse/NurseHome.vue?vue&type=template&id=9cc71722&scoped=true& ***!
@@ -37577,6 +41016,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseNavbar_vue_vue_type_template_id_8d9b45c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseNavbar_vue_vue_type_template_id_8d9b45c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NurseNavbar.vue?vue&type=template&id=8d9b45c0&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseNavbar.vue?vue&type=template&id=8d9b45c0&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Nurse/NurseNotes.vue?vue&type=template&id=7183f361&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/Nurse/NurseNotes.vue?vue&type=template&id=7183f361& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseNotes_vue_vue_type_template_id_7183f361___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseNotes_vue_vue_type_template_id_7183f361___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NurseNotes_vue_vue_type_template_id_7183f361___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NurseNotes.vue?vue&type=template&id=7183f361& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseNotes.vue?vue&type=template&id=7183f361&");
 
 
 /***/ }),
@@ -37645,6 +41101,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NursePatientDiagnoses_vue_vue_type_template_id_aa72e000___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NursePatientDiagnoses_vue_vue_type_template_id_aa72e000___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NursePatientDiagnoses.vue?vue&type=template&id=aa72e000& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NursePatientDiagnoses.vue?vue&type=template&id=aa72e000&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=template&id=ca5a7662&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=template&id=ca5a7662& ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NursePatientMedications_vue_vue_type_template_id_ca5a7662___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NursePatientMedications_vue_vue_type_template_id_ca5a7662___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NursePatientMedications_vue_vue_type_template_id_ca5a7662___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NursePatientMedications.vue?vue&type=template&id=ca5a7662& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=template&id=ca5a7662&");
 
 
 /***/ }),
@@ -40687,6 +44160,1794 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefHome.vue?vue&type=template&id=665988bf&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefHome.vue?vue&type=template&id=665988bf&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "welcome-container" }, [
+        _c("div", { staticClass: "loader-3" }, [
+          _c("div", { staticClass: "circle" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "circle" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "circle" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "circle" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "circle" }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "welcome-text" }, [
+          _vm._v("\n            WELCOME CHIEF NURSE\n        "),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=template&id=32fb9d70&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefNavbar.vue?vue&type=template&id=32fb9d70&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("b-navbar", {
+        scopedSlots: _vm._u([
+          {
+            key: "brand",
+            fn: function () {
+              return [
+                _c("b-navbar-item", [_c("span", [_vm._v("CHIEF PANEL")])]),
+              ]
+            },
+            proxy: true,
+          },
+          {
+            key: "start",
+            fn: function () {
+              return undefined
+            },
+            proxy: true,
+          },
+          {
+            key: "end",
+            fn: function () {
+              return [
+                _c("b-navbar-item", { attrs: { href: "/chief-home" } }, [
+                  _vm._v("\n                Home\n            "),
+                ]),
+                _vm._v(" "),
+                _c("b-navbar-item", { attrs: { href: "/chief-patients" } }, [
+                  _vm._v("\n                My Patients\n            "),
+                ]),
+                _vm._v(" "),
+                _c("b-navbar-item", { attrs: { tag: "div" } }, [
+                  _c("div", { staticClass: "buttons" }, [
+                    _c(
+                      "button",
+                      { staticClass: "w2-button", on: { click: _vm.logout } },
+                      [
+                        _c("span", { staticClass: "mdi mdi-logout" }),
+                        _vm._v(
+                          "\n                        LOG OUT\n                    "
+                        ),
+                      ]
+                    ),
+                  ]),
+                ]),
+              ]
+            },
+            proxy: true,
+          },
+        ]),
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=template&id=57413dc1&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatientSummary.vue?vue&type=template&id=57413dc1&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "section" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
+        _c("div", { staticClass: "column is-8-desktop" }, [
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c("div", { staticClass: "information-container" }, [
+                  _c("div", { staticClass: "title-header-text" }, [
+                    _vm._v("PATIENT PROFILE"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Patient Name: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.lname) +
+                            ", " +
+                            _vm._s(_vm.data.patient.fname) +
+                            " " +
+                            _vm._s(_vm.data.patient.mname) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Contact No: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.contact_no) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Sex: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.sex) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Civil Status: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.civil_status) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Birthdate: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.bdate) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Birthplace: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.birthplace) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Nationality: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.nationality) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Religion: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.religion) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Occupation: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.occupation) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Father: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.father_name) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Contact No: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.father_contact_no) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Mother: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.mother_maiden_name) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Contact No: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.mother_contact_no) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Spouse: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.spouse_name) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Contact No: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.spouse_contact_no) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ])
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c("div", { staticClass: "information-container" }, [
+                  _c("div", { staticClass: "title-header-text" }, [
+                    _vm._v("ADMISSION INFORMATION"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Admission Date: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.admission_date) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Discharge: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.discharge_date) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Ward/Room: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.ward_room) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Total Day: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.total_day) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Admitting Physician: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.admitting_physician) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Admitting Clerk: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.admitting_clerk) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Attending Physician: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.attending_physician) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Referred By: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.referred_by) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Social Service Classification: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.social_service_classification) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Health Insurance: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.health_insurance) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Phic: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.phic) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Data Furnished By: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.data_furnished_by) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Address Informant: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.address_informant) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Patient Relation: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient_relation) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Admission Diagnosis: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.admission_diagnosis) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("BP: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.bg) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("CR: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.cr) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("RR: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.rr) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Temp: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.temp) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ])
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c("div", { staticClass: "information-container" }, [
+                  _c("div", { staticClass: "title-header-text" }, [
+                    _vm._v("HISTORY"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Present Complain: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.history.present_complain) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Past History: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.history.past_history) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Family History: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.history.family_history) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Occupation Environment: "),
+                        ]),
+                        _vm._v(
+                          " \n                                    " +
+                            _vm._s(_vm.data.history.occupation_environment) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Alcohol: "),
+                        ]),
+                        _vm._v(
+                          " \n                                    " +
+                            _vm._s(_vm.data.history.alcohol) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Tobacco: "),
+                        ]),
+                        _vm._v(
+                          " \n                                    " +
+                            _vm._s(_vm.data.history.tobacco) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Drug Allergies: "),
+                        ]),
+                        _vm._v(
+                          " \n                                    " +
+                            _vm._s(_vm.data.history.drug_allergies) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Other Allergies: "),
+                        ]),
+                        _vm._v(
+                          " \n                                    " +
+                            _vm._s(_vm.data.history.other_allergies) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ])
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c("div", { staticClass: "information-container" }, [
+                  _c("div", { staticClass: "title-header-text" }, [
+                    _vm._v("PHYSICAL EXAM"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Skin: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.skin) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Head-EENT: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.head_eent) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Lymp Notes: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.lymp_notes) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Chest: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.chest) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Lungs: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.lungs) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Cardiovascular: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.cardiovascular) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Breast: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.breast) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Abdomen: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.abdomen) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Rectum: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.rectum) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Genetalia: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.genetalia) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ])
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c(
+                  "div",
+                  { staticClass: "information-container" },
+                  [
+                    _c("div", { staticClass: "title-header-text" }, [
+                      _vm._v("DOCTOR ORDER"),
+                    ]),
+                    _vm._v(" "),
+                    _vm._l(_vm.data.doctor_orders, function (i, ix) {
+                      return _c("div", { key: ix }, [
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Date/Time: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(i.doctor_date_time_created) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Progress Notes: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(i.progress_notes) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Order: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(i.order) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "columns" }, [
+                          _c(
+                            "div",
+                            { staticClass: "column" },
+                            [
+                              _c(
+                                "b-field",
+                                { attrs: { label: "C" } },
+                                [
+                                  _c("b-checkbox", {
+                                    attrs: {
+                                      "true-value": "1",
+                                      "false-value": "0",
+                                      disabled: "",
+                                    },
+                                    model: {
+                                      value: i.letter_c,
+                                      callback: function ($$v) {
+                                        _vm.$set(i, "letter_c", $$v)
+                                      },
+                                      expression: "i.letter_c",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "column" },
+                            [
+                              _c(
+                                "b-field",
+                                { attrs: { label: "A" } },
+                                [
+                                  _c("b-checkbox", {
+                                    attrs: {
+                                      "true-value": "1",
+                                      "false-value": "0",
+                                      disabled: "",
+                                    },
+                                    model: {
+                                      value: i.letter_a,
+                                      callback: function ($$v) {
+                                        _vm.$set(i, "letter_a", $$v)
+                                      },
+                                      expression: "i.letter_a",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "column" },
+                            [
+                              _c(
+                                "b-field",
+                                { attrs: { label: "R" } },
+                                [
+                                  _c("b-checkbox", {
+                                    attrs: {
+                                      "true-value": "1",
+                                      "false-value": "0",
+                                      disabled: "",
+                                    },
+                                    model: {
+                                      value: i.letter_r,
+                                      callback: function ($$v) {
+                                        _vm.$set(i, "letter_r", $$v)
+                                      },
+                                      expression: "i.letter_r",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "column" },
+                            [
+                              _c(
+                                "b-field",
+                                { attrs: { label: "E" } },
+                                [
+                                  _c("b-checkbox", {
+                                    attrs: {
+                                      "true-value": "1",
+                                      "false-value": "0",
+                                      disabled: "",
+                                    },
+                                    model: {
+                                      value: i.letter_e,
+                                      callback: function ($$v) {
+                                        _vm.$set(i, "letter_e", $$v)
+                                      },
+                                      expression: "i.letter_e",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "column" },
+                            [
+                              _c(
+                                "b-field",
+                                { attrs: { label: "D" } },
+                                [
+                                  _c("b-checkbox", {
+                                    attrs: {
+                                      "true-value": "1",
+                                      "false-value": "0",
+                                      disabled: "",
+                                    },
+                                    model: {
+                                      value: i.letter_d,
+                                      callback: function ($$v) {
+                                        _vm.$set(i, "letter_d", $$v)
+                                      },
+                                      expression: "i.letter_d",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticStyle: {
+                            height: "1px",
+                            "background-color": "gray",
+                            "margin-bottom": "10px",
+                          },
+                        }),
+                      ])
+                    }),
+                  ],
+                  2
+                )
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c(
+                  "div",
+                  { staticClass: "information-container" },
+                  [
+                    _c("div", { staticClass: "title-header-text" }, [
+                      _vm._v("NURSE NOTES"),
+                    ]),
+                    _vm._v(" "),
+                    _vm._l(_vm.data.nurse_notes, function (ii, ixx) {
+                      return _c("div", { key: ixx }, [
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Date/Time: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(ii.date_time_created) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Doctor Order: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(ii.doctor_order) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Focus: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(ii.focus) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Nurse Notes: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(ii.nurse_notes) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticStyle: {
+                            height: "1px",
+                            "background-color": "gray",
+                            "margin-bottom": "10px",
+                          },
+                        }),
+                      ])
+                    }),
+                  ],
+                  2
+                )
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c(
+                  "div",
+                  { staticClass: "information-container" },
+                  [
+                    _c("div", { staticClass: "title-header-text" }, [
+                      _vm._v("MEDICATION"),
+                    ]),
+                    _vm._v(" "),
+                    _vm._l(_vm.data.medications, function (ii, ixx) {
+                      return _c("div", { key: ixx }, [
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Date/Time: "),
+                              ]),
+                              _vm._v(
+                                "\n                                        " +
+                                  _vm._s(ii.datetime_created) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Doctor Order: "),
+                              ]),
+                              _vm._v(
+                                "\n                                        " +
+                                  _vm._s(ii.doctor_order) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Medication: "),
+                              ]),
+                              _vm._v(
+                                "\n                                        " +
+                                  _vm._s(ii.medication) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Remarks: "),
+                              ]),
+                              _vm._v(
+                                "\n                                        " +
+                                  _vm._s(ii.remarks) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticStyle: {
+                            height: "1px",
+                            "background-color": "gray",
+                            "margin-bottom": "10px",
+                          },
+                        }),
+                      ])
+                    }),
+                  ],
+                  2
+                )
+              : _vm._e(),
+          ]),
+        ]),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=template&id=4b639324&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Chief/ChiefPatients.vue?vue&type=template&id=4b639324& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "section" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
+        _c("div", { staticClass: "column is-10-desktop" }, [
+          _c(
+            "div",
+            { staticClass: "box" },
+            [
+              _c("div", { staticClass: "table-text" }, [
+                _vm._v("NURSE PATIENTS LIST"),
+              ]),
+              _vm._v(" "),
+              _c(
+                "b-field",
+                { attrs: { label: "Search", "label-position": "on-border" } },
+                [
+                  _c("b-input", {
+                    attrs: { type: "text", placeholder: "Last Name" },
+                    nativeOn: {
+                      keyup: function ($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k(
+                            $event.keyCode,
+                            "enter",
+                            13,
+                            $event.key,
+                            "Enter"
+                          )
+                        ) {
+                          return null
+                        }
+                        return _vm.loadAsyncData.apply(null, arguments)
+                      },
+                    },
+                    model: {
+                      value: _vm.search.lname,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.search, "lname", $$v)
+                      },
+                      expression: "search.lname",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("b-input", {
+                    attrs: { type: "text", placeholder: "First Name" },
+                    nativeOn: {
+                      keyup: function ($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k(
+                            $event.keyCode,
+                            "enter",
+                            13,
+                            $event.key,
+                            "Enter"
+                          )
+                        ) {
+                          return null
+                        }
+                        return _vm.loadAsyncData.apply(null, arguments)
+                      },
+                    },
+                    model: {
+                      value: _vm.search.fname,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.search, "fname", $$v)
+                      },
+                      expression: "search.fname",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    { staticClass: "control" },
+                    [
+                      _c(
+                        "b-tooltip",
+                        { attrs: { label: "Search", type: "is-success" } },
+                        [
+                          _c("b-button", {
+                            attrs: {
+                              type: "is-primary",
+                              "icon-right": "magnify",
+                            },
+                            on: { click: _vm.loadAsyncData },
+                          }),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-table",
+                {
+                  attrs: {
+                    data: _vm.data,
+                    loading: _vm.loading,
+                    paginated: "",
+                    detailed: "",
+                    "backend-pagination": "",
+                    total: _vm.total,
+                    "pagination-rounded": true,
+                    "per-page": _vm.perPage,
+                    "aria-next-label": "Next page",
+                    "aria-previous-label": "Previous page",
+                    "aria-page-label": "Page",
+                    "aria-current-label": "Current page",
+                    "backend-sorting": "",
+                    "default-sort-direction": _vm.defaultSortDirection,
+                  },
+                  on: { "page-change": _vm.onPageChange, sort: _vm.onSort },
+                  scopedSlots: _vm._u([
+                    {
+                      key: "detail",
+                      fn: function (props) {
+                        return [
+                          _c("tr", [
+                            _c("th", [_vm._v("Admission Id")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Admission Date")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Discharge Date")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Total Day")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Ward/Room")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Admitting Physician")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Action")]),
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(
+                            props.row.patient_admissions,
+                            function (item, index) {
+                              return _c("tr", { key: index }, [
+                                _c("td", [
+                                  _vm._v(_vm._s(item.patient_admission_id)),
+                                ]),
+                                _vm._v(" "),
+                                _c("td", [_vm._v(_vm._s(item.admission_date))]),
+                                _vm._v(" "),
+                                _c("td", [_vm._v(_vm._s(item.discharge_date))]),
+                                _vm._v(" "),
+                                _c("td", [_vm._v(_vm._s(item.total_day))]),
+                                _vm._v(" "),
+                                _c("td", [_vm._v(_vm._s(item.ward_room))]),
+                                _vm._v(" "),
+                                _c("td", [
+                                  _vm._v(_vm._s(item.admitting_physician)),
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "td",
+                                  [
+                                    _c(
+                                      "b-dropdown",
+                                      {
+                                        attrs: { "aria-role": "list" },
+                                        scopedSlots: _vm._u(
+                                          [
+                                            {
+                                              key: "trigger",
+                                              fn: function (ref) {
+                                                var active = ref.active
+                                                return [
+                                                  _c("b-button", {
+                                                    staticClass: "is-small",
+                                                    attrs: {
+                                                      label: "Option",
+                                                      type: "is-primary",
+                                                      "icon-right": active
+                                                        ? "menu-up"
+                                                        : "menu-down",
+                                                    },
+                                                  }),
+                                                ]
+                                              },
+                                            },
+                                          ],
+                                          null,
+                                          true
+                                        ),
+                                      },
+                                      [
+                                        _vm._v(" "),
+                                        _c(
+                                          "b-dropdown-item",
+                                          {
+                                            attrs: {
+                                              "aria-role": "listitem",
+                                              href:
+                                                "/chief-patient-summary/" +
+                                                item.patient_admission_id +
+                                                "/" +
+                                                item.patient_id,
+                                            },
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                            Summary\n                                        "
+                                            ),
+                                          ]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                  ],
+                                  1
+                                ),
+                              ])
+                            }
+                          ),
+                        ]
+                      },
+                    },
+                  ]),
+                },
+                [
+                  _c("b-table-column", {
+                    attrs: { field: "patient_id", label: "ID", sortable: "" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.patient_id) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: {
+                      field: "admission_date",
+                      label: "Admission Date",
+                      sortable: "",
+                    },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(
+                                  _vm._f("formatDateAndTime")(
+                                    props.row.admission_date
+                                  )
+                                ) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "name", label: "Name", sortable: "" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.fname) +
+                                " " +
+                                _vm._s(props.row.mname) +
+                                " " +
+                                _vm._s(props.row.lname) +
+                                " " +
+                                _vm._s(props.row.suffix) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "sex", label: "Sex", sortable: "" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.sex) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "contact_no", label: "Contact" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.contact_no) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "bdate", label: "Birthdate" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.bdate) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "mother_maiden_name", label: "Mother" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.mother_maiden_name) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "father_name", label: "Father" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.father_name) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c(
+                  "div",
+                  { staticClass: "column" },
+                  [
+                    _c(
+                      "b-field",
+                      {
+                        attrs: { label: "Page", "label-position": "on-border" },
+                      },
+                      [
+                        _c(
+                          "b-select",
+                          {
+                            staticClass: "is-small",
+                            on: { input: _vm.setPerPage },
+                            model: {
+                              value: _vm.perPage,
+                              callback: function ($$v) {
+                                _vm.perPage = $$v
+                              },
+                              expression: "perPage",
+                            },
+                          },
+                          [
+                            _c("option", { attrs: { value: "5" } }, [
+                              _vm._v("5 per page"),
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "10" } }, [
+                              _vm._v("10 per page"),
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "15" } }, [
+                              _vm._v("15 per page"),
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "20" } }, [
+                              _vm._v("20 per page"),
+                            ]),
+                          ]
+                        ),
+                      ],
+                      1
+                    ),
+                  ],
+                  1
+                ),
+              ]),
+            ],
+            1
+          ),
+        ]),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorHome.vue?vue&type=template&id=79921bd3&scoped=true&":
 /*!*****************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorHome.vue?vue&type=template&id=79921bd3&scoped=true& ***!
@@ -40811,6 +46072,321 @@ var render = function () {
   )
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorOrder.vue?vue&type=template&id=25b9628a&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorOrder.vue?vue&type=template&id=25b9628a& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "section" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
+        _c("div", { staticClass: "column is-6-desktop is-8-tablet" }, [
+          _c("div", { staticClass: "box" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "box-body" },
+              [
+                _vm._l(_vm.doctor_orders, function (order, index) {
+                  return _c(
+                    "div",
+                    { key: index },
+                    [
+                      _c("div", { staticClass: "divider" }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Date/Time" } },
+                              [
+                                _c("b-datetimepicker", {
+                                  attrs: { placeholder: "Date/Time" },
+                                  model: {
+                                    value: order.doctor_date_time_created,
+                                    callback: function ($$v) {
+                                      _vm.$set(
+                                        order,
+                                        "doctor_date_time_created",
+                                        $$v
+                                      )
+                                    },
+                                    expression:
+                                      "order.doctor_date_time_created",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Progress Notes" } },
+                              [
+                                _c("b-input", {
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Progress Notes",
+                                  },
+                                  model: {
+                                    value: order.progress_notes,
+                                    callback: function ($$v) {
+                                      _vm.$set(order, "progress_notes", $$v)
+                                    },
+                                    expression: "order.progress_notes",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Order" } },
+                              [
+                                _c("b-input", {
+                                  attrs: {
+                                    type: "textarea",
+                                    placeholder: "Order",
+                                  },
+                                  model: {
+                                    value: order.order,
+                                    callback: function ($$v) {
+                                      _vm.$set(order, "order", $$v)
+                                    },
+                                    expression: "order.order",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              [
+                                _c(
+                                  "b-field",
+                                  { attrs: { label: "C" } },
+                                  [
+                                    _c("b-checkbox", {
+                                      attrs: {
+                                        "true-value": "1",
+                                        "false-value": "0",
+                                      },
+                                      model: {
+                                        value: order.letter_c,
+                                        callback: function ($$v) {
+                                          _vm.$set(order, "letter_c", $$v)
+                                        },
+                                        expression: "order.letter_c",
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-field",
+                                  { attrs: { label: "A" } },
+                                  [
+                                    _c("b-checkbox", {
+                                      attrs: {
+                                        "true-value": "1",
+                                        "false-value": "0",
+                                      },
+                                      model: {
+                                        value: order.letter_a,
+                                        callback: function ($$v) {
+                                          _vm.$set(order, "letter_a", $$v)
+                                        },
+                                        expression: "order.letter_a",
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-field",
+                                  { attrs: { label: "R" } },
+                                  [
+                                    _c("b-checkbox", {
+                                      attrs: {
+                                        "true-value": "1",
+                                        "false-value": "0",
+                                      },
+                                      model: {
+                                        value: order.letter_r,
+                                        callback: function ($$v) {
+                                          _vm.$set(order, "letter_r", $$v)
+                                        },
+                                        expression: "order.letter_r",
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-field",
+                                  { attrs: { label: "E" } },
+                                  [
+                                    _c("b-checkbox", {
+                                      attrs: {
+                                        "true-value": "1",
+                                        "false-value": "0",
+                                      },
+                                      model: {
+                                        value: order.letter_e,
+                                        callback: function ($$v) {
+                                          _vm.$set(order, "letter_e", $$v)
+                                        },
+                                        expression: "order.letter_e",
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-field",
+                                  { attrs: { label: "D" } },
+                                  [
+                                    _c("b-checkbox", {
+                                      attrs: {
+                                        "true-value": "1",
+                                        "false-value": "0",
+                                      },
+                                      model: {
+                                        value: order.letter_d,
+                                        callback: function ($$v) {
+                                          _vm.$set(order, "letter_d", $$v)
+                                        },
+                                        expression: "order.letter_d",
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("b-button", {
+                        staticClass: "is-small",
+                        attrs: { "icon-right": "delete", type: "is-danger" },
+                        on: {
+                          click: function ($event) {
+                            return _vm.removeOrder(index)
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "divider" }),
+                    ],
+                    1
+                  )
+                }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "buttons is-right" },
+                  [
+                    _c("b-button", {
+                      staticClass: "is-small",
+                      attrs: { "icon-right": "plus", type: "is-primary" },
+                      on: { click: _vm.addOrder },
+                    }),
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "buttons is-right" },
+                  [
+                    _c("b-button", {
+                      attrs: { label: "Save Order", type: "is-primary" },
+                      on: { click: _vm.submit },
+                    }),
+                  ],
+                  1
+                ),
+              ],
+              2
+            ),
+          ]),
+        ]),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "box-header" }, [
+      _c("div", { staticClass: "box-header-text" }, [
+        _vm._v(
+          "\n                            DOCTOR ORDERS\n                        "
+        ),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -42071,6 +47647,31 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=template&id=0aad3058&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorPatientProfile.vue?vue&type=template&id=0aad3058& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div")
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorPatientSystemReview.vue?vue&type=template&id=7fc9b348&":
 /*!********************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/DoctorPatientSystemReview.vue?vue&type=template&id=7fc9b348& ***!
@@ -42900,6 +48501,44 @@ var render = function () {
                                             attrs: {
                                               "aria-role": "listitem",
                                               href:
+                                                "/doctor-orders/" +
+                                                item.patient_admission_id +
+                                                "/" +
+                                                item.patient_id,
+                                            },
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                                Doctor Order\n                                            "
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "b-dropdown-item",
+                                          {
+                                            attrs: {
+                                              "aria-role": "listitem",
+                                              href:
+                                                "/patient-summary/" +
+                                                item.patient_admission_id +
+                                                "/" +
+                                                item.patient_id,
+                                            },
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                                Patient Summary\n                                            "
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "b-dropdown-item",
+                                          {
+                                            attrs: {
+                                              "aria-role": "listitem",
+                                              href:
                                                 "/doctor-patient-disposition/" +
                                                 item.patient_admission_id +
                                                 "/" +
@@ -43602,6 +49241,1113 @@ var staticRenderFns = [
     ])
   },
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=template&id=6960a3d4&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Doctor/PatientSummary.vue?vue&type=template&id=6960a3d4&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "section" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
+        _c("div", { staticClass: "column is-8-desktop" }, [
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c("div", { staticClass: "information-container" }, [
+                  _c("div", { staticClass: "title-header-text" }, [
+                    _vm._v("PATIENT PROFILE"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Patient Name: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.lname) +
+                            ", " +
+                            _vm._s(_vm.data.patient.fname) +
+                            " " +
+                            _vm._s(_vm.data.patient.mname) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Contact No: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.contact_no) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Sex: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.sex) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Civil Status: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.civil_status) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Birthdate: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.bdate) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Birthplace: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.birthplace) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Nationality: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.nationality) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Religion: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.religion) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Occupation: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.occupation) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Father: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.father_name) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Contact No: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.father_contact_no) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Mother: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.mother_maiden_name) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Contact No: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.mother_contact_no) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Spouse: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.spouse_name) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Contact No: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.spouse_contact_no) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ])
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c("div", { staticClass: "information-container" }, [
+                  _c("div", { staticClass: "title-header-text" }, [
+                    _vm._v("ADMISSION INFORMATION"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Admission Date: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.admission_date) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Discharge: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.discharge_date) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Ward/Room: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.ward_room) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Total Day: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.total_day) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Admitting Physician: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.admitting_physician) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Admitting Clerk: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.admitting_clerk) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Attending Physician: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.attending_physician) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Referred By: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.referred_by) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Social Service Classification: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.social_service_classification) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Health Insurance: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.health_insurance) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Phic: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient.phic) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Data Furnished By: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.data_furnished_by) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Address Informant: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.address_informant) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Patient Relation: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.patient_relation) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Admission Diagnosis: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.admission_diagnosis) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("BP: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.bg) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("CR: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.cr) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("RR: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.rr) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Temp: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.temp) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ])
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c("div", { staticClass: "information-container" }, [
+                  _c("div", { staticClass: "title-header-text" }, [
+                    _vm._v("HISTORY"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Present Complain: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.history.present_complain) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Past History: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.history.past_history) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Family History: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.history.family_history) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Occupation Environment: "),
+                        ]),
+                        _vm._v(
+                          " \n                                    " +
+                            _vm._s(_vm.data.history.occupation_environment) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Alcohol: "),
+                        ]),
+                        _vm._v(
+                          " \n                                    " +
+                            _vm._s(_vm.data.history.alcohol) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Tobacco: "),
+                        ]),
+                        _vm._v(
+                          " \n                                    " +
+                            _vm._s(_vm.data.history.tobacco) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Drug Allergies: "),
+                        ]),
+                        _vm._v(
+                          " \n                                    " +
+                            _vm._s(_vm.data.history.drug_allergies) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Other Allergies: "),
+                        ]),
+                        _vm._v(
+                          " \n                                    " +
+                            _vm._s(_vm.data.history.other_allergies) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ])
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c("div", { staticClass: "information-container" }, [
+                  _c("div", { staticClass: "title-header-text" }, [
+                    _vm._v("PHYSICAL EXAM"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Skin: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.skin) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Head-EENT: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.head_eent) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Lymp Notes: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.lymp_notes) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Chest: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.chest) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Lungs: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.lungs) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Cardiovascular: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.cardiovascular) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Breast: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.breast) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Abdomen: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.abdomen) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Rectum: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.rectum) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("span", { staticClass: "field-prop" }, [
+                          _vm._v("Genetalia: "),
+                        ]),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.data.physical_exam.genetalia) +
+                            "\n                                "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ])
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c(
+                  "div",
+                  { staticClass: "information-container" },
+                  [
+                    _c("div", { staticClass: "title-header-text" }, [
+                      _vm._v("DOCTOR ORDER"),
+                    ]),
+                    _vm._v(" "),
+                    _vm._l(_vm.data.doctor_orders, function (i, ix) {
+                      return _c("div", { key: ix }, [
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Date/Time: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(i.doctor_date_time_created) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Progress Notes: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(i.progress_notes) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Order: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(i.order) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "columns" }, [
+                          _c(
+                            "div",
+                            { staticClass: "column" },
+                            [
+                              _c(
+                                "b-field",
+                                { attrs: { label: "C" } },
+                                [
+                                  _c("b-checkbox", {
+                                    attrs: {
+                                      "true-value": "1",
+                                      "false-value": "0",
+                                      disabled: "",
+                                    },
+                                    model: {
+                                      value: i.letter_c,
+                                      callback: function ($$v) {
+                                        _vm.$set(i, "letter_c", $$v)
+                                      },
+                                      expression: "i.letter_c",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "column" },
+                            [
+                              _c(
+                                "b-field",
+                                { attrs: { label: "A" } },
+                                [
+                                  _c("b-checkbox", {
+                                    attrs: {
+                                      "true-value": "1",
+                                      "false-value": "0",
+                                      disabled: "",
+                                    },
+                                    model: {
+                                      value: i.letter_a,
+                                      callback: function ($$v) {
+                                        _vm.$set(i, "letter_a", $$v)
+                                      },
+                                      expression: "i.letter_a",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "column" },
+                            [
+                              _c(
+                                "b-field",
+                                { attrs: { label: "R" } },
+                                [
+                                  _c("b-checkbox", {
+                                    attrs: {
+                                      "true-value": "1",
+                                      "false-value": "0",
+                                      disabled: "",
+                                    },
+                                    model: {
+                                      value: i.letter_r,
+                                      callback: function ($$v) {
+                                        _vm.$set(i, "letter_r", $$v)
+                                      },
+                                      expression: "i.letter_r",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "column" },
+                            [
+                              _c(
+                                "b-field",
+                                { attrs: { label: "E" } },
+                                [
+                                  _c("b-checkbox", {
+                                    attrs: {
+                                      "true-value": "1",
+                                      "false-value": "0",
+                                      disabled: "",
+                                    },
+                                    model: {
+                                      value: i.letter_e,
+                                      callback: function ($$v) {
+                                        _vm.$set(i, "letter_e", $$v)
+                                      },
+                                      expression: "i.letter_e",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "column" },
+                            [
+                              _c(
+                                "b-field",
+                                { attrs: { label: "D" } },
+                                [
+                                  _c("b-checkbox", {
+                                    attrs: {
+                                      "true-value": "1",
+                                      "false-value": "0",
+                                      disabled: "",
+                                    },
+                                    model: {
+                                      value: i.letter_d,
+                                      callback: function ($$v) {
+                                        _vm.$set(i, "letter_d", $$v)
+                                      },
+                                      expression: "i.letter_d",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticStyle: {
+                            height: "1px",
+                            "background-color": "gray",
+                            "margin-bottom": "10px",
+                          },
+                        }),
+                      ])
+                    }),
+                  ],
+                  2
+                )
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box" }, [
+            _vm.data.patient
+              ? _c(
+                  "div",
+                  { staticClass: "information-container" },
+                  [
+                    _c("div", { staticClass: "title-header-text" }, [
+                      _vm._v("NURSE NOTES"),
+                    ]),
+                    _vm._v(" "),
+                    _vm._l(_vm.data.nurse_notes, function (ii, ixx) {
+                      return _c("div", { key: ixx }, [
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Date/Time: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(ii.date_time_created) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Doctor Order: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(ii.doctor_order) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Focus: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(ii.focus) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column" }, [
+                            _c("div", [
+                              _c("span", { staticClass: "field-prop" }, [
+                                _vm._v("Nurse Notes: "),
+                              ]),
+                              _vm._v(
+                                " \n                                        " +
+                                  _vm._s(ii.nurse_notes) +
+                                  "\n                                    "
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticStyle: {
+                            height: "1px",
+                            "background-color": "gray",
+                            "margin-bottom": "10px",
+                          },
+                        }),
+                      ])
+                    }),
+                  ],
+                  2
+                )
+              : _vm._e(),
+          ]),
+        ]),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -46229,6 +52975,321 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseCared.vue?vue&type=template&id=0cba39da&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseCared.vue?vue&type=template&id=0cba39da& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "section" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
+        _c("div", { staticClass: "column is-6-desktop is-8-tablet" }, [
+          _c("div", { staticClass: "box" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "box-body" },
+              [
+                _vm._l(_vm.doctor_orders, function (order, index) {
+                  return _c(
+                    "div",
+                    { key: index },
+                    [
+                      _c("div", { staticClass: "divider" }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Date/Time" } },
+                              [
+                                _c("b-datetimepicker", {
+                                  attrs: { placeholder: "Date/Time" },
+                                  model: {
+                                    value: order.doctor_date_time_created,
+                                    callback: function ($$v) {
+                                      _vm.$set(
+                                        order,
+                                        "doctor_date_time_created",
+                                        $$v
+                                      )
+                                    },
+                                    expression:
+                                      "order.doctor_date_time_created",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Progress Notes" } },
+                              [
+                                _c("b-input", {
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Progress Notes",
+                                  },
+                                  model: {
+                                    value: order.progress_notes,
+                                    callback: function ($$v) {
+                                      _vm.$set(order, "progress_notes", $$v)
+                                    },
+                                    expression: "order.progress_notes",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Order" } },
+                              [
+                                _c("b-input", {
+                                  attrs: {
+                                    type: "textarea",
+                                    placeholder: "Order",
+                                  },
+                                  model: {
+                                    value: order.order,
+                                    callback: function ($$v) {
+                                      _vm.$set(order, "order", $$v)
+                                    },
+                                    expression: "order.order",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              [
+                                _c(
+                                  "b-field",
+                                  { attrs: { label: "C" } },
+                                  [
+                                    _c("b-checkbox", {
+                                      attrs: {
+                                        "true-value": "1",
+                                        "false-value": "0",
+                                      },
+                                      model: {
+                                        value: order.letter_c,
+                                        callback: function ($$v) {
+                                          _vm.$set(order, "letter_c", $$v)
+                                        },
+                                        expression: "order.letter_c",
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-field",
+                                  { attrs: { label: "A" } },
+                                  [
+                                    _c("b-checkbox", {
+                                      attrs: {
+                                        "true-value": "1",
+                                        "false-value": "0",
+                                      },
+                                      model: {
+                                        value: order.letter_a,
+                                        callback: function ($$v) {
+                                          _vm.$set(order, "letter_a", $$v)
+                                        },
+                                        expression: "order.letter_a",
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-field",
+                                  { attrs: { label: "R" } },
+                                  [
+                                    _c("b-checkbox", {
+                                      attrs: {
+                                        "true-value": "1",
+                                        "false-value": "0",
+                                      },
+                                      model: {
+                                        value: order.letter_r,
+                                        callback: function ($$v) {
+                                          _vm.$set(order, "letter_r", $$v)
+                                        },
+                                        expression: "order.letter_r",
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-field",
+                                  { attrs: { label: "E" } },
+                                  [
+                                    _c("b-checkbox", {
+                                      attrs: {
+                                        "true-value": "1",
+                                        "false-value": "0",
+                                      },
+                                      model: {
+                                        value: order.letter_e,
+                                        callback: function ($$v) {
+                                          _vm.$set(order, "letter_e", $$v)
+                                        },
+                                        expression: "order.letter_e",
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-field",
+                                  { attrs: { label: "D" } },
+                                  [
+                                    _c("b-checkbox", {
+                                      attrs: {
+                                        "true-value": "1",
+                                        "false-value": "0",
+                                      },
+                                      model: {
+                                        value: order.letter_d,
+                                        callback: function ($$v) {
+                                          _vm.$set(order, "letter_d", $$v)
+                                        },
+                                        expression: "order.letter_d",
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("b-button", {
+                        staticClass: "is-small",
+                        attrs: { "icon-right": "delete", type: "is-danger" },
+                        on: {
+                          click: function ($event) {
+                            return _vm.removeOrder(index)
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "divider" }),
+                    ],
+                    1
+                  )
+                }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "buttons is-right" },
+                  [
+                    _c("b-button", {
+                      staticClass: "is-small",
+                      attrs: { "icon-right": "plus", type: "is-primary" },
+                      on: { click: _vm.addOrder },
+                    }),
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "buttons is-right" },
+                  [
+                    _c("b-button", {
+                      attrs: { label: "Save Order", type: "is-primary" },
+                      on: { click: _vm.submit },
+                    }),
+                  ],
+                  1
+                ),
+              ],
+              2
+            ),
+          ]),
+        ]),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "box-header" }, [
+      _c("div", { staticClass: "box-header-text" }, [
+        _vm._v(
+          "\n                            DOCTOR ORDERS\n                        "
+        ),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseHome.vue?vue&type=template&id=9cc71722&scoped=true&":
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseHome.vue?vue&type=template&id=9cc71722&scoped=true& ***!
@@ -46381,6 +53442,241 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseNotes.vue?vue&type=template&id=7183f361&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NurseNotes.vue?vue&type=template&id=7183f361& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "section" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
+        _c("div", { staticClass: "column is-6-desktop is-8-tablet" }, [
+          _c("div", { staticClass: "box" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "box-body" },
+              [
+                _vm._l(_vm.nurse_notes, function (item, index) {
+                  return _c(
+                    "div",
+                    { key: index },
+                    [
+                      _c("div", { staticClass: "divider" }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Date/Time" } },
+                              [
+                                _c("b-datetimepicker", {
+                                  attrs: { placeholder: "Date/Time" },
+                                  model: {
+                                    value: item.date_time_created,
+                                    callback: function ($$v) {
+                                      _vm.$set(item, "date_time_created", $$v)
+                                    },
+                                    expression: "item.date_time_created",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Doctor Order" } },
+                              [
+                                _c(
+                                  "b-select",
+                                  {
+                                    attrs: { placeholder: "Doctor Order" },
+                                    model: {
+                                      value: item.doctor_order,
+                                      callback: function ($$v) {
+                                        _vm.$set(item, "doctor_order", $$v)
+                                      },
+                                      expression: "item.doctor_order",
+                                    },
+                                  },
+                                  _vm._l(
+                                    _vm.doctor_orders,
+                                    function (item, index) {
+                                      return _c(
+                                        "option",
+                                        {
+                                          key: index,
+                                          domProps: { value: item.order },
+                                        },
+                                        [_vm._v(_vm._s(item.order))]
+                                      )
+                                    }
+                                  ),
+                                  0
+                                ),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Focus" } },
+                              [
+                                _c("b-input", {
+                                  attrs: { type: "text", placeholder: "Focus" },
+                                  model: {
+                                    value: item.focus,
+                                    callback: function ($$v) {
+                                      _vm.$set(item, "focus", $$v)
+                                    },
+                                    expression: "item.focus",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              {
+                                attrs: {
+                                  label: "Nurse Notes (Data, Action, Response)",
+                                },
+                              },
+                              [
+                                _c("b-input", {
+                                  attrs: {
+                                    type: "textarea",
+                                    placeholder: "Nurse Notes",
+                                  },
+                                  model: {
+                                    value: item.nurse_notes,
+                                    callback: function ($$v) {
+                                      _vm.$set(item, "nurse_notes", $$v)
+                                    },
+                                    expression: "item.nurse_notes",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("b-button", {
+                        staticClass: "is-small",
+                        attrs: { "icon-right": "delete", type: "is-danger" },
+                        on: {
+                          click: function ($event) {
+                            return _vm.removeOrder(index)
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "divider" }),
+                    ],
+                    1
+                  )
+                }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "buttons is-right" },
+                  [
+                    _c("b-button", {
+                      staticClass: "is-small",
+                      attrs: { "icon-right": "plus", type: "is-primary" },
+                      on: { click: _vm.addOrder },
+                    }),
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "buttons is-right" },
+                  [
+                    _c("b-button", {
+                      attrs: { label: "Save Notes", type: "is-primary" },
+                      on: { click: _vm.submit },
+                    }),
+                  ],
+                  1
+                ),
+              ],
+              2
+            ),
+          ]),
+        ]),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "box-header" }, [
+      _c("div", { staticClass: "box-header-text" }, [
+        _vm._v(
+          "\n                            NURSE NOTES\n                        "
+        ),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NursePatient.vue?vue&type=template&id=16014ba5&":
 /*!******************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NursePatient.vue?vue&type=template&id=16014ba5& ***!
@@ -46397,97 +53693,471 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("div", { staticClass: "section" }, [
-        _c("div", { staticClass: "columns is-centered" }, [
-          _c("div", { staticClass: "column is-10-desktop" }, [
-            _c(
-              "div",
-              { staticClass: "box" },
-              [
-                _c("div", { staticClass: "table-text" }, [
-                  _vm._v("PATIENTS LIST"),
-                ]),
-                _vm._v(" "),
+  return _c("div", [
+    _c("div", { staticClass: "section" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
+        _c("div", { staticClass: "column is-10-desktop" }, [
+          _c(
+            "div",
+            { staticClass: "box" },
+            [
+              _c("div", { staticClass: "table-text" }, [
+                _vm._v("NURSE PATIENTS LIST"),
+              ]),
+              _vm._v(" "),
+              _c(
+                "b-field",
+                { attrs: { label: "Search", "label-position": "on-border" } },
+                [
+                  _c("b-input", {
+                    attrs: { type: "text", placeholder: "Last Name" },
+                    nativeOn: {
+                      keyup: function ($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k(
+                            $event.keyCode,
+                            "enter",
+                            13,
+                            $event.key,
+                            "Enter"
+                          )
+                        ) {
+                          return null
+                        }
+                        return _vm.loadAsyncData.apply(null, arguments)
+                      },
+                    },
+                    model: {
+                      value: _vm.search.lname,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.search, "lname", $$v)
+                      },
+                      expression: "search.lname",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("b-input", {
+                    attrs: { type: "text", placeholder: "First Name" },
+                    nativeOn: {
+                      keyup: function ($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k(
+                            $event.keyCode,
+                            "enter",
+                            13,
+                            $event.key,
+                            "Enter"
+                          )
+                        ) {
+                          return null
+                        }
+                        return _vm.loadAsyncData.apply(null, arguments)
+                      },
+                    },
+                    model: {
+                      value: _vm.search.fname,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.search, "fname", $$v)
+                      },
+                      expression: "search.fname",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    { staticClass: "control" },
+                    [
+                      _c(
+                        "b-tooltip",
+                        { attrs: { label: "Search", type: "is-success" } },
+                        [
+                          _c("b-button", {
+                            attrs: {
+                              type: "is-primary",
+                              "icon-right": "magnify",
+                            },
+                            on: { click: _vm.loadAsyncData },
+                          }),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-table",
+                {
+                  attrs: {
+                    data: _vm.data,
+                    loading: _vm.loading,
+                    paginated: "",
+                    detailed: "",
+                    "backend-pagination": "",
+                    total: _vm.total,
+                    "pagination-rounded": true,
+                    "per-page": _vm.perPage,
+                    "aria-next-label": "Next page",
+                    "aria-previous-label": "Previous page",
+                    "aria-page-label": "Page",
+                    "aria-current-label": "Current page",
+                    "backend-sorting": "",
+                    "default-sort-direction": _vm.defaultSortDirection,
+                  },
+                  on: { "page-change": _vm.onPageChange, sort: _vm.onSort },
+                  scopedSlots: _vm._u([
+                    {
+                      key: "detail",
+                      fn: function (props) {
+                        return [
+                          _c("tr", [
+                            _c("th", [_vm._v("Admission Id")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Admission Date")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Discharge Date")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Total Day")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Ward/Room")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Admitting Physician")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Action")]),
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(
+                            props.row.patient_admissions,
+                            function (item, index) {
+                              return _c("tr", { key: index }, [
+                                _c("td", [
+                                  _vm._v(_vm._s(item.patient_admission_id)),
+                                ]),
+                                _vm._v(" "),
+                                _c("td", [_vm._v(_vm._s(item.admission_date))]),
+                                _vm._v(" "),
+                                _c("td", [_vm._v(_vm._s(item.discharge_date))]),
+                                _vm._v(" "),
+                                _c("td", [_vm._v(_vm._s(item.total_day))]),
+                                _vm._v(" "),
+                                _c("td", [_vm._v(_vm._s(item.ward_room))]),
+                                _vm._v(" "),
+                                _c("td", [
+                                  _vm._v(_vm._s(item.admitting_physician)),
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "td",
+                                  [
+                                    _c(
+                                      "b-dropdown",
+                                      {
+                                        attrs: { "aria-role": "list" },
+                                        scopedSlots: _vm._u(
+                                          [
+                                            {
+                                              key: "trigger",
+                                              fn: function (ref) {
+                                                var active = ref.active
+                                                return [
+                                                  _c("b-button", {
+                                                    staticClass: "is-small",
+                                                    attrs: {
+                                                      label: "Option",
+                                                      type: "is-primary",
+                                                      "icon-right": active
+                                                        ? "menu-up"
+                                                        : "menu-down",
+                                                    },
+                                                  }),
+                                                ]
+                                              },
+                                            },
+                                          ],
+                                          null,
+                                          true
+                                        ),
+                                      },
+                                      [
+                                        _vm._v(" "),
+                                        _c(
+                                          "b-dropdown-item",
+                                          {
+                                            attrs: {
+                                              "aria-role": "listitem",
+                                              href:
+                                                "/nurse-cared/" +
+                                                item.patient_admission_id +
+                                                "/" +
+                                                item.patient_id,
+                                            },
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                            CARED\n                                        "
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "b-dropdown-item",
+                                          {
+                                            attrs: {
+                                              "aria-role": "listitem",
+                                              href:
+                                                "/nurse-notes/" +
+                                                item.patient_admission_id +
+                                                "/" +
+                                                item.patient_id,
+                                            },
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                            Nurse Notes\n                                        "
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "b-dropdown-item",
+                                          {
+                                            attrs: {
+                                              "aria-role": "listitem",
+                                              href:
+                                                "/nurse-patient-medications/" +
+                                                item.patient_admission_id +
+                                                "/" +
+                                                item.patient_id,
+                                            },
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                            Medication\n                                        "
+                                            ),
+                                          ]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                  ],
+                                  1
+                                ),
+                              ])
+                            }
+                          ),
+                        ]
+                      },
+                    },
+                  ]),
+                },
+                [
+                  _c("b-table-column", {
+                    attrs: { field: "patient_id", label: "ID", sortable: "" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.patient_id) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: {
+                      field: "admission_date",
+                      label: "Admission Date",
+                      sortable: "",
+                    },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(
+                                  _vm._f("formatDateAndTime")(
+                                    props.row.admission_date
+                                  )
+                                ) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "name", label: "Name", sortable: "" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.fname) +
+                                " " +
+                                _vm._s(props.row.mname) +
+                                " " +
+                                _vm._s(props.row.lname) +
+                                " " +
+                                _vm._s(props.row.suffix) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "sex", label: "Sex", sortable: "" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.sex) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "contact_no", label: "Contact" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.contact_no) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "bdate", label: "Birthdate" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.bdate) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "mother_maiden_name", label: "Mother" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.mother_maiden_name) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("b-table-column", {
+                    attrs: { field: "father_name", label: "Father" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (props) {
+                          return [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(props.row.father_name) +
+                                "\n                        "
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
                 _c(
-                  "b-field",
-                  { attrs: { label: "Search", "label-position": "on-border" } },
+                  "div",
+                  { staticClass: "column" },
                   [
-                    _c("b-input", {
-                      attrs: { type: "text", placeholder: "Last Name" },
-                      nativeOn: {
-                        keyup: function ($event) {
-                          if (
-                            !$event.type.indexOf("key") &&
-                            _vm._k(
-                              $event.keyCode,
-                              "enter",
-                              13,
-                              $event.key,
-                              "Enter"
-                            )
-                          ) {
-                            return null
-                          }
-                          return _vm.loadAsyncData.apply(null, arguments)
-                        },
-                      },
-                      model: {
-                        value: _vm.search.lname,
-                        callback: function ($$v) {
-                          _vm.$set(_vm.search, "lname", $$v)
-                        },
-                        expression: "search.lname",
-                      },
-                    }),
-                    _vm._v(" "),
-                    _c("b-input", {
-                      attrs: { type: "text", placeholder: "First Name" },
-                      nativeOn: {
-                        keyup: function ($event) {
-                          if (
-                            !$event.type.indexOf("key") &&
-                            _vm._k(
-                              $event.keyCode,
-                              "enter",
-                              13,
-                              $event.key,
-                              "Enter"
-                            )
-                          ) {
-                            return null
-                          }
-                          return _vm.loadAsyncData.apply(null, arguments)
-                        },
-                      },
-                      model: {
-                        value: _vm.search.fname,
-                        callback: function ($$v) {
-                          _vm.$set(_vm.search, "fname", $$v)
-                        },
-                        expression: "search.fname",
-                      },
-                    }),
-                    _vm._v(" "),
                     _c(
-                      "p",
-                      { staticClass: "control" },
+                      "b-field",
+                      {
+                        attrs: { label: "Page", "label-position": "on-border" },
+                      },
                       [
                         _c(
-                          "b-tooltip",
-                          { attrs: { label: "Search", type: "is-success" } },
-                          [
-                            _c("b-button", {
-                              attrs: {
-                                type: "is-primary",
-                                "icon-right": "magnify",
+                          "b-select",
+                          {
+                            staticClass: "is-small",
+                            on: { input: _vm.setPerPage },
+                            model: {
+                              value: _vm.perPage,
+                              callback: function ($$v) {
+                                _vm.perPage = $$v
                               },
-                              on: { click: _vm.loadAsyncData },
-                            }),
-                          ],
-                          1
+                              expression: "perPage",
+                            },
+                          },
+                          [
+                            _c("option", { attrs: { value: "5" } }, [
+                              _vm._v("5 per page"),
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "10" } }, [
+                              _vm._v("10 per page"),
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "15" } }, [
+                              _vm._v("15 per page"),
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "20" } }, [
+                              _vm._v("20 per page"),
+                            ]),
+                          ]
                         ),
                       ],
                       1
@@ -46495,985 +54165,14 @@ var render = function () {
                   ],
                   1
                 ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "buttons is-right mt-3" },
-                  [
-                    _c(
-                      "b-button",
-                      {
-                        staticClass: "is-primary is-small",
-                        attrs: {
-                          tag: "a",
-                          "icon-left": "account",
-                          href:
-                            "/nurse-patient/create?lname=" +
-                            _vm.search.lname +
-                            "&fname=" +
-                            _vm.search.fname,
-                        },
-                      },
-                      [_vm._v("New Patient")]
-                    ),
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "b-table",
-                  {
-                    attrs: {
-                      data: _vm.data,
-                      loading: _vm.loading,
-                      paginated: "",
-                      "backend-pagination": "",
-                      total: _vm.total,
-                      "pagination-rounded": true,
-                      "per-page": _vm.perPage,
-                      "aria-next-label": "Next page",
-                      "aria-previous-label": "Previous page",
-                      "aria-page-label": "Page",
-                      "aria-current-label": "Current page",
-                      "backend-sorting": "",
-                      "default-sort-direction": _vm.defaultSortDirection,
-                    },
-                    on: { "page-change": _vm.onPageChange, sort: _vm.onSort },
-                  },
-                  [
-                    _c("b-table-column", {
-                      attrs: { field: "patient_id", label: "ID", sortable: "" },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "default",
-                          fn: function (props) {
-                            return [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(props.row.patient_id) +
-                                  "\n                        "
-                              ),
-                            ]
-                          },
-                        },
-                      ]),
-                    }),
-                    _vm._v(" "),
-                    _c("b-table-column", {
-                      attrs: { field: "name", label: "Name", sortable: "" },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "default",
-                          fn: function (props) {
-                            return [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(props.row.fname) +
-                                  " " +
-                                  _vm._s(props.row.mname) +
-                                  " " +
-                                  _vm._s(props.row.lname) +
-                                  " " +
-                                  _vm._s(props.row.suffix) +
-                                  " \n                        "
-                              ),
-                            ]
-                          },
-                        },
-                      ]),
-                    }),
-                    _vm._v(" "),
-                    _c("b-table-column", {
-                      attrs: { field: "sex", label: "Sex", sortable: "" },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "default",
-                          fn: function (props) {
-                            return [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(props.row.sex) +
-                                  "\n                        "
-                              ),
-                            ]
-                          },
-                        },
-                      ]),
-                    }),
-                    _vm._v(" "),
-                    _c("b-table-column", {
-                      attrs: {
-                        field: "civil_status",
-                        label: "Civil Status",
-                        sortable: "",
-                      },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "default",
-                          fn: function (props) {
-                            return [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(props.row.civil_status) +
-                                  "\n                        "
-                              ),
-                            ]
-                          },
-                        },
-                      ]),
-                    }),
-                    _vm._v(" "),
-                    _c("b-table-column", {
-                      attrs: { field: "contact_no", label: "Contact" },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "default",
-                          fn: function (props) {
-                            return [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(props.row.contact_no) +
-                                  "\n                        "
-                              ),
-                            ]
-                          },
-                        },
-                      ]),
-                    }),
-                    _vm._v(" "),
-                    _c("b-table-column", {
-                      attrs: { field: "bdate", label: "Birthdate" },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "default",
-                          fn: function (props) {
-                            return [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(props.row.bdate) +
-                                  "\n                        "
-                              ),
-                            ]
-                          },
-                        },
-                      ]),
-                    }),
-                    _vm._v(" "),
-                    _c("b-table-column", {
-                      attrs: { field: "mother_maiden_name", label: "Mother" },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "default",
-                          fn: function (props) {
-                            return [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(props.row.mother_maiden_name) +
-                                  "\n                        "
-                              ),
-                            ]
-                          },
-                        },
-                      ]),
-                    }),
-                    _vm._v(" "),
-                    _c("b-table-column", {
-                      attrs: { field: "father_name", label: "Father" },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "default",
-                          fn: function (props) {
-                            return [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(props.row.father_name) +
-                                  "\n                        "
-                              ),
-                            ]
-                          },
-                        },
-                      ]),
-                    }),
-                    _vm._v(" "),
-                    _c("b-table-column", {
-                      attrs: { label: "Action" },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "default",
-                          fn: function (props) {
-                            return [
-                              _c(
-                                "div",
-                                { staticClass: "is-flex" },
-                                [
-                                  _c(
-                                    "b-dropdown",
-                                    {
-                                      attrs: { "aria-role": "list" },
-                                      scopedSlots: _vm._u(
-                                        [
-                                          {
-                                            key: "trigger",
-                                            fn: function (ref) {
-                                              var active = ref.active
-                                              return [
-                                                _c("b-button", {
-                                                  staticClass: "is-small",
-                                                  attrs: {
-                                                    label: "Option",
-                                                    type: "is-primary",
-                                                    "icon-right": active
-                                                      ? "menu-up"
-                                                      : "menu-down",
-                                                  },
-                                                }),
-                                              ]
-                                            },
-                                          },
-                                        ],
-                                        null,
-                                        true
-                                      ),
-                                    },
-                                    [
-                                      _vm._v(" "),
-                                      _c(
-                                        "b-dropdown-item",
-                                        {
-                                          attrs: {
-                                            "aria-role": "listitem",
-                                            "icon-right": "pencil",
-                                            href:
-                                              "/nurse-patient/" +
-                                              props.row.patient_id +
-                                              "/edit",
-                                          },
-                                        },
-                                        [_vm._v("Update")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "b-dropdown-item",
-                                        {
-                                          attrs: { "aria-role": "listitem" },
-                                          on: {
-                                            click: function ($event) {
-                                              return _vm.openModalDiagnose(
-                                                props.row
-                                              )
-                                            },
-                                          },
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                        Diagnose\n                                    "
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "b-dropdown-item",
-                                        {
-                                          attrs: {
-                                            "aria-role": "listitem",
-                                            href:
-                                              "/nurse-patient-diagnoses/" +
-                                              props.row.patient_id,
-                                          },
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                        Show diagnoses\n                                    "
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("hr"),
-                                      _vm._v(" "),
-                                      _c(
-                                        "b-dropdown-item",
-                                        {
-                                          attrs: {
-                                            "aria-role": "listitem",
-                                            "icon-right": "delete",
-                                          },
-                                          on: {
-                                            click: function ($event) {
-                                              return _vm.confirmDelete(
-                                                props.row.patient_id
-                                              )
-                                            },
-                                          },
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                        Delete\n                                    "
-                                          ),
-                                        ]
-                                      ),
-                                    ],
-                                    1
-                                  ),
-                                ],
-                                1
-                              ),
-                            ]
-                          },
-                        },
-                      ]),
-                    }),
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "columns" }, [
-                  _c(
-                    "div",
-                    { staticClass: "column" },
-                    [
-                      _c(
-                        "b-field",
-                        {
-                          attrs: {
-                            label: "Page",
-                            "label-position": "on-border",
-                          },
-                        },
-                        [
-                          _c(
-                            "b-select",
-                            {
-                              staticClass: "is-small",
-                              on: { input: _vm.setPerPage },
-                              model: {
-                                value: _vm.perPage,
-                                callback: function ($$v) {
-                                  _vm.perPage = $$v
-                                },
-                                expression: "perPage",
-                              },
-                            },
-                            [
-                              _c("option", { attrs: { value: "5" } }, [
-                                _vm._v("5 per page"),
-                              ]),
-                              _vm._v(" "),
-                              _c("option", { attrs: { value: "10" } }, [
-                                _vm._v("10 per page"),
-                              ]),
-                              _vm._v(" "),
-                              _c("option", { attrs: { value: "15" } }, [
-                                _vm._v("15 per page"),
-                              ]),
-                              _vm._v(" "),
-                              _c("option", { attrs: { value: "20" } }, [
-                                _vm._v("20 per page"),
-                              ]),
-                            ]
-                          ),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                ]),
-              ],
-              1
-            ),
-          ]),
+              ]),
+            ],
+            1
+          ),
         ]),
       ]),
-      _vm._v(" "),
-      _c(
-        "b-modal",
-        {
-          attrs: {
-            "has-modal-card": "",
-            "trap-focus": "",
-            width: 640,
-            "aria-role": "dialog",
-            "aria-label": "Modal",
-            "aria-modal": "",
-          },
-          model: {
-            value: _vm.modalDiagnose,
-            callback: function ($$v) {
-              _vm.modalDiagnose = $$v
-            },
-            expression: "modalDiagnose",
-          },
-        },
-        [
-          _c(
-            "form",
-            {
-              on: {
-                submit: function ($event) {
-                  $event.preventDefault()
-                  return _vm.submitDiagnose.apply(null, arguments)
-                },
-              },
-            },
-            [
-              _c("div", { staticClass: "modal-card" }, [
-                _c("header", { staticClass: "modal-card-head" }, [
-                  _c("p", { staticClass: "modal-card-title" }, [
-                    _vm._v("Diagnose Information"),
-                  ]),
-                  _vm._v(" "),
-                  _c("button", {
-                    staticClass: "delete",
-                    attrs: { type: "button" },
-                    on: {
-                      click: function ($event) {
-                        _vm.modalDiagnose = false
-                      },
-                    },
-                  }),
-                ]),
-                _vm._v(" "),
-                _c("section", { staticClass: "modal-card-body" }, [
-                  _c("div", {}, [
-                    _c("div", { staticClass: "columns" }, [
-                      _c(
-                        "div",
-                        { staticClass: "column" },
-                        [
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Present Complain",
-                                "label-position": "on-border",
-                                type: this.errors.present_complain
-                                  ? "is-danger"
-                                  : "",
-                                message: this.errors.present_complain
-                                  ? this.errors.present_complain[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: {
-                                  type: "textarea",
-                                  placeholder: "Present Complain",
-                                },
-                                model: {
-                                  value: _vm.fields.present_complain,
-                                  callback: function ($$v) {
-                                    _vm.$set(
-                                      _vm.fields,
-                                      "present_complain",
-                                      $$v
-                                    )
-                                  },
-                                  expression: "fields.present_complain",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Admission Diagnose",
-                                "label-position": "on-border",
-                                type: this.errors.admission_diagnose
-                                  ? "is-danger"
-                                  : "",
-                                message: this.errors.admission_diagnose
-                                  ? this.errors.admission_diagnose[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: {
-                                  type: "textarea",
-                                  placeholder: "Admission Diagnose",
-                                },
-                                model: {
-                                  value: _vm.fields.admission_diagnose,
-                                  callback: function ($$v) {
-                                    _vm.$set(
-                                      _vm.fields,
-                                      "admission_diagnose",
-                                      $$v
-                                    )
-                                  },
-                                  expression: "fields.admission_diagnose",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Doctor",
-                                "label-position": "on-border",
-                                type: this.errors.doctor ? "is-danger" : "",
-                                message: this.errors.doctor
-                                  ? this.errors.doctor[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c(
-                                "b-select",
-                                {
-                                  attrs: { placeholder: "Doctor" },
-                                  model: {
-                                    value: _vm.fields.doctor,
-                                    callback: function ($$v) {
-                                      _vm.$set(_vm.fields, "doctor", $$v)
-                                    },
-                                    expression: "fields.doctor",
-                                  },
-                                },
-                                _vm._l(_vm.doctors, function (item, index) {
-                                  return _c(
-                                    "option",
-                                    {
-                                      key: index,
-                                      domProps: { value: item.user_id },
-                                    },
-                                    [
-                                      _vm._v(
-                                        _vm._s(item.lname) +
-                                          ", " +
-                                          _vm._s(item.fname) +
-                                          " " +
-                                          _vm._s(item.mname)
-                                      ),
-                                    ]
-                                  )
-                                }),
-                                0
-                              ),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Skin",
-                                "label-position": "on-border",
-                                type: this.errors.skin ? "is-danger" : "",
-                                message: this.errors.skin
-                                  ? this.errors.skin[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: { type: "text", placeholder: "Skin" },
-                                model: {
-                                  value: _vm.fields.skin,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "skin", $$v)
-                                  },
-                                  expression: "fields.skin",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Head EENT",
-                                "label-position": "on-border",
-                                type: this.errors.head_eent ? "is-danger" : "",
-                                message: this.errors.head_eent
-                                  ? this.errors.head_eent[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: {
-                                  type: "text",
-                                  placeholder: "Head EENT",
-                                },
-                                model: {
-                                  value: _vm.fields.head_eent,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "head_eent", $$v)
-                                  },
-                                  expression: "fields.head_eent",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Lymp Notes",
-                                "label-position": "on-border",
-                                type: this.errors.lymp_notes ? "is-danger" : "",
-                                message: this.errors.lymp_notes
-                                  ? this.errors.lymp_notes[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: {
-                                  type: "text",
-                                  placeholder: "Lymp Notes",
-                                },
-                                model: {
-                                  value: _vm.fields.lymp_notes,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "lymp_notes", $$v)
-                                  },
-                                  expression: "fields.lymp_notes",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Chest",
-                                "label-position": "on-border",
-                                type: this.errors.chest ? "is-danger" : "",
-                                message: this.errors.chest
-                                  ? this.errors.chest[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: { type: "text", placeholder: "Chest" },
-                                model: {
-                                  value: _vm.fields.chest,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "chest", $$v)
-                                  },
-                                  expression: "fields.chest",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Lungs",
-                                "label-position": "on-border",
-                                type: this.errors.lungs ? "is-danger" : "",
-                                message: this.errors.lungs
-                                  ? this.errors.lungs[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: { type: "text", placeholder: "Lungs" },
-                                model: {
-                                  value: _vm.fields.lungs,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "lungs", $$v)
-                                  },
-                                  expression: "fields.lungs",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Cadiovascular",
-                                "label-position": "on-border",
-                                type: this.errors.cardiovascular
-                                  ? "is-danger"
-                                  : "",
-                                message: this.errors.cardiovascular
-                                  ? this.errors.cardiovascular[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: {
-                                  type: "text",
-                                  placeholder: "Cadiovascular",
-                                },
-                                model: {
-                                  value: _vm.fields.cardiovascular,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "cardiovascular", $$v)
-                                  },
-                                  expression: "fields.cardiovascular",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Breast",
-                                "label-position": "on-border",
-                                type: this.errors.breast ? "is-danger" : "",
-                                message: this.errors.breast
-                                  ? this.errors.breast[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: { type: "text", placeholder: "Breast" },
-                                model: {
-                                  value: _vm.fields.breast,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "breast", $$v)
-                                  },
-                                  expression: "fields.breast",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Abdomen",
-                                "label-position": "on-border",
-                                type: this.errors.abdomen ? "is-danger" : "",
-                                message: this.errors.abdomen
-                                  ? this.errors.abdomen[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: { type: "text", placeholder: "Abdomen" },
-                                model: {
-                                  value: _vm.fields.abdomen,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "abdomen", $$v)
-                                  },
-                                  expression: "fields.abdomen",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Rectum",
-                                "label-position": "on-border",
-                                type: this.errors.rectum ? "is-danger" : "",
-                                message: this.errors.rectum
-                                  ? this.errors.rectum[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: { type: "text", placeholder: "Rectum" },
-                                model: {
-                                  value: _vm.fields.rectum,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "rectum", $$v)
-                                  },
-                                  expression: "fields.rectum",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Genetalia",
-                                "label-position": "on-border",
-                                type: this.errors.genetalia ? "is-danger" : "",
-                                message: this.errors.genetalia
-                                  ? this.errors.genetalia[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: {
-                                  type: "text",
-                                  placeholder: "Genetalia",
-                                },
-                                model: {
-                                  value: _vm.fields.genetalia,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "genetalia", $$v)
-                                  },
-                                  expression: "fields.genetalia",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Musculoskeletal",
-                                "label-position": "on-border",
-                                type: this.errors.musculoskeletal
-                                  ? "is-danger"
-                                  : "",
-                                message: this.errors.musculoskeletal
-                                  ? this.errors.musculoskeletal[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: {
-                                  type: "text",
-                                  placeholder: "Musculoskeletal",
-                                },
-                                model: {
-                                  value: _vm.fields.musculoskeletal,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "musculoskeletal", $$v)
-                                  },
-                                  expression: "fields.musculoskeletal",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Extremities",
-                                "label-position": "on-border",
-                                type: this.errors.extremities
-                                  ? "is-danger"
-                                  : "",
-                                message: this.errors.extremities
-                                  ? this.errors.extremities[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: {
-                                  type: "text",
-                                  placeholder: "Extremities",
-                                },
-                                model: {
-                                  value: _vm.fields.extremities,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "extremities", $$v)
-                                  },
-                                  expression: "fields.extremities",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-field",
-                            {
-                              attrs: {
-                                label: "Neurological",
-                                "label-position": "on-border",
-                                type: this.errors.neurological
-                                  ? "is-danger"
-                                  : "",
-                                message: this.errors.neurological
-                                  ? this.errors.neurological[0]
-                                  : "",
-                              },
-                            },
-                            [
-                              _c("b-input", {
-                                attrs: {
-                                  type: "text",
-                                  placeholder: "Neurological",
-                                },
-                                model: {
-                                  value: _vm.fields.neurological,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.fields, "neurological", $$v)
-                                  },
-                                  expression: "fields.neurological",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                    ]),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "footer",
-                  { staticClass: "modal-card-foot" },
-                  [
-                    _c("b-button", {
-                      attrs: { label: "Close" },
-                      on: {
-                        click: function ($event) {
-                          _vm.modalDiagnose = false
-                        },
-                      },
-                    }),
-                    _vm._v(" "),
-                    _c("button", { staticClass: "button is-primary" }, [
-                      _vm._v("SAVE"),
-                    ]),
-                  ],
-                  1
-                ),
-              ]),
-            ]
-          ),
-        ]
-      ),
-    ],
-    1
-  )
+    ]),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -49074,6 +55773,234 @@ var render = function () {
   )
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=template&id=ca5a7662&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Nurse/NursePatientMedications.vue?vue&type=template&id=ca5a7662& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "section" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
+        _c("div", { staticClass: "column is-6-desktop is-8-tablet" }, [
+          _c("div", { staticClass: "box" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "box-body" },
+              [
+                _vm._l(_vm.patient_medications, function (item, index) {
+                  return _c(
+                    "div",
+                    { key: index },
+                    [
+                      _c("div", { staticClass: "divider" }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Date/Time" } },
+                              [
+                                _c("b-datetimepicker", {
+                                  attrs: { placeholder: "Date/Time" },
+                                  model: {
+                                    value: item.datetime_created,
+                                    callback: function ($$v) {
+                                      _vm.$set(item, "datetime_created", $$v)
+                                    },
+                                    expression: "item.datetime_created",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Doctor Order" } },
+                              [
+                                _c(
+                                  "b-select",
+                                  {
+                                    attrs: { placeholder: "Doctor Order" },
+                                    model: {
+                                      value: item.doctor_order,
+                                      callback: function ($$v) {
+                                        _vm.$set(item, "doctor_order", $$v)
+                                      },
+                                      expression: "item.doctor_order",
+                                    },
+                                  },
+                                  _vm._l(
+                                    _vm.doctor_orders,
+                                    function (item, index) {
+                                      return _c(
+                                        "option",
+                                        {
+                                          key: index,
+                                          domProps: { value: item.order },
+                                        },
+                                        [_vm._v(_vm._s(item.order))]
+                                      )
+                                    }
+                                  ),
+                                  0
+                                ),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Medication" } },
+                              [
+                                _c("b-input", {
+                                  attrs: { type: "text", placeholder: "Focus" },
+                                  model: {
+                                    value: item.medication,
+                                    callback: function ($$v) {
+                                      _vm.$set(item, "medication", $$v)
+                                    },
+                                    expression: "item.medication",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "columns" }, [
+                        _c(
+                          "div",
+                          { staticClass: "column" },
+                          [
+                            _c(
+                              "b-field",
+                              { attrs: { label: "Remarks" } },
+                              [
+                                _c("b-input", {
+                                  attrs: { type: "text", placeholder: "Focus" },
+                                  model: {
+                                    value: item.remarks,
+                                    callback: function ($$v) {
+                                      _vm.$set(item, "remarks", $$v)
+                                    },
+                                    expression: "item.remarks",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("b-button", {
+                        staticClass: "is-small",
+                        attrs: { "icon-right": "delete", type: "is-danger" },
+                        on: {
+                          click: function ($event) {
+                            return _vm.remove(index)
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "divider" }),
+                    ],
+                    1
+                  )
+                }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "buttons is-right" },
+                  [
+                    _c("b-button", {
+                      staticClass: "is-small",
+                      attrs: { "icon-right": "plus", type: "is-primary" },
+                      on: { click: _vm.add },
+                    }),
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "buttons is-right" },
+                  [
+                    _c("b-button", {
+                      attrs: { label: "Save Medication", type: "is-primary" },
+                      on: { click: _vm.submit },
+                    }),
+                  ],
+                  1
+                ),
+              ],
+              2
+            ),
+          ]),
+        ]),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "box-header" }, [
+      _c("div", { staticClass: "box-header-text" }, [
+        _vm._v(
+          "\n                            PATIENT MEDICATIONS\n                        "
+        ),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -73814,15 +80741,22 @@ var map = {
 	"./components/Administrator/Designation/Designation.vue": "./resources/js/components/Administrator/Designation/Designation.vue",
 	"./components/Administrator/NavbarComponent.vue": "./resources/js/components/Administrator/NavbarComponent.vue",
 	"./components/Administrator/Patient/ManagePatient.vue": "./resources/js/components/Administrator/Patient/ManagePatient.vue",
+	"./components/Chief/ChiefHome.vue": "./resources/js/components/Chief/ChiefHome.vue",
+	"./components/Chief/ChiefNavbar.vue": "./resources/js/components/Chief/ChiefNavbar.vue",
+	"./components/Chief/ChiefPatientSummary.vue": "./resources/js/components/Chief/ChiefPatientSummary.vue",
+	"./components/Chief/ChiefPatients.vue": "./resources/js/components/Chief/ChiefPatients.vue",
 	"./components/Doctor/DoctorHome.vue": "./resources/js/components/Doctor/DoctorHome.vue",
 	"./components/Doctor/DoctorNavbar.vue": "./resources/js/components/Doctor/DoctorNavbar.vue",
+	"./components/Doctor/DoctorOrder.vue": "./resources/js/components/Doctor/DoctorOrder.vue",
 	"./components/Doctor/DoctorPatientDiagnose.vue": "./resources/js/components/Doctor/DoctorPatientDiagnose.vue",
 	"./components/Doctor/DoctorPatientDisposition.vue": "./resources/js/components/Doctor/DoctorPatientDisposition.vue",
 	"./components/Doctor/DoctorPatientHistory.vue": "./resources/js/components/Doctor/DoctorPatientHistory.vue",
 	"./components/Doctor/DoctorPatientPhysicalExam.vue": "./resources/js/components/Doctor/DoctorPatientPhysicalExam.vue",
+	"./components/Doctor/DoctorPatientProfile.vue": "./resources/js/components/Doctor/DoctorPatientProfile.vue",
 	"./components/Doctor/DoctorPatientSystemReview.vue": "./resources/js/components/Doctor/DoctorPatientSystemReview.vue",
 	"./components/Doctor/DoctorPatients.vue": "./resources/js/components/Doctor/DoctorPatients.vue",
 	"./components/Doctor/OldDoctorPatientDiagnosexxxx.vue": "./resources/js/components/Doctor/OldDoctorPatientDiagnosexxxx.vue",
+	"./components/Doctor/PatientSummary.vue": "./resources/js/components/Doctor/PatientSummary.vue",
 	"./components/ExampleComponent.vue": "./resources/js/components/ExampleComponent.vue",
 	"./components/FooterComponent.vue": "./resources/js/components/FooterComponent.vue",
 	"./components/Login.vue": "./resources/js/components/Login.vue",
@@ -73832,12 +80766,15 @@ var map = {
 	"./components/Nurse/Admission/Admission.vue": "./resources/js/components/Nurse/Admission/Admission.vue",
 	"./components/Nurse/Admission/PatientAdmission.vue": "./resources/js/components/Nurse/Admission/PatientAdmission.vue",
 	"./components/Nurse/Admission/PatientProfile.vue": "./resources/js/components/Nurse/Admission/PatientProfile.vue",
+	"./components/Nurse/NurseCared.vue": "./resources/js/components/Nurse/NurseCared.vue",
 	"./components/Nurse/NurseHome.vue": "./resources/js/components/Nurse/NurseHome.vue",
 	"./components/Nurse/NurseNavbar.vue": "./resources/js/components/Nurse/NurseNavbar.vue",
+	"./components/Nurse/NurseNotes.vue": "./resources/js/components/Nurse/NurseNotes.vue",
 	"./components/Nurse/NursePatient.vue": "./resources/js/components/Nurse/NursePatient.vue",
 	"./components/Nurse/NursePatientCreateUpdate.vue": "./resources/js/components/Nurse/NursePatientCreateUpdate.vue",
 	"./components/Nurse/NursePatientDiagnoseDoctorOrders.vue": "./resources/js/components/Nurse/NursePatientDiagnoseDoctorOrders.vue",
 	"./components/Nurse/NursePatientDiagnoses.vue": "./resources/js/components/Nurse/NursePatientDiagnoses.vue",
+	"./components/Nurse/NursePatientMedications.vue": "./resources/js/components/Nurse/NursePatientMedications.vue",
 	"./components/ServicesComponent.vue": "./resources/js/components/ServicesComponent.vue",
 	"./components/SignupComponent.vue": "./resources/js/components/SignupComponent.vue",
 	"./components/User/DashboardUser.vue": "./resources/js/components/User/DashboardUser.vue",

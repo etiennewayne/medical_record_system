@@ -27024,7 +27024,7 @@ fieldset[disabled] .file-name, fieldset[disabled] .select select, .select fields
 
 .divider {
   border: 2px solid #9ff1ff;
-  margin: 5px 0;
+  margin: 5px 0 20px 0;
 }
 
 /*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma */

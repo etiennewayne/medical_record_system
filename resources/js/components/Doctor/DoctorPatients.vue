@@ -106,6 +106,11 @@
                                                     :icon-right="active ? 'menu-up' : 'menu-down'" />
                                             </template>
 
+<!--                                            <b-dropdown-item aria-role="listitem"-->
+<!--                                                             :href="`/doctor-patient-profile/${item.patient_admission_id}/${item.patient_id}`">-->
+<!--                                                View Profile-->
+<!--                                            </b-dropdown-item>-->
+
                                             <b-dropdown-item aria-role="listitem"
                                                              :href="`/doctor-patient-diagnose/${item.patient_admission_id}/${item.patient_id}`">
                                                 Diagnose
@@ -123,6 +128,16 @@
                                             <b-dropdown-item aria-role="listitem"
                                                              :href="`/doctor-patient-physical-exam/${item.patient_admission_id}/${item.patient_id}`">
                                                 Physical Exam
+                                            </b-dropdown-item>
+
+                                            <b-dropdown-item aria-role="listitem"
+                                                             :href="`/doctor-orders/${item.patient_admission_id}/${item.patient_id}`">
+                                                Doctor Order
+                                            </b-dropdown-item>
+
+                                            <b-dropdown-item aria-role="listitem"
+                                                             :href="`/patient-summary/${item.patient_admission_id}/${item.patient_id}`">
+                                                Patient Summary
                                             </b-dropdown-item>
 
                                             <b-dropdown-item aria-role="listitem"

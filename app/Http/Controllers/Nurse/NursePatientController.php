@@ -30,7 +30,8 @@ class NursePatientController extends Controller
     public function getNursePatients(Request $req){
         $sort = explode('.', $req->sort_by);
 
-        $data = Patient::where('lname', 'like', $req->lname . '%')
+        $data = Patient::with(['patient_admissions'])
+            ->where('lname', 'like', $req->lname . '%')
             ->where('fname', 'like', $req->fname . '%')
             ->orderBy($sort[0], $sort[1])
             ->paginate($req->perpage);

@@ -25,7 +25,6 @@
             </div>
         </form>
 
-        
     </div>
 </template>
 
@@ -57,6 +56,10 @@ export default {
 
                 if(res.data.role === 'DOCTOR'){
                     window.location = '/doctor-home';
+                }
+
+                if(res.data.role === 'CHIEF NURSE'){
+                    window.location = '/chief-home';
                 }
 
                //window.location = '/dashboard';
