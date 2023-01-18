@@ -56,7 +56,7 @@ class PatientAdmission extends Model
     }
 
     public function physical_exam(){
-        return $this->hasOne(PatientHistory::class, 'patient_admission_id', 'patient_admission_id');
+        return $this->hasOne(PhysicalExam::class, 'patient_admission_id', 'patient_admission_id');
     }
 
     public function doctor_orders(){
