@@ -27,7 +27,7 @@
                                     <b-field label="Present Complaint">
                                         <b-input type="textarea"
                                             placeholder="Present Complaint"
-                                            v-model="fields.present_complaint"></b-input>
+                                            v-model="fields.present_complain"></b-input>
                                     </b-field>
                                 </div>
                             </div>
