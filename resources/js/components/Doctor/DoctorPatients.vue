@@ -144,6 +144,10 @@
                                                              :href="`/doctor-patient-disposition/${item.patient_admission_id}/${item.patient_id}`">
                                                 Disposition
                                             </b-dropdown-item>
+                                            <b-dropdown-item aria-role="listitem"
+                                                     :href="`/doctor-patient-discharge-summary/${item.patient_admission_id}/${item.patient_id}`">
+                                                Discharge Summary
+                                            </b-dropdown-item>
 
 <!--                                            <b-dropdown-item aria-role="listitem"-->
 <!--                                                             @click="confirmDelete(props.row.nurse_patient_id)"-->

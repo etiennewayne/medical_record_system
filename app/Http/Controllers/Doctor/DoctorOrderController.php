@@ -61,6 +61,12 @@ class DoctorOrderController extends Controller
     }
 
 
+    public function destroy($id){
+        DoctorOrder::destroy($id);
 
+        return response()->json([
+            'status' => 'deleted'
+        ], 200);
+    }
 
 }

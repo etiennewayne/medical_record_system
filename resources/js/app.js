@@ -17,6 +17,7 @@ import Buefy from 'buefy'
 import VueQrcodeReader from "vue-qrcode-reader";
 //for QR CODE Generation
 import VueQrcode from '@chenfengyuan/vue-qrcode';
+import { times } from 'lodash';
 
 
 
@@ -83,11 +84,13 @@ Vue.filter('formatDateAndTime', function(value) {
         ('0' + myDate.getSeconds()).slice(-2);
 
 
-    let timeString = realTime;
-    let H = +timeString.substr(0, 2);
-    let h = (H % 12) || 12;
-    let ampm = H < 12 ? " AM" : " PM";
-    timeString = h + timeString.substr(2, 3) + ampm;
+    let timeString = myDate.toLocaleTimeString();
+    // return timeString;
+    
+    // let H = +timeString.substr(0, 2);
+    // let h = (H % 12) || 12;
+    // let ampm = H < 12 ? " AM" : " PM";
+    // timeString = h + timeString.substr(2, 3) + ampm;
 
     return realDate + ' ' + timeString
 });

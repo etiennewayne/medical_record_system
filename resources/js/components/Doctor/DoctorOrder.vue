@@ -149,6 +149,19 @@ export default{
             })
         },
         removeOrder(index){
+
+          
+
+            if(this.doctor_orders[index].doctor_order_id > 0){
+                let id = this.doctor_orders[index].doctor_order_id;
+
+                axios.delete('/doctor-orders-delete/' + id).then(res=>{
+                    this.$buefy.toast.open({
+                        message: 'Order removed',
+                        type: 'is-success'
+                    })
+                })
+            }
             this.doctor_orders.splice(index, 1);
         },
 

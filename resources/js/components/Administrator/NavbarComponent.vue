@@ -15,9 +15,9 @@
                     Home
                 </b-navbar-item>
 
-                <b-navbar-item href="/manage-patient">
+                <!-- <b-navbar-item href="/manage-patient">
                     Patient
-                </b-navbar-item>
+                </b-navbar-item> -->
                
                 <b-navbar-dropdown label="Setup">
                     <b-navbar-item href="/designations">

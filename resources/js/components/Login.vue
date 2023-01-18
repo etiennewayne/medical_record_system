@@ -62,6 +62,11 @@ export default {
                     window.location = '/chief-home';
                 }
 
+                if(res.data.role === 'RECORD OFFICER'){
+                    window.location = '/record-home';
+                }
+
+
                //window.location = '/dashboard';
             }).catch(err=>{
                 if(err.response.status === 422){

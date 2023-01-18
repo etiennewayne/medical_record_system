@@ -26,6 +26,8 @@ class PatientDoctorDiagnose extends Model
         'place_occurence',
         'disposition',
         'result',
+        'laboratory_findings',
+        'medication_disposition'
     ];
 
     public function patient(){

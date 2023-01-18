@@ -27027,6 +27027,27 @@ fieldset[disabled] .file-name, fieldset[disabled] .select select, .select fields
   margin: 5px 0 20px 0;
 }
 
+@media print {
+  .nprint {
+    display: none;
+  }
+
+  header, footer, aside, nav, form, iframe, .menu, .hero, .adslot, footer {
+    display: none;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .buttons {
+    display: none;
+  }
+}
 /*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .pagination-previous,

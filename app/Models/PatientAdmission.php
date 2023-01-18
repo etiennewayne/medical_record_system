@@ -14,35 +14,37 @@ class PatientAdmission extends Model
     protected $primaryKey = 'patient_admission_d';
 
     protected $fillable = [
-      'patient_id',
-      'admission_date',
-      'discharge_date',
-      'total_day',
-      'ward_room',
-      'admitting_physician',
-      'admitting_clerk',
-      'attending_physician',
-      'referred_by',
+        'patient_id',
+        'admission_date',
+        'discharge_date',
+        'total_day',
+        'ward_room',
+        'admitting_physician',
+        'admitting_clerk',
+        'attending_physician',
+        'referred_by',
 
-      'social_service_classification',
-      'allergic_to',
-      'hospitalization_name',
-      'health_inssurance',
-      'phic',
-      'data_furnished_by',
+        'social_service_classification',
+        'allergic_to',
+        'hospitalization_name',
+        'health_inssurance',
+        'phic',
+        'data_furnished_by',
 
-      'address_informant',
-      'patient_relation',
-      'admission_diagnosis',
+        'address_informant',
+        'patient_relation',
+        'admission_diagnosis',
+        'bp',
+        'cr',
+        'rr',
+        'temp',
+        'disposition',
+        'laboratory_findings'
 
-      'bp',
-      'cr',
-      'rr',
-      'temp',
     ];
 
     public function patient(){
-      return $this->hasOne(Patient::class, 'patient_id', 'patient_id');
+        return $this->hasOne(Patient::class, 'patient_id', 'patient_id');
     }
 
     public function doctor_diagnose(){
@@ -68,6 +70,8 @@ class PatientAdmission extends Model
     public function medications(){
         return $this->hasMany(PatientMedication::class, 'patient_admission_id', 'patient_admission_id');
     }
+
+
 
 
 }

@@ -180,10 +180,18 @@ Route::get('/get-patient-physical-exam-by-admission-and-patient/{admissionId}/{p
 Route::get('/doctor-orders/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorOrderController::class, 'index']);
 Route::post('/doctor-orders-submit', [App\Http\Controllers\Doctor\DoctorOrderController::class, 'store']);
 Route::get('/get-patient-doctor-orders/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorOrderController::class, 'getDoctorOrders']);
+Route::delete('/doctor-orders-delete/{id}', [App\Http\Controllers\Doctor\DoctorOrderController::class, 'destroy']);
+
+
 
 
 Route::get('/doctor-patient-disposition/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientDispositionController::class, 'index']);
 Route::get('/get-patient-all-data/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientDispositionController::class, 'getPatientInfo']);
+
+Route::post('/doctor-patient-discharge', [App\Http\Controllers\Doctor\DoctorPatientDispositionController::class, 'store']);
+Route::get('/get-patient-doctor-to-discharge/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\DoctorPatientDispositionController::class, 'getPatientDoctorToDischarge']);
+
+
 
 //summarry
 Route::get('/patient-summary/{admissionId}/{patientId}', [App\Http\Controllers\Doctor\PatientSummaryController::class, 'index']);
@@ -208,6 +216,12 @@ Route::get('/chief-patient-summary/{admissionId}/{patientId}', [App\Http\Control
 Route::get('/get-summary-patient/{admissionId}/{patientId}', [App\Http\Controllers\Chief\ChiefPatientSummaryController::class, 'summary']);
 
 
+
+
+// -------------------------------RECORD-------------------------------------------
+Route::get('/record-home', [App\Http\Controllers\Record\RecordHomeController::class, 'index']);
+Route::get('/record-patients', [App\Http\Controllers\Record\RecordPatientController::class, 'index']);
+Route::get('/discharge-summary/{admissionId}/{patientId}', [App\Http\Controllers\Record\DischargeSummaryController::class, 'index']);
 
 
 
