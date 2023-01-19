@@ -52,6 +52,7 @@ class NurseNoteController extends Controller
                 ],
                 [
                     'patient_id' => $item['patient_id'],
+                    'doctor_order' => $item['doctor_order'],
                     'patient_admission_id' => $item['patient_admission_id'],
                     'date_time_created' => $item['date_time_created'],
                     'focus' => $item['focus'],
